@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PRFBBQ - Past BBQs</title>
+    <meta name="description" content="PRFBBQ - 2010" />
+    <meta name="robots" content="robots.txt" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+    <!-- FAVCONS -->
+    <link rel="image/x-icon" href="make favcon"/>
+    <link rel="apple-touch-icon" href="make favcon"/>
+    <link rel="shortcut icon" href="make favcon" type="image/x-icon"/>
+    
+    <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body id="www-prfbbq-com">
+    <div id="page-wrapper">
+      <header id="page-header">
+        <h1>
+          <a href="/">
+            PRF BBQ
+          </a>
+        </h1>
+      
+        <nav id="page-nav">
+          <a href="#">News</a>
+          <a href="#" class="selected">Present</a>
+          <a href="#">Past</a>
+        </nav>
+        
+        <!-- Show only if there are tickets/shows available -->
+        <dl class="ticket_info">
+          <dt>Tickets</dt>
+          <dd><a href="#">CHI/OCT '10</a></dd>
+          <dd><a href="#">NYC/DEC '10</a></dd>
+        </dl>
+      </header>
+
+      <section id="page-content" class="shows">
+        <ul id="content-nav">
+          <li class="top_item">
+            <a href="#" class="selected">CHI/OCT '10</a>
+            <ul class="subnav">
+              <li><a href="#" class="selected">Thursday</a></li>
+              <li><a href="#">Friday</a></li>
+              <li><a href="#">Saturday</a></li>
+            </ul>
+          </li>
+          <li class="top_item">
+            <a href="#">NYC/DEC '10</a>
+            <ul class="subnav">
+              <li><a href="#">Thursday</a></li>
+              <li><a href="#">Friday</a></li>
+              <li><a href="#">Saturday</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <!-- Clicking on a show date should update/replace the contents of #show-info. The structure of the HTML should be pulled from the server via Ajax. On page load, the first BBQ date should show (in this example, Chicago October Thursday) -->
+        <section id="show-info">   
+          <hgroup class="date">
+            <h1>OCTOBER 14th, 2010</h1>
+            <h2>8:00pm - 2:00am</h2>
+          </hgroup>
+          
+          <dl class="venue_info">
+            <dt>Quencher's Saloon</dt>     
+            <dd>1234 N. Western Ave.</dd>
+            <dd>Chicago, IL 60647</dd>
+          </dl>
+          
+          <div id="map_canvas">
+            <img src="img/map.png" />
+          </div>
+          
+          <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+          <ul class="band_list">
+            <li><a href="#">Band 1</a> <em>7:00pm</em></li>
+            <li><a href="#">Band 2</a> <em>8:00pm</em></li>
+            <li><a href="#">Band 3</a> <em>9:00pm</em></li>
+            <li><a href="#">Band 4</a> <em>10:00pm</em></li>
+            <li><a href="#">Band 5</a> <em>11:00pm</em></li>
+          </ul>
+          
+          <div class="description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href="#">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.</p>
+          </div>
+        </section>
+      </section>
+    </div>
+    
+    <div style="clear:both;"></div>
+    <footer id="page-footer">
+
+    </footer>
+  </body>
+  
+  <!-- Javascript -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/utilities.js"></script>
+  <script type="text/javascript">
+   $(function() {
+     
+   });
+  </script>
+</html>
