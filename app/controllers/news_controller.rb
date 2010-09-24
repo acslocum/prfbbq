@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
-  def news
+  def news_article
   end
-  def index
+  def home
   end
 
 end
