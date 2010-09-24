@@ -248,7 +248,7 @@ dl.ticket_info {
   padding-bottom:0.5em;
 }
 dl.ticket_info dt {
-/*  background-image:url(../img/ticket.png);
+/*  background-image:url(../images/ticket.png);
   background-position:0.4em 0.5em;
   background-repeat:no-repeat;*/
   border-bottom:0.1em solid #4dbddd;
@@ -359,11 +359,11 @@ ul.social_media li a {
   width:2em;
 }
 a.facebook {
-  background-image:url(../img/facebook.png);
+  background-image:url(../images/facebook.png);
   background-repeat:no-repeat;
 }
 a.twitter {
-  background-image:url(../img/twitter.png);
+  background-image:url(../images/twitter.png);
   background-repeat:no-repeat;
 }
 
@@ -445,7 +445,7 @@ ul#content-nav a.selected {
 /* Page Footer
 ==================================================== */
 #page-footer {
-  background-image:url(../img/footer.png);
+  background-image:url(../images/footer.png);
   background-repeat:repeat-x;
   clear:both;
   height:33em;
