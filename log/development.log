@@ -633,3 +633,19 @@ Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/news/index]
 Processing NewsController#index (for 127.0.0.1 at 2010-09-24 15:57:51) [GET]
 Rendering news/index
 Completed in 75ms (View: 73, DB: 0) | 200 OK [http://localhost/news/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:11:10) [GET]
+
+ActionController::RoutingError (No route matches "/news/home.tml" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:11:15) [GET]
+
+ActionController::RoutingError (No route matches "/news/home.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
