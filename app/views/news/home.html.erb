@@ -9,8 +9,8 @@
     
       <nav id="page-nav">
         <a href="#" class="selected">News</a>
-        <a href="#">Present</a>
-        <a href="#">Past</a>
+		<a href="/news/present">Present</a>
+		<a href="/news/past">Past</a>
       </nav>
 
       <!-- Show only if there are tickets/shows available -->
@@ -21,7 +21,7 @@
     </header>
 
       <section id="page-content" class="home">
-        <ul class="news">
+        <ul class="news" id="news-list">
 			<%= render (:partial=> "article", :collection=>@articles)%>
         </ul>
       </section>

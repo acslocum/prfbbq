@@ -2835,3 +2835,372 @@ ActionController::UnknownAction (No action responded to js. Actions: home, look_
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 17:42:25) [GET]
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.5ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 24ms (View: 17, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 17:42:25) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 17:42:25) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-09-28 17:42:29) [POST]
+  Parameters: {"commit"=>"Present", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E="}
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering news/present
+Rendered news/_article (42.5ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 55ms (View: 48, DB: 2) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 17:44:38) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (undefined method `link_tag' for #<ActionView::Base:0x19e4ef8>) on line #13 of app/views/news/home.html.erb:
+10:       <nav id="page-nav">
+11:         <a href="#" class="selected">News</a>
+12: 		<% form_remote_tag :url=> {:action => 'present'} do %>
+13: 			<%= link_tag "Present"%>
+14: 		<% end %>
+15: 		<% form_remote_tag :url=> {:action => 'past'} do %>
+16: 			<%= link_tag "Past"%>
+
+    app/views/news/home.html.erb:13
+    app/views/news/home.html.erb:12
+
+Rendered rescues/_trace (38.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 17:45:01) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.5ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 63ms (View: 58, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 17:45:01) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 17:45:01) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#past (for 127.0.0.1 at 2010-09-28 17:45:14) [POST]
+  Parameters: {"commit"=>"Past", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E="}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date < '2010-09-28') ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering news/past
+Rendered news/_article (2.4ms)
+Completed in 13ms (View: 7, DB: 2) | 200 OK [http://localhost/news/past]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 17:46:12) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.4ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (0.5ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 22ms (View: 17, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 17:46:12) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 17:46:12) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-09-28 17:46:14) [POST]
+  Parameters: {"commit"=>"Present", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E="}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering news/present
+Rendered news/_article (2.5ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 18:08:12) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.4ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.5ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 20ms (View: 15, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 18:08:12) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 18:08:12) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 18:08:46) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.5ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.5ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 20ms (View: 15, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 18:08:46) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 18:08:46) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 18:09:43) [GET]
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.5ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (0.5ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 22ms (View: 15, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 18:09:43) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 18:09:43) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-09-28 18:09:46) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%= article.title%> - <%= article.event_date_usa%></h1>
+4:   <%= article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/controllers/news_controller.rb:11:in `present'
+
+Rendered rescues/_trace (76.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 18:13:46) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.7ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.5ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 20ms (View: 15, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 18:13:46) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-09-28 18:13:48) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%= article.title%> - <%= article.event_date_usa%></h1>
+4:   <%= article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/controllers/news_controller.rb:11:in `present'
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-09-28 18:14:05) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%= article.title%> - <%= article.event_date_usa%></h1>
+4:   <%= article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/controllers/news_controller.rb:11:in `present'
+
+Rendered rescues/_trace (82.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-09-28 18:14:52) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 10ms (View: 4, DB: 2) | 200 OK [http://localhost/news/present]

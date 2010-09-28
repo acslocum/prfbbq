@@ -8,10 +8,12 @@ class NewsController < ApplicationController
   def present
     @articles = Article.find(:all, :conditions=>["event_date >= ?", Date.today], :order => "created_at DESC, id DESC")
     look_for_tickets
+    render :partial => "article", :collection => @articles
   end
   def past
     @articles = Article.find(:all, :conditions=>["event_date < ?", Date.today], :order => "created_at DESC, id DESC")
     look_for_tickets
+    render :partial => "article", :collection => @articles
   end  
 
   def look_for_tickets
