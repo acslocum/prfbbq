@@ -1,0 +1,5 @@
+<dd><% if (tickets.tickets_available) %><a href="<%=tickets.ticket_url%>"><% end %>
+<%= tickets.title %>/<%= tickets.event_date_short %>
+<% if (tickets.tickets_available) %></a><% else %>SOLD OUT!<% end %>
+</dd>
+

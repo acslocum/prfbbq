@@ -1799,3 +1799,1039 @@ ActionController::UnknownAction (No action responded to js. Actions: home and ne
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:57:57) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (51.6ms)
+Rendered news/_article (0.3ms)
+Completed in 73ms (View: 69, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:57:57) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:57:58) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "articles" ADD "event_date" date[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "articles" ADD "ticket_url" varchar(255)[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Update (0.2ms)[0m   [0;1mUPDATE "articles" SET "event_date" = '2010-10-10', "ticket_url" = 'http://www.google.com', "updated_at" = '2010-09-28 20:59:40' WHERE "id" = 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Update (0.1ms)[0m   [0;1mUPDATE "articles" SET "event_date" = '2010-10-20', "ticket_url" = 'http://www.yahoo.com', "updated_at" = '2010-09-28 20:59:40' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100928204447')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("articles")[0m
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:04:02) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (undefined local variable or method `ticket' for #<ActionView::Base:0x195b0f4>) on line #1 of app/views/news/_tickets.html.erb:
+1: <dd><a href="<%=ticket.ticket_url%>"><%= ticket.title%></a></dd>
+
+    app/views/news/_tickets.html.erb:1
+    app/views/news/home.html.erb:19
+
+Rendered rescues/_trace (88.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:04:29) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.1ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.2ms)
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:04:29) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:04:29) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:05:20) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.4ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:05:21) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:05:21) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "articles" ADD "tickets_available" boolean DEFAULT 't'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100928211023')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:11:44) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+
+NoMethodError (private method `now' called for Date:Class):
+  app/controllers/news_controller.rb:18:in `look_for_tickets'
+  app/controllers/news_controller.rb:6:in `home'
+
+Rendered rescues/_trace (27.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:12:12) [GET]
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+
+NoMethodError (private method `now' called for Date:Class):
+  app/controllers/news_controller.rb:18:in `look_for_tickets'
+  app/controllers/news_controller.rb:6:in `home'
+
+Rendered rescues/_trace (70.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:12:57) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: true: SELECT * FROM "articles" WHERE (event_date >= '2010-09-28' and tickets_available = true) ORDER BY created_at DESC, id DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: true: SELECT * FROM "articles" WHERE (event_date >= '2010-09-28' and tickets_available = true)  ORDER BY created_at DESC, id DESC):
+  app/controllers/news_controller.rb:18:in `look_for_tickets'
+  app/controllers/news_controller.rb:6:in `home'
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:13:28) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28' and tickets_available = 't') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.0ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Completed in 14ms (View: 8, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:13:28) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mArticle Create (0.5ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-28 21:20:06', 'Buffalo WTFBBQ', 't', 'Wild like wings YO', '2010-08-30', '2010-09-28 21:20:06', 'http://www.google.com')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-28 21:20:06', 'Cleveland BBQ', 'f', 'HELLO CLEVELAND', '2010-11-30', '2010-09-28 21:20:06', 'http://www.google.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100928211425')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("articles")[0m
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:20:10) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28' and tickets_available = 't') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.0ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Completed in 10ms (View: 5, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:20:10) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:20:11) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:22:18) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28' and tickets_available = 't') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.4ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Completed in 14ms (View: 9, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:22:18) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:22:19) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:22:21) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28' and tickets_available = 't') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.0ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.4ms)
+Completed in 10ms (View: 5, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:22:21) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:22:21) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:23:03) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28' and tickets_available = 't') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+ERROR: compiling _run_erb_app47views47news47_tickets46html46erb_locals_object_tickets_tickets_counter RAISED compile error
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/news/_tickets.html.erb:11: syntax error, unexpected kENSURE, expecting kEND
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/news/_tickets.html.erb:13: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47news47_tickets46html46erb_locals_object_tickets_tickets_counter(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];tickets = local_assigns[:tickets];tickets_counter = local_assigns[:tickets_counter];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<dd>";  if tickets.tickets_available begin ; @output_buffer.concat "\n"
+@output_buffer.concat "\t<a href=\""; @output_buffer.concat((tickets.ticket_url).to_s); @output_buffer.concat "\">\n"
+@output_buffer.concat "\t";  end ; @output_buffer.concat "\n"
+@output_buffer.concat(( tickets.title).to_s); @output_buffer.concat "\n"
+ if tickets.tickets_available begin ; @output_buffer.concat "\n"
+@output_buffer.concat "</a>\n"
+ else ; @output_buffer.concat "SOLD OUT";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "</dd>\n"
+@output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/news/_tickets.html.erb:13:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:221:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:216:in `map'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:216:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:182:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:262:in `render'
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/news/home.html.erb:19:in `_run_erb_app47views47news47home46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:301:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/news/_tickets.html.erb:11: syntax error, unexpected kENSURE, expecting kEND
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/news/_tickets.html.erb:13: syntax error, unexpected $end, expecting kEND) on line #11 of app/views/news/_tickets.html.erb:
+8: </dd>
+
+    app/views/news/_tickets.html.erb:13:in `compile!'
+    app/views/news/home.html.erb:19
+
+Rendered rescues/_trace (81.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:23:22) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28' and tickets_available = 't') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.5ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Completed in 14ms (View: 8, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:23:22) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:23:23) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:23:50) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28' and tickets_available = 't') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (undefined method `tickets_avaliable' for #<Article:0x19f5f78>) on line #8 of app/views/news/_tickets.html.erb:
+5: <% if (tickets.tickets_available) %>
+6: </a>
+7: <% else %>SOLD OUT<% end %>
+8: <%=tickets.tickets_avaliable%>
+9: </dd>
+
+    app/views/news/_tickets.html.erb:8
+    app/views/news/home.html.erb:19
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:24:44) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28' and tickets_available = 't') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.6ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (44.6ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Completed in 58ms (View: 53, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:24:44) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:24:44) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:25:06) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.0ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Completed in 10ms (View: 5, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:25:07) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:25:07) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:25:59) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.5ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Completed in 14ms (View: 9, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:25:59) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:26:00) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:26:20) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.5ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.3ms)
+Completed in 14ms (View: 9, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:26:20) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:26:20) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:26:40) [GET]
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.0ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:26:40) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:26:40) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:26:43) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.0ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Completed in 10ms (View: 5, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:26:43) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:28:09) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.0ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_tickets (0.1ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Completed in 10ms (View: 5, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:28:09) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:28:10) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:34:07) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.8ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:34:07) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:34:07) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:34:37) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.8ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Rendered news/_article (0.2ms)
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:34:37) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:34:37) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:35:34) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (0.5ms)
+Rendered news/_article (0.3ms)
+Rendered news/_article (0.3ms)
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:35:34) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:39:15) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.7ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+
+ActionView::TemplateError (undefined local variable or method `created_ad' for #<Article:0x19357f0>) on line #8 of app/views/news/_article.html.erb:
+5: </section>
+6: 
+7: <aside class="time_stamp">
+8:   <h3><%= article.created_at_formatted%></h3>
+9:   
+10:   <!-- Links up to Facebook/Twitter -->
+11:   <ul class="social_media">
+
+    app/models/article.rb:9:in `created_at_formatted'
+    app/views/news/_article.html.erb:8
+    app/views/news/home.html.erb:25
+
+Rendered rescues/_trace (88.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:39:26) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:39:26) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:39:26) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:39:54) [GET]
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:39:55) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:39:55) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:44:21) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (1.2ms)
+Rendered news/_article (0.5ms)
+Completed in 18ms (View: 12, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:44:21) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:44:21) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 16:44:59) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-28') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (0.5ms)
+Rendered news/_article (0.4ms)
+Rendered news/_article (0.4ms)
+Completed in 16ms (View: 11, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 16:44:59) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)

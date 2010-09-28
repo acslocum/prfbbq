@@ -1,16 +1,16 @@
 <li class="story">
 <section class="story_container">          
-  <h1><%= article.title%></h1>
+  <h1><%= article.title%> - <%= article.event_date_usa%></h1>
   <%= article.content%>
 </section>
 
 <aside class="time_stamp">
-  <h3><%= article.created_at%></h3>
+  <h3><%= article.created_at_formatted%></h3>
   
   <!-- Links up to Facebook/Twitter -->
   <ul class="social_media">
     <li><a href="#" class="facebook">facebook</a></li>
-    <li><a href="#" class="twitter">twitter</a></li>
+    <li><a href="http://twitter.com/search?q=<%=article.twitter_hashtag%>" class="twitter">twitter</a></li>
   </ul>
 </aside>
 </li>

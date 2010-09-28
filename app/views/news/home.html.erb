@@ -15,9 +15,8 @@
 
       <!-- Show only if there are tickets/shows available -->
       <dl class="ticket_info">
-        <dt>Tickets</dt>
-        <dd><a href="#">CHI/OCT '10</a></dd>
-        <dd><a href="#">NYC/DEC '10</a></dd>
+		<dt>Tickets</dt>
+		<%= render (:partial=>"tickets", :collection=>@available_tickets)%>
       </dl>
     </header>
 

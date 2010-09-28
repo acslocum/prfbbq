@@ -9,13 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100928185250) do
+ActiveRecord::Schema.define(:version => 20100928211425) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "event_date"
+    t.string   "ticket_url"
+    t.boolean  "tickets_available", :default => true
   end
 
 end
