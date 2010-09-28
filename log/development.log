@@ -649,3 +649,1153 @@ ActionController::RoutingError (No route matches "/news/home.html" with {:method
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:16:13) [GET]
+
+ActionController::RoutingError (No route matches "/news/home.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-24 16:16:19) [GET]
+Rendering news/home
+Completed in 165ms (View: 164, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:16:19) [GET]
+
+ActionController::RoutingError (No route matches "/css/reset.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:16:19) [GET]
+
+ActionController::RoutingError (No route matches "/css/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-09-24 16:16:19) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:16:20) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-09-24 16:16:20) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-09-24 16:16:22) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-24 16:16:46) [GET]
+Rendering news/home
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#css to css (for 127.0.0.1 at 2010-09-24 16:16:46) [GET]
+  Parameters: {"id"=>"reset"}
+
+ActionController::UnknownAction (No action responded to css. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#css to css (for 127.0.0.1 at 2010-09-24 16:16:46) [GET]
+  Parameters: {"id"=>"main"}
+
+ActionController::UnknownAction (No action responded to css. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:16:46) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:16:46) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-24 16:17:16) [GET]
+Rendering news/home
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#css to css (for 127.0.0.1 at 2010-09-24 16:17:16) [GET]
+  Parameters: {"id"=>"reset"}
+
+ActionController::UnknownAction (No action responded to css. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#css to css (for 127.0.0.1 at 2010-09-24 16:17:16) [GET]
+  Parameters: {"id"=>"main"}
+
+ActionController::UnknownAction (No action responded to css. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:17:16) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:17:16) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:17:35) [GET]
+
+ActionController::RoutingError (No route matches "/css/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-24 16:18:16) [GET]
+Rendering news/home
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:18:16) [GET]
+
+ActionController::RoutingError (No route matches "/css/reset.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:18:16) [GET]
+
+ActionController::RoutingError (No route matches "/css/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:18:16) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:18:16) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-24 16:18:17) [GET]
+Rendering news/home
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:18:17) [GET]
+
+ActionController::RoutingError (No route matches "/css/reset.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:18:17) [GET]
+
+ActionController::RoutingError (No route matches "/css/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:18:17) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:18:17) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-24 16:22:56) [GET]
+Rendering news/home
+Completed in 48ms (View: 47, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:22:56) [GET]
+
+ActionController::RoutingError (No route matches "/img/facebook.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:22:56) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:22:56) [GET]
+
+ActionController::RoutingError (No route matches "/img/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:22:56) [GET]
+
+ActionController::RoutingError (No route matches "/img/footer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:22:57) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-24 16:26:20) [GET]
+Rendering news/home
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:26:20) [GET]
+
+ActionController::RoutingError (No route matches "/img/facebook.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:26:20) [GET]
+
+ActionController::RoutingError (No route matches "/img/twitter.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-24 16:26:20) [GET]
+
+ActionController::RoutingError (No route matches "/img/footer.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:26:20) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-24 16:27:24) [GET]
+Rendering news/home
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:27:24) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:27:24) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-24 16:27:45) [GET]
+Rendering news/home
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:27:45) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:27:45) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-24 16:34:44) [GET]
+Rendering news/home
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:34:44) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-24 16:34:45) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 08:23:18) [GET]
+Rendering news/home
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 08:23:19) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-09-28 08:23:20) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-09-28 08:23:21) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 13:38:54) [GET]
+Rendering news/home
+Completed in 57ms (View: 55, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-09-28 13:38:54) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 13:38:55) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-09-28 13:38:55) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-09-28 13:38:57) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (38.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100928184505')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mArticle Delete all (0.4ms)[0m   [0mDELETE FROM "articles" WHERE 1=1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mArticle Delete all (0.4ms)[0m   [0mDELETE FROM "articles" WHERE 1=1[0m
+  [4;36;1mArticle Create (0.2ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2010-09-28 18:56:26', 'Chicago BBQ', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href="#">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.</p>
+ <p>In hac habitasse platea dictumst. In in massa in quam hendrerit gravida sed a purus. Donec placerat tristique laoreet. Proin hendrerit magna et lectus dictum vitae ornare nunc lacinia. Nulla facilisi. Aliquam dui neque, dictum sit amet cursus quis, condimentum eu leo. Pellentesque tempus velit ut mauris condimentum vitae gravida enim accumsan. Quisque ultrices nisi ac tortor malesuada accumsan. In hac habitasse platea dictumst.</p>
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien.</p>', '2010-09-28 18:56:26')[0m
+  [4;35;1mArticle Create (0.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2010-09-28 18:56:26', 'NYC BBQ', '<p>Some text</p>', '2010-09-28 18:56:26')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100928185250')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:04:12) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #29 of app/views/news/home.html.erb:
+26: 		<%@articles.each do |article|%>
+27:           <li class="story">
+28:             <section class="story_container">          
+29:               <h1><%=h @article.title%></h1>
+30: 			  <%=h @article.content%>
+31:             </section>
+32:           
+
+    app/views/news/home.html.erb:29
+    app/views/news/home.html.erb:26:in `each'
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (35.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:07:24) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #29 of app/views/news/home.html.erb:
+26: 		<%@articles.each do |article|%>
+27:           <li class="story">
+28:             <section class="story_container">          
+29:               <h1><%=h @article.title%></h1>
+30: 			  <%=h @article.content%>
+31:             </section>
+32:           
+
+    app/views/news/home.html.erb:29
+    app/views/news/home.html.erb:26:in `each'
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:07:53) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #29 of app/views/news/home.html.erb:
+26: 		<%@articles.each do |article|%>
+27:           <li class="story">
+28:             <section class="story_container">          
+29:               <h1><%=h @article.title%></h1>
+30: 			  <%=h @article.content%>
+31:             </section>
+32:           
+
+    app/views/news/home.html.erb:29
+    app/views/news/home.html.erb:26:in `each'
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:09:45) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #29 of app/views/news/home.html.erb:
+26: 		<%@articles.each do |article|%>
+27:           <li class="story">
+28:             <section class="story_container">          
+29:               <h1><%=h @article.title%></h1>
+30: 			  <%=h @article.content%>
+31:             </section>
+32:           
+
+    app/views/news/home.html.erb:29
+    app/views/news/home.html.erb:26:in `each'
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:25:36) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of app/views/news/_article.html.erb:
+1: <section class="story_container">          
+2:   <h1><%=h @article.title%></h1>
+3:   <%=h @article.content%>
+4: </section>
+5: 
+
+    app/views/news/_article.html.erb:2
+    app/views/news/home.html.erb:28
+    app/views/news/home.html.erb:26:in `each'
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (42.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:25:55) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of app/views/news/_article.html.erb:
+1: <section class="story_container">          
+2:   <h1><%=h @article.title%></h1>
+3:   <%=h @article.content%>
+4: </section>
+5: 
+
+    app/views/news/_article.html.erb:2
+    app/views/news/home.html.erb:28
+    app/views/news/home.html.erb:26:in `each'
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (44.3ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:25:57) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of app/views/news/_article.html.erb:
+1: <section class="story_container">          
+2:   <h1><%=h @article.title%></h1>
+3:   <%=h @article.content%>
+4: </section>
+5: 
+
+    app/views/news/_article.html.erb:2
+    app/views/news/home.html.erb:28
+    app/views/news/home.html.erb:26:in `each'
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:30:07) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (42.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:31:20) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (92.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:31:30) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:32:40) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+
+NoMethodError (undefined method `add' for #<Array:0x1a3df44>):
+  app/controllers/news_controller.rb:6:in `home'
+
+Rendered rescues/_trace (27.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:34:21) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (89.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:34:35) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:35:31) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:35:32) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (89.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:36:17) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:28
+
+Rendered rescues/_trace (91.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:36:19) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:28
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:36:51) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:28
+
+Rendered rescues/_trace (42.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:36:52) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%=h @article.title%></h1>
+4:   <%=h @article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:28
+
+Rendered rescues/_trace (89.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:37:22) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:37:22) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:37:22) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:38:09) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:38:09) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:38:09) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:42:29) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:42:29) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:42:30) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:42:31) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:42:31) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:42:31) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:42:45) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.1ms)
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:42:46) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:42:46) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:43:00) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.2ms)
+Rendered news/_article (0.1ms)
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:43:00) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:43:00) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:47:04) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (undefined method `timestamp' for #<Article:0x17a4684>) on line #8 of app/views/news/_article.html.erb:
+5: </section>
+6: 
+7: <aside class="time_stamp">
+8:   <h3><%= article.timestamp%></h3>
+9:   
+10:   <!-- Links up to Facebook/Twitter -->
+11:   <ul class="social_media">
+
+    app/views/news/_article.html.erb:8
+    app/views/news/home.html.erb:26
+
+Rendered rescues/_trace (86.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-28 14:48:36) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (179.4ms)
+Rendered news/_article (0.3ms)
+Completed in 188ms (View: 184, DB: 0) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:48:36) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-28 14:48:36) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home and news_article):
+  
+
+Rendering rescues/layout (not_found)
