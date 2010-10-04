@@ -1,6 +1,6 @@
 <li class="story">
 <section class="story_container">          
-  <h1><%= article.title%> - <%= article.event_date_usa%></h1>
+  <h1><%= link_to article.full_title, :action=>"article", :id=>article.permalink %></h1>
   <%= article.content%>
 </section>
 

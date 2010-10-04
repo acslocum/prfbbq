@@ -3204,3 +3204,1309 @@ Rendered news/_article (2.4ms)
 Rendered news/_article (0.4ms)
 Rendered news/_article (0.4ms)
 Completed in 10ms (View: 4, DB: 2) | 200 OK [http://localhost/news/present]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime, "event_date" date, "ticket_url" varchar(255), "tickets_available" boolean DEFAULT 't') [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100928211425')[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100928184505')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100928185250')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100928204447')[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100928211023')[0m
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:06:46) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 24ms (View: 17, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:06:46) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:06:47) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:07:02) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (2.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 20ms (View: 14, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:07:02) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:07:02) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:07:04) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (38.6ms)
+Completed in 53ms (View: 47, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:07:04) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:07:05) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:08:22) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (2.0ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 20ms (View: 14, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:08:22) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:08:22) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:09:08) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (2.6ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 20ms (View: 14, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:09:08) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:09:08) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:09:42) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (1.8ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.5ms)
+Rendered news/_article (0.5ms)
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:09:42) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:09:42) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:10:15) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (2.0ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:10:15) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:10:15) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:10:28) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:10:29) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:10:29) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:10:52) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.7ms)
+Completed in 20ms (View: 14, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:10:53) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:10:53) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:11:29) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:11:29) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:11:30) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:12:24) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.9ms)
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:12:25) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:12:25) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:13:04) [GET]
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (2.1ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 20ms (View: 14, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:13:05) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:13:05) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:45:23) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.7ms)
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:45:23) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:45:23) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:45:25) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.3ms)
+Rendered news/_tickets (0.5ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:45:26) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:45:26) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:47:34) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.1ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (1.8ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:47:34) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:47:34) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#cleveland-bbq-11-30-2010 (for 127.0.0.1 at 2010-09-29 18:47:38) [GET]
+
+ActionController::UnknownAction (No action responded to cleveland-bbq-11-30-2010. Actions: home, look_for_tickets, news_article, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:48:22) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.1ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+
+ActionView::TemplateError (undefined method `article_path' for #<ActionView::Base:0x17c2648>) on line #3 of app/views/news/_article.html.erb:
+1: <li class="story">
+2: <section class="story_container">          
+3:   <h1><%= link_to article.full_title, article_path(article.permalink) %></h1>
+4:   <%= article.content%>
+5: </section>
+6: 
+
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:25
+
+Rendered rescues/_trace (83.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:50:59) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:50:59) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:50:59) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-09-29 18:51:02) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+
+NoMethodError (private method `split' called for 13591820:Fixnum):
+  app/models/article.rb:40:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:51:38) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.8ms)
+Completed in 15ms (View: 10, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:51:38) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:51:38) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-09-29 18:51:40) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered rescues/_trace (27.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-09-29 18:51:55) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:52:00) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (2.1ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.8ms)
+Completed in 21ms (View: 14, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:52:00) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:52:01) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-09-29 18:52:04) [GET]
+  Parameters: {"permalink"=>"cleveland-bbq-11-30-2010"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered rescues/_trace (67.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:55:36) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Completed in 19ms (View: 14, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:55:36) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:55:36) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-09-29 18:55:38) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered rescues/_trace (67.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-09-29 18:55:54) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-09-29') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:55:54) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-09-29 18:55:54) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-09-29 18:55:56) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+
+NoMethodError (private method `split' called for 13943160:Fixnum):
+  app/models/article.rb:40:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (28.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-01 08:17:53) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-01') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.1ms)
+Completed in 45ms (View: 13, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-01 08:17:54) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-10-01 08:17:56) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-10-01 08:17:57) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-10-04 09:07:47) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-10-04 14:39:48) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-04 14:42:45) [GET]
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (1.2ms)
+Completed in 89ms (View: 11, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 14:42:45) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 14:42:45) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:42:48) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered rescues/_trace (27.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:43:16) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered rescues/_trace (71.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:43:42) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:44:02) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered rescues/_trace (73.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:44:32) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+
+NoMethodError (private method `split' called for :id:Symbol):
+  app/models/article.rb:40:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (28.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:45:23) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (4.7ms)
+Completed in 91ms (View: 87, DB: 0) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:23) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:45:23) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.join):
+  app/models/article.rb:42:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:23) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:23) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:45:23) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.join):
+  app/models/article.rb:42:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (70.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:45:26) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.join):
+  app/models/article.rb:42:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (30.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:45:26) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.join):
+  app/models/article.rb:42:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (76.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:45:30) [GET]
+  Parameters: {"id"=>"buffalo-wtfbbq-08-30-2010"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (lower(title) like '%buffalo wtfbbq%' and event_date = '2010-08-30') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.9ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/news/article/buffalo-wtfbbq-08-30-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:30) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:30) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:30) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:45:35) [GET]
+  Parameters: {"id"=>"chicago-bbq-10-10-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%chicago bbq%' and event_date = '2010-10-10') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.8ms)
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/news/article/chicago-bbq-10-10-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:35) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:35) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:35) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:45:47) [GET]
+  Parameters: {"id"=>"nyc-bbq-10-20-2010"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (lower(title) like '%nyc bbq%' and event_date = '2010-10-20') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.8ms)
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/news/article/nyc-bbq-10-20-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:47) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:47) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:45:47) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-04 14:46:03) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 14:46:03) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 14:46:03) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:46:04) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.0ms)
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:46:04) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:46:05) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:46:05) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 14:46:56) [GET]
+  Parameters: {"id"=>"chicago-bbq-10-10-2010"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (lower(title) like '%chicago bbq%' and event_date = '2010-10-10') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.8ms)
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/news/article/chicago-bbq-10-10-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:46:56) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:46:56) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:46:56) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-10-04 14:47:31) [GET]
+Rendering template within layouts/news
+Rendering news/index
+Completed in 47ms (View: 46, DB: 0) | 200 OK [http://localhost/news]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:47:32) [GET]
+
+ActionController::RoutingError (No route matches "/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:47:32) [GET]
+
+ActionController::RoutingError (No route matches "/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:47:32) [GET]
+
+ActionController::RoutingError (No route matches "/make%20favcon" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:47:32) [GET]
+
+ActionController::RoutingError (No route matches "/make%20favcon" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 14:47:35) [GET]
+
+ActionController::RoutingError (No route matches "/make%20favcon" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-04 14:47:44) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (0.9ms)
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 14:47:44) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 14:47:45) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)

@@ -1,0 +1,42 @@
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 21:50:57', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 21:50:57', NULL)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:43:21', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:43:21', NULL)[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:47:43', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:47:43', NULL)[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."title" = 'chicago bbq' AND "articles"."event_date" = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:48:04', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:48:04', NULL)[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."title" = 'chicago bbq' AND "articles"."event_date" = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:48:28', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:48:28', NULL)[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."title" = 'chicago bbq' AND "articles"."event_date" = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:49:09', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:49:09', NULL)[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."title" = 'chicago bbq' AND "articles"."event_date" = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:49:32', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:49:32', NULL)[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."title" = 'chicago bbq' AND "articles"."event_date" = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:50:58', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:50:58', NULL)[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."title" = 'chicago bbq' AND "articles"."event_date" = '2010-10-12') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:51:19', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:51:19', NULL)[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."title" = 'chicago bbq' AND "articles"."event_date" = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:53:03', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:53:03', NULL)[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:53:54', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:53:54', NULL)[0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."title" = 'chicago bbq' AND "articles"."event_date" = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:55:00', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:55:00', NULL)[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:55:33', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:55:33', NULL)[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSQLite3::SQLException: no such function: to_lower: SELECT * FROM "articles" WHERE (to_lower(title) = 'chicago bbq' and event_date = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:58:13', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:58:13', NULL)[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSQLite3::SQLException: near "ILIKE": syntax error: SELECT * FROM "articles" WHERE (title ILIKE 'chicago bbq' and event_date = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:58:54', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:58:54', NULL)[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSQLite3::SQLException: near "ILIKE": syntax error: SELECT * FROM "articles" WHERE (title ILIKE '%chicago bbq%' and event_date = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:59:23', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:59:23', NULL)[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (lower(title) like '%chicago bbq%' and event_date = '2010-10-12') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-09-29 22:59:54', 'Chicago BBQ', 't', NULL, '2010-10-12', '2010-09-29 22:59:54', NULL)[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (lower(title) like '%chicago bbq%' and event_date = '2010-10-12') LIMIT 1[0m
