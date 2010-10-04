@@ -4510,3 +4510,275 @@ ActionController::UnknownAction (No action responded to js. Actions: article, ho
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 16:16:03) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (6.4ms)
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:16:03) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:16:03) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:16:04) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 16:16:24) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.9ms)
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:16:24) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:16:24) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:16:24) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 16:16:48) [GET]
+  Parameters: {"id"=>"nyc-bbq-10-20-2010"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%nyc bbq%' and event_date = '2010-10-20') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.7ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/news/article/nyc-bbq-10-20-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:16:48) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:16:49) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:16:49) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-04 16:19:45) [GET]
+  [4;35;1mArticle Load (110.8ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.9ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.8ms)
+Completed in 131ms (View: 15, DB: 112) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 16:19:45) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 16:19:45) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 16:19:46) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_tickets (2.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (1.2ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:19:46) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:19:47) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-04 16:19:49) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 16:19:49) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 16:19:49) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-04 16:19:54) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY created_at DESC, id DESC[0m
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY event_date DESC, id DESC[0m
+Rendered news/_article (3.0ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.8ms)
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#past (for 127.0.0.1 at 2010-10-04 16:19:57) [GET]
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date < '2010-10-04') ORDER BY created_at DESC, id DESC[0m
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY event_date DESC, id DESC[0m
+Rendered news/_article (3.0ms)
+Completed in 10ms (View: 4, DB: 2) | 200 OK [http://localhost/news/past]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-04 16:20:08) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 16:20:08) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#js to js (for 127.0.0.1 at 2010-10-04 16:20:08) [GET]
+  Parameters: {"id"=>"utilities"}
+
+ActionController::UnknownAction (No action responded to js. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-04 16:20:16) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-10-04') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_tickets (2.2ms)
+Rendered news/_tickets (0.3ms)
+Rendered news/_tickets (0.2ms)
+Rendered news/_article (0.9ms)
+Completed in 13ms (View: 7, DB: 2) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:20:16) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-04 16:20:16) [GET]
+
+ActionController::RoutingError (No route matches "/news/article/js/utilities.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

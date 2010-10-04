@@ -20,6 +20,7 @@ class NewsController < ApplicationController
   
   def article
     @article = Article.find_by_permalink(params[:id])
+    look_for_tickets
   end
 
 end

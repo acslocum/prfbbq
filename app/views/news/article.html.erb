@@ -1,44 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>PRFBBQ - [News Article Title] </title>
-    <meta name="description" content="PRFBBQ - 2010" />
-    <meta name="robots" content="robots.txt" />
-    
-    <!-- CSS -->
-    <%= stylesheet_link_tag "reset" %>
-	<%= stylesheet_link_tag "main" %>
-    
-    <!-- FAVCONS -->
-    <link rel="image/x-icon" href="make favcon"/>
-    <link rel="apple-touch-icon" href="make favcon"/>
-    <link rel="shortcut icon" href="make favcon" type="image/x-icon"/>
-    
-    <!--[if IE]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
+
   
   <body id="www-prfbbq-com">
     <div id="page-wrapper">
       <header id="page-header">
         <h1>
-          <a href="/">
+          <a href="/news/home">
             PRF BBQ
           </a>
         </h1>
       
-        <nav id="page-nav">
-          <a href="#" class="selected">News</a>
-          <a href="#">Present</a>
-          <a href="#">Past</a>
-        </nav>
+      <nav id="page-nav">
+        <a href="/news/home" class="selected">News</a>
+		<a href="/news/present">Present</a>
+		<a href="/news/past">Past</a>
+      </nav>
         
         <!-- Show only if there are tickets/shows available -->
         <dl class="ticket_info">
           <dt>Tickets</dt>
-          <dd><a href="#">CHI/OCT '10</a></dd>
-          <dd><a href="#">NYC/DEC '10</a></dd>
+		<%= render (:partial=>"tickets", :collection=>@available_tickets)%>
         </dl>
       </header>
 
@@ -53,12 +33,3 @@
     </footer>
   </body>
   
-  <!-- Javascript -->
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script type="text/javascript" src="js/utilities.js"></script>
-  <script type="text/javascript">
-   $(function() {
-     
-   });
-  </script>
-</html>
