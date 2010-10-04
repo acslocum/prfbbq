@@ -262,7 +262,8 @@ dl.ticket_info dt {
 dl.ticket_info dd {
   margin-bottom:0.5em;
 }
-dl.ticket_info dd a {
+dl.ticket_info dd a,
+dl.ticket_info dd span {
   display:block;
   font-family:'MuseoSlab500';
   font-size:1em;
@@ -272,6 +273,9 @@ dl.ticket_info dd a {
 dl.ticket_info dd a:hover {
   background-color:#4c4c4c;
   color:#fff;
+}
+dl.ticket_info dd span {
+  color:#4c4c4c;
 }
 
 /* Page Content
@@ -300,7 +304,7 @@ dl.ticket_info dd a:hover {
 #page-content.home .story_container {
   border-right:0.5em solid #45aac6;
   float:left;
-  padding:0 2em;
+  padding:0 2em 1em;
   width:52em;
 }
 
@@ -317,6 +321,7 @@ dl.ticket_info dd a:hover {
 }
 #page-content.home .time_stamp ul.social_media {
   float:right;
+  margin-bottom:1em;
 }
 
 #page-content.news_article .time_stamp {
@@ -332,6 +337,17 @@ dl.ticket_info dd a:hover {
   float:left;
   font-family:'MuseoSlab500';
   font-size:1.6em;
+}
+
+#page-content ul.single_article {
+  
+}
+#page-content ul.single_article aside.time_stamp {
+  border-bottom:none;
+  border-top:0.5em solid #45AAC6;
+  margin:1.5em 0 0;
+  overflow:hidden;
+  padding:1.5em 0 0;
 }
 
 #page-content hgroup.date {
@@ -351,12 +367,7 @@ ul.social_media li {
   margin-left:0.5em;
 }
 ul.social_media li a {
-  display:block;
-  font-size:1em;
-  height:2em;
-  overflow:hidden;
-  text-indent:-999em;
-  width:2em;
+
 }
 a.facebook {
   background-image:url(../images/facebook.png);

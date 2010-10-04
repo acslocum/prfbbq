@@ -1,35 +1,5 @@
-
-  
-  <body id="www-prfbbq-com">
-    <div id="page-wrapper">
-      <header id="page-header">
-        <h1>
-          <a href="/news/home">
-            PRF BBQ
-          </a>
-        </h1>
-      
-      <nav id="page-nav">
-        <a href="/news/home" class="selected">News</a>
-		<a href="/news/present">Present</a>
-		<a href="/news/past">Past</a>
-      </nav>
-        
-        <!-- Show only if there are tickets/shows available -->
-        <dl class="ticket_info">
-          <dt>Tickets</dt>
-		<%= render (:partial=>"tickets", :collection=>@available_tickets)%>
-        </dl>
-      </header>
-
-      <section id="page-content" class="news_article">
-        <%= render (:partial=> "article", :object=>@article)%>
-      </section>
-    </div>
-    
-    <div style="clear:both;"></div>
-    <footer id="page-footer">
-
-    </footer>
-  </body>
-  
+<section id="page-content" class="news_article">
+  <ul class="single_article">
+    <%= render (:partial=> "article", :object=>@article)%>
+  </ul>
+</section>

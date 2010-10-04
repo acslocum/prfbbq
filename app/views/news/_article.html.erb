@@ -1,16 +1,18 @@
 <li class="story">
-<section class="story_container">          
-  <h1><%= link_to article.full_title, :action=>"article", :id=>article.permalink %></h1>
-  <%= article.content%>
-</section>
+  <section class="story_container">          
+    <h1><%= link_to article.full_title, :action=>"article", :id=>article.permalink %></h1>
+    <%= article.content%>
+  </section>
 
-<aside class="time_stamp">
-  <h3><%= article.created_at_formatted%></h3>
+  <aside class="time_stamp">
+    <h3><%= article.created_at_formatted%></h3>
   
-  <!-- Links up to Facebook/Twitter -->
-  <ul class="social_media">
-    <li><a href="#" class="facebook">facebook</a></li>
-    <li><a href="http://twitter.com/search?q=<%=article.twitter_hashtag%>" class="twitter">twitter</a></li>
-  </ul>
-</aside>
+    <!-- Links up to Facebook/Twitter -->
+    <ul class="social_media">
+      <li>
+        <a name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php">Share</a>
+        <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share"></script>
+      </li>
+    </ul>
+  </aside>
 </li>
