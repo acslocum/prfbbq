@@ -1,11 +1,11 @@
 function VerticalScroller(container) {
   var height = $(container).innerHeight();
-
+  console.log(height);
   $(container).css({overflow:'hidden'});
   
-  // $(container).mousemove(function(event) {
-  //   $(this).scrollUp();
-  // });
+  $(container).mousemove(function(event) {
+    $(this).scrollUp();
+  });
 };
 
 // $(function(){

@@ -188,16 +188,19 @@ h6 {
 /* Page Header 
 ==================================================== */
 #page-wrapper {
-  width:95em;
-  margin:4em auto;
+  margin:4em auto 0;
+  position:relative;
+  width:97em;
 }
 
 /* Page Header 
 ==================================================== */
 #page-header {
   float:left;
+  position:relative;
   text-align:left;
   width:21em;
+  z-index:100;
 }
 
 #page-header h1 {
@@ -209,7 +212,7 @@ h6 {
   font-size:4em;
   line-height:0.8em;
   text-decoration:none;
-  text-shadow: #282729 -0.02em 0.02em 0;
+  text-shadow:#282729 -0.02em 0.02em 0;
 }
 
 /* Page Nav
@@ -233,10 +236,13 @@ h6 {
   text-transform:uppercase;
 }
 #page-nav a:hover {
-  background-color:#4c4c4c;
+  background-color:#a0e2f0;
+  color:#4c4c4c;
 }
-#page-nav a.selected {
-  background-color:#f00;
+#page-nav a.selected,
+#page-nav a.selected:hover {
+  background-color:#4c4c4c;
+  color:#fff;
 }
 
 /* Ticket Info
@@ -282,9 +288,10 @@ dl.ticket_info dd span {
 ==================================================== */
 #page-content {
   float:left;
+  height:48em;
   padding:0 1em 0 4.5em;
   text-align:left;
-  width:68em;
+  width:70em;
 }
 
 #page-content h1 {
@@ -458,11 +465,26 @@ ul#content-nav a.selected {
 #page-footer {
   background-image:url(../images/footer.png);
   background-repeat:repeat-x;
+  background-position:bottom left;
   clear:both;
   height:33em;
-  margin-top:2em;
   text-align:center;
   width:100%;
+}
+
+/* Martyred Saints
+==================================================== */
+#martyred_saint {
+  clear:both;
+  margin:0 auto;
+  position:relative;
+  width:95em;
+}
+#martyred_saint img {
+  bottom:0;
+  font-size:1em;
+  left:-1.5em;
+  position:absolute;
 }
 
 /* Icons & Effects
@@ -472,4 +494,67 @@ ul#content-nav a.selected {
   clear:both;
   height:30em;
   width:30em;
+}
+
+/* ScrollPane 
+---------------------------------------------------- */
+.jScrollPaneContainer {
+	overflow:hidden;
+	position:relative;
+}
+
+.jScrollPaneTrack {
+  background:#60d6ef;
+	cursor:pointer;
+	height:100%;
+	position:absolute;
+	right:0;
+	top:0;
+}
+.jScrollPaneDrag {
+  background:#208da5;
+	cursor:pointer;
+	overflow:hidden;
+	position:absolute;
+}
+.jScrollPaneDrag:hover {
+  background:#2398b2;
+}
+.jScrollPaneDragTop {
+	left:0;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+}
+.jScrollPaneDragBottom {
+	bottom:0;
+	left:0;
+	overflow:hidden;
+	position:absolute;
+}
+a.jScrollArrowUp {
+  background-image:url(../images/scroll_arrows.png);
+	display:block;
+	font-size:1em;
+	height:0.9em;
+	overflow:hidden;
+	position:absolute;
+	right:0;
+	text-indent:-200em;
+	top:0;
+	z-index:1;
+}
+
+a.jScrollArrowDown {
+  background-image:url(../images/scroll_arrows.png);
+  background-position:0 -0.8em;
+  bottom:0;
+	display:block;
+	font-size:1em;
+	height:0.9em;
+	overflow:hidden;
+	position:absolute;
+	right:0;
+	z-index:1;
+	text-indent:-200em;
 }

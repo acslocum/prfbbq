@@ -39,28 +39,26 @@
           <a href="/news/past">Past</a>
         </nav>
 
-        <%-# Show only if there are tickets/shows available -%>
-        <dl class="ticket_info">
-      		<dt>Tickets</dt>
-      		<%= render (:partial=>"tickets", :collection=>@available_tickets)%>
-        </dl>
-      </header>
+          <%-# Show only if there are tickets/shows available -%>
+          <%-#<dl class="ticket_info">-%>
+            <%-#<dt>Tickets</dt>-%>
+            <%-#<%= render (:partial=>"tickets", :collection=>@available_tickets)%>-%>
+          <%-#</dl> -%>
+        </header>
 
-      <%= yield :layout %>
+        <%= yield :layout %>
     </div>
-
+    
     <div style="clear:both;"></div>
     <footer id="page-footer">
-      <%= @time %>
-    </footer>
+    </footer> 
+    <div id="martyred_saint">
+      <img src="/images/burning_hotdog.png" />
+    </div>
   </body>
 
   <%-# Javascript -%>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script type="text/javascript" src="js/utilities.js"></script>
-  <script type="text/javascript">
-   $(function() {
-     
-   });
-  </script>
+  <%= javascript_include_tag 'jquery/jquery-1.4.2.js' %>
+  <%= javascript_include_tag 'utilities.js' %>
+  <%= javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' %>
 </html>
