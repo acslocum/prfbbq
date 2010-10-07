@@ -1,6 +1,6 @@
 <section class="story_container">          
   <div class="title_container">
-    <h1 class="article_title"><%= link_to article.full_title, {:action=>"article"}, :id=>article.permalink -%></h1>
+    <h1 class="article_title"><%= link_to article.full_title, :action=>"article", :id=>article.permalink -%></h1>
     <ul class="info">
       <li class="time_stamp">
         <%= article.created_at_formatted -%>

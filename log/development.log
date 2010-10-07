@@ -13881,3 +13881,95 @@ Rendered news/_article (1.4ms)
 Rendered news/_article (1.8ms)
 Rendered news/_article (1.6ms)
 Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 19:51:58) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 19:52:00) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.split):
+  app/models/article.rb:40:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (91.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 19:52:03) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.split):
+  app/models/article.rb:40:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (29.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 19:52:38) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.2ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.5ms)
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 19:52:45) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.split):
+  app/models/article.rb:40:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (29.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 19:53:29) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.split):
+  app/models/article.rb:40:in `extract_title'
+  app/models/article.rb:34:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (29.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 19:53:38) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.8ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.4ms)
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/news/home]
