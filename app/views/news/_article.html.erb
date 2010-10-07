@@ -1,16 +1,16 @@
 <section class="story_container">          
   <div class="title_container">
-    <h1 class="article_title"><%= link_to article.full_title, :action=>"article", :id=>article.permalink %></h1>
+    <h1 class="article_title"><%= link_to article.full_title, {:action=>"article"}, :id=>article.permalink -%></h1>
     <ul class="info">
       <li class="time_stamp">
-        <%= article.created_at_formatted%>
+        <%= article.created_at_formatted -%>
       </li>
       <li class="share">
-        <a name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php">Share</a>
+        <%= link_to 'Share', {:action => 'http://www.facebook.com/sharer.php'}, :name => 'fb_share', :type => 'button_count' -%>
         <%= javascript_include_tag 'http://static.ak.fbcdn.net/connect.php/js/FB.Share' %>
       </li>
     </ul>
   </div>
   
-  <%= article.content%>
+  <%= article.content -%>
 </section>

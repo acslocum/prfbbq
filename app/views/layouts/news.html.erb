@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= yield :title %>
+    <%= yield :title -%>
     <meta name="description" content="PRFBBQ - 2010" />
     <meta name="robots" content="robots.txt" />
     
     <%-#  CSS -%>
-    <%= stylesheet_link_tag "reset" %>
-	  <%= stylesheet_link_tag "main" %>
+    <%= stylesheet_link_tag "reset" -%>
+	  <%= stylesheet_link_tag "main" -%>
 	    
     <%-# FAVCONS -%>
     <link rel="image/x-icon" href="make favcon"/>
@@ -22,11 +22,7 @@
   <body id="www-prfbbq-com">
     <div id="page-wrapper">
       <header id="page-header">
-        <h1>
-          <a href="/">
-            PRF BBQ
-          </a>
-        </h1>
+        <h1><%= link_to "PRF BBQ", {:action => "/"} -%></h1>
         
         <%-# TODO: Set "selected" on nav when in particluar page -%>
         <%-# News/home: News -%>
@@ -34,9 +30,9 @@
         <%-# Present: Present -%>
         <%-# Past: Past -%>
         <nav id="page-nav">
-          <a href="/news/home" class="selected">News</a>
-          <a href="/news/present">Present</a>
-          <a href="/news/past">Past</a>
+          <%= link_to "News", {:action => 'home'}, :class => 'selected' -%> 
+          <%= link_to "Present", {:action => 'present'} -%> 
+          <%= link_to "Past", {:action => 'past'} -%>          
         </nav>
 
           <%-# TICKETS not available - not sure if it'll ever happen -%>
@@ -47,25 +43,27 @@
           <%-#</dl> -%>
         </header>
 
-        <%= yield :layout %>
+        <%= yield :layout -%>
     </div>
     
     <div style="clear:both;"></div>
     <footer id="page-footer">
     </footer> 
     <div id="martyred_saint">
-      <%= image_tag "burning_hotdog.png" %>
+      <%= image_tag "burning_hotdog.png" -%>
     </div>
   </body>
 
   <%-# Javascript -%>
-  <%= javascript_include_tag 'jquery/jquery-1.4.2.js' %>
-  <%= javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' %>
+  <%= javascript_include_tag 'jquery/jquery-1.4.2.js' -%>
+  <%= javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' -%>
   <script>
     $(function() {
       $('#page-content').jScrollPane({
         showArrows:true
       });
+      
+      // $('a[@id="{% block 'currentpage' %}home{% endblock %}"]').addClass('selected');
     });
   </script>
 </html>
