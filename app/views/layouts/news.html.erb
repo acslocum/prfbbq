@@ -39,6 +39,7 @@
           <a href="/news/past">Past</a>
         </nav>
 
+          <%-# TICKETS not available - not sure if it'll ever happen -%>
           <%-# Show only if there are tickets/shows available -%>
           <%-#<dl class="ticket_info">-%>
             <%-#<dt>Tickets</dt>-%>
@@ -53,12 +54,18 @@
     <footer id="page-footer">
     </footer> 
     <div id="martyred_saint">
-      <img src="/images/burning_hotdog.png" />
+      <%= image_tag "burning_hotdog.png" %>
     </div>
   </body>
 
   <%-# Javascript -%>
   <%= javascript_include_tag 'jquery/jquery-1.4.2.js' %>
-  <%= javascript_include_tag 'utilities.js' %>
   <%= javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' %>
+  <script>
+    $(function() {
+      $('#page-content').jScrollPane({
+        showArrows:true
+      });
+    });
+  </script>
 </html>

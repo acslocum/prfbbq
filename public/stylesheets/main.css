@@ -290,99 +290,47 @@ dl.ticket_info dd span {
   float:left;
   height:48em;
   padding:0 1em 0 4.5em;
+  position:relative;
   text-align:left;
   width:70em;
+  z-index:101;
 }
 
-#page-content h1 {
-  margin-bottom:0.5em;
-}
-
-#page-content ul.news {
-}
-
-#page-content ul.news li.story {
+#page-content .story_container {
   border-bottom:0.1em solid #45aac6;
   margin-bottom:2em;
-  overflow:hidden;
-  position:relative;
+  padding:0.5em 0 2em;
 }
-
-#page-content.home .story_container {
-  border-right:0.5em solid #45aac6;
-  float:left;
-  padding:0 2em 1em;
-  width:52em;
-}
-
-#page-content.home .time_stamp {
-  float:left;
-  padding:0 0 0 1em;
-  width:10.5em;
-}
-#page-content.home .time_stamp h3 {
-  font-family:'MuseoSlab500';
-  font-size:1.6em;
-  margin-bottom:0.5em;
-  text-align:right;
-}
-#page-content.home .time_stamp ul.social_media {
-  float:right;
-  margin-bottom:1em;
-}
-
-#page-content.news_article .time_stamp {
-  border-bottom:0.5em solid #45aac6;
-  margin-bottom:1.5em;
-  overflow:hidden;
-  padding-bottom:0.5em;
-}
-#page-content.news_article .time_stamp ul.social_media {
-  float:right;
-}
-#page-content.news_article .time_stamp h3 {
-  float:left;
-  font-family:'MuseoSlab500';
-  font-size:1.6em;
-}
-
-#page-content ul.single_article {
-  
-}
-#page-content ul.single_article aside.time_stamp {
+#page-content .story_container:last-child {
   border-bottom:none;
-  border-top:0.5em solid #45AAC6;
-  margin:1.5em 0 0;
-  overflow:hidden;
-  padding:1.5em 0 0;
 }
 
-#page-content hgroup.date {
+#page-content .title_container {
   margin-bottom:2em;
-}
-#page-content hgroup.date h1 {
-  margin-bottom:0.1em;
-}
-#page-content hgroup.date h2 {
-  font-size:1.4em;
-  font-weight:400;
+  overflow:hidden;
 }
 
-/* Social Media */
-ul.social_media li {
+#page-content .title_container h1 {
   float:left;
-  margin-left:0.5em;
+  width:21em;
 }
-ul.social_media li a {
+#page-content .title_container h1 a {
+  text-decoration:none;
+}
 
+#page-content ul.info {
+  float:right;
+  padding-top:0.6em;
 }
-a.facebook {
-  background-image:url(../images/facebook.png);
-  background-repeat:no-repeat;
+#page-content ul.info li {
+  float:left;
 }
-a.twitter {
-  background-image:url(../images/twitter.png);
-  background-repeat:no-repeat;
+#page-content  ul.info li.time_stamp {
+  display:inline;
+  font-family:'MuseoSlab500';
+  font-size:1.2em;
+  margin-right:1em;
+  padding-top:0.2em;
 }
 
 /* Band list */
@@ -468,6 +416,7 @@ ul#content-nav a.selected {
   background-position:bottom left;
   clear:both;
   height:33em;
+  margin-top:1em;
   text-align:center;
   width:100%;
 }

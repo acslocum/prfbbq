@@ -9625,3 +9625,2582 @@ The error occurred while evaluating nil.join):
 Rendered rescues/_trace (85.7ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-06 19:11:44) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-06') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.3ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-06 19:11:52) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-06') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 17:57:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 17:57:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-07 17:57:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 17:57:46) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (160.9ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 335ms (View: 249, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:07:22) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (undefined method `page_heading' for #<ActionView::Base:0x101613aa8>) on line #1 of app/views/news/home.html.erb:
+1: <%= page_heading "Awesome" %>
+2: <section id="page-content" class="home">
+3:   <ul class="news" id="news-list">
+4:     <%= render (:partial=> "article", :collection=>@articles)%>
+
+    app/views/news/home.html.erb:1
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:07:46) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.6ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.7ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:08:31) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.5ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 18:08:32) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0x1044a3a30>) on line #1 of app/views/news/article.html.erb:
+1: <title>PRFBBQ - <%= article.full_title %> </title>
+2: <section id="page-content" class="news_article">
+3:   <ul class="single_article">
+4:     <%= render (:partial=> "article", :object=>@article)%>
+
+    app/views/news/article.html.erb:1
+
+Rendered rescues/_trace (36.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 18:08:56) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.9ms)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:12:01) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.8ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:13:29) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:15:01) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.2ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.8ms)
+ERROR: compiling _run_erb_app47views47layouts47news46html46erb RAISED compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47layouts47news46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n  <head>\n    <title>PRF - "
+
+
+;  content_for :titleAddon do ; @output_buffer.concat "</html>\n    <meta name=\"description\" content=\"PRFBBQ - 2010\" />\n    <meta name=\"robots\" content=\"robots.txt\" />\n    \n"
+
+
+
+; #  CSS 
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag "reset" ).to_s); @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( stylesheet_link_tag "main" ).to_s); @output_buffer.concat "\n\t    \n"
+
+; # FAVCONS 
+@output_buffer.concat "    <link rel=\"image/x-icon\" href=\"make favcon\"/>\n    <link rel=\"apple-touch-icon\" href=\"make favcon\"/>\n    <link rel=\"shortcut icon\" href=\"make favcon\" type=\"image/x-icon\"/>\n    \n    <!--[if IE]>\n      <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n    <![endif]-->\n  </head>\n  \n  <body id=\"www-prfbbq-com\">\n    <div id=\"page-wrapper\">\n      <header id=\"page-header\">\n        <h1>\n          <a href=\"/\">\n            PRF BBQ\n          </a>\n        </h1>\n        \n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; # TODO: Set "selected" on nav when in particluar page 
+# News/home: News 
+# Article: News 
+# Present: Present 
+# Past: Past 
+@output_buffer.concat "        <nav id=\"page-nav\">\n          <a href=\"/news/home\" class=\"selected\">News</a>\n          <a href=\"/news/present\">Present</a>\n          <a href=\"/news/past\">Past</a>\n        </nav>\n\n"
+
+
+
+
+
+; # TICKETS not available - not sure if it'll ever happen 
+# Show only if there are tickets/shows available 
+#<dl class="ticket_info">
+#<dt>Tickets</dt>
+#<%= render (:partial=>"tickets", :collection=>@available_tickets); @output_buffer.concat "-%>\n"
+; #</dl> 
+@output_buffer.concat "        </header>\n\n        "
+
+; @output_buffer.concat(( yield :layout ).to_s); @output_buffer.concat "\n    </div>\n    \n    <div style=\"clear:both;\"></div>\n    <footer id=\"page-footer\">\n    </footer> \n    <div id=\"martyred_saint\">\n      "
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag "burning_hotdog.png" ).to_s); @output_buffer.concat "\n    </div>\n  </body>\n\n"
+
+
+
+; # Javascript 
+@output_buffer.concat "  "; @output_buffer.concat(( javascript_include_tag 'jquery/jquery-1.4.2.js' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' ).to_s); @output_buffer.concat "\n  <script>\n    $(function() {\n      $('#page-content').jScrollPane({\n        showArrows:true\n      });\n    });\n  </script>\n</html>"
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting kEND) on line #72 of app/views/layouts/news.html.erb:
+69:     });
+70:   </script>
+71: </html>
+
+    app/views/layouts/news.html.erb:74:in `compile!'
+
+Rendered rescues/_trace (34.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:15:11) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.1ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.8ms)
+ERROR: compiling _run_erb_app47views47layouts47news46html46erb RAISED compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47layouts47news46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n  <head>\n    <title>PRF - "
+
+
+;  content_for :titleAddon do ; @output_buffer.concat "</html>\n    <meta name=\"description\" content=\"PRFBBQ - 2010\" />\n    <meta name=\"robots\" content=\"robots.txt\" />\n    \n"
+
+
+
+; #  CSS 
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag "reset" ).to_s); @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( stylesheet_link_tag "main" ).to_s); @output_buffer.concat "\n\t    \n"
+
+; # FAVCONS 
+@output_buffer.concat "    <link rel=\"image/x-icon\" href=\"make favcon\"/>\n    <link rel=\"apple-touch-icon\" href=\"make favcon\"/>\n    <link rel=\"shortcut icon\" href=\"make favcon\" type=\"image/x-icon\"/>\n    \n    <!--[if IE]>\n      <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n    <![endif]-->\n  </head>\n  \n  <body id=\"www-prfbbq-com\">\n    <div id=\"page-wrapper\">\n      <header id=\"page-header\">\n        <h1>\n          <a href=\"/\">\n            PRF BBQ\n          </a>\n        </h1>\n        \n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; # TODO: Set "selected" on nav when in particluar page 
+# News/home: News 
+# Article: News 
+# Present: Present 
+# Past: Past 
+@output_buffer.concat "        <nav id=\"page-nav\">\n          <a href=\"/news/home\" class=\"selected\">News</a>\n          <a href=\"/news/present\">Present</a>\n          <a href=\"/news/past\">Past</a>\n        </nav>\n\n"
+
+
+
+
+
+; # TICKETS not available - not sure if it'll ever happen 
+# Show only if there are tickets/shows available 
+#<dl class="ticket_info">
+#<dt>Tickets</dt>
+#<%= render (:partial=>"tickets", :collection=>@available_tickets); @output_buffer.concat "-%>\n"
+; #</dl> 
+@output_buffer.concat "        </header>\n\n        "
+
+; @output_buffer.concat(( yield :layout ).to_s); @output_buffer.concat "\n    </div>\n    \n    <div style=\"clear:both;\"></div>\n    <footer id=\"page-footer\">\n    </footer> \n    <div id=\"martyred_saint\">\n      "
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag "burning_hotdog.png" ).to_s); @output_buffer.concat "\n    </div>\n  </body>\n\n"
+
+
+
+; # Javascript 
+@output_buffer.concat "  "; @output_buffer.concat(( javascript_include_tag 'jquery/jquery-1.4.2.js' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' ).to_s); @output_buffer.concat "\n  <script>\n    $(function() {\n      $('#page-content').jScrollPane({\n        showArrows:true\n      });\n    });\n  </script>\n</html>"
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting kEND) on line #72 of app/views/layouts/news.html.erb:
+69:     });
+70:   </script>
+71: </html>
+
+    app/views/layouts/news.html.erb:74:in `compile!'
+
+Rendered rescues/_trace (43.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:15:12) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.5ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+ERROR: compiling _run_erb_app47views47layouts47news46html46erb RAISED compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47layouts47news46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n  <head>\n    <title>PRF - "
+
+
+;  content_for :titleAddon do ; @output_buffer.concat "</html>\n    <meta name=\"description\" content=\"PRFBBQ - 2010\" />\n    <meta name=\"robots\" content=\"robots.txt\" />\n    \n"
+
+
+
+; #  CSS 
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag "reset" ).to_s); @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( stylesheet_link_tag "main" ).to_s); @output_buffer.concat "\n\t    \n"
+
+; # FAVCONS 
+@output_buffer.concat "    <link rel=\"image/x-icon\" href=\"make favcon\"/>\n    <link rel=\"apple-touch-icon\" href=\"make favcon\"/>\n    <link rel=\"shortcut icon\" href=\"make favcon\" type=\"image/x-icon\"/>\n    \n    <!--[if IE]>\n      <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n    <![endif]-->\n  </head>\n  \n  <body id=\"www-prfbbq-com\">\n    <div id=\"page-wrapper\">\n      <header id=\"page-header\">\n        <h1>\n          <a href=\"/\">\n            PRF BBQ\n          </a>\n        </h1>\n        \n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; # TODO: Set "selected" on nav when in particluar page 
+# News/home: News 
+# Article: News 
+# Present: Present 
+# Past: Past 
+@output_buffer.concat "        <nav id=\"page-nav\">\n          <a href=\"/news/home\" class=\"selected\">News</a>\n          <a href=\"/news/present\">Present</a>\n          <a href=\"/news/past\">Past</a>\n        </nav>\n\n"
+
+
+
+
+
+; # TICKETS not available - not sure if it'll ever happen 
+# Show only if there are tickets/shows available 
+#<dl class="ticket_info">
+#<dt>Tickets</dt>
+#<%= render (:partial=>"tickets", :collection=>@available_tickets); @output_buffer.concat "-%>\n"
+; #</dl> 
+@output_buffer.concat "        </header>\n\n        "
+
+; @output_buffer.concat(( yield :layout ).to_s); @output_buffer.concat "\n    </div>\n    \n    <div style=\"clear:both;\"></div>\n    <footer id=\"page-footer\">\n    </footer> \n    <div id=\"martyred_saint\">\n      "
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag "burning_hotdog.png" ).to_s); @output_buffer.concat "\n    </div>\n  </body>\n\n"
+
+
+
+; # Javascript 
+@output_buffer.concat "  "; @output_buffer.concat(( javascript_include_tag 'jquery/jquery-1.4.2.js' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' ).to_s); @output_buffer.concat "\n  <script>\n    $(function() {\n      $('#page-content').jScrollPane({\n        showArrows:true\n      });\n    });\n  </script>\n</html>"
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting kEND) on line #72 of app/views/layouts/news.html.erb:
+69:     });
+70:   </script>
+71: </html>
+
+    app/views/layouts/news.html.erb:74:in `compile!'
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:15:35) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.5ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.8ms)
+ERROR: compiling _run_erb_app47views47layouts47news46html46erb RAISED compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:66: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:68: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47layouts47news46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n  <head>\n    <title>PRF - "
+
+
+;  content_for :titleAddon do ; @output_buffer.concat "</html>\n    <meta name=\"description\" content=\"PRFBBQ - 2010\" />\n    <meta name=\"robots\" content=\"robots.txt\" />\n    \n"
+
+
+
+; #  CSS 
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag "reset" ).to_s); @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( stylesheet_link_tag "main" ).to_s); @output_buffer.concat "\n\t    \n"
+
+; # FAVCONS 
+@output_buffer.concat "    <link rel=\"image/x-icon\" href=\"make favcon\"/>\n    <link rel=\"apple-touch-icon\" href=\"make favcon\"/>\n    <link rel=\"shortcut icon\" href=\"make favcon\" type=\"image/x-icon\"/>\n    \n    <!--[if IE]>\n      <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n    <![endif]-->\n  </head>\n  \n  <body id=\"www-prfbbq-com\">\n    <div id=\"page-wrapper\">\n      <header id=\"page-header\">\n        <h1>\n          <a href=\"/\">\n            PRF BBQ\n          </a>\n        </h1>\n        \n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; # TODO: Set "selected" on nav when in particluar page 
+# News/home: News 
+# Article: News 
+# Present: Present 
+# Past: Past 
+@output_buffer.concat "        <nav id=\"page-nav\">\n          <a href=\"/news/home\" class=\"selected\">News</a>\n          <a href=\"/news/present\">Present</a>\n          <a href=\"/news/past\">Past</a>\n        </nav>\n\n"
+
+
+
+
+
+; # TICKETS not available - not sure if it'll ever happen 
+# Show only if there are tickets/shows available 
+#<dl class="ticket_info">
+#<dt>Tickets</dt>
+#<%= render (:partial=>"tickets", :collection=>@available_tickets); @output_buffer.concat "-%>\n"
+; #</dl> 
+@output_buffer.concat "        </header>\n\n        "
+
+; @output_buffer.concat(( yield :layout ).to_s); @output_buffer.concat "\n    </div>\n    \n    <div style=\"clear:both;\"></div>\n    <footer id=\"page-footer\">\n    </footer> \n    <div id=\"martyred_saint\">\n      "
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag "burning_hotdog.png" ).to_s); @output_buffer.concat "\n    </div>\n  </body>\n\n"
+
+
+
+; # Javascript 
+@output_buffer.concat "  "; @output_buffer.concat(( javascript_include_tag 'jquery/jquery-1.4.2.js' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' ).to_s); @output_buffer.concat "\n\n</html>"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:68:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:66: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:68: syntax error, unexpected $end, expecting kEND) on line #66 of app/views/layouts/news.html.erb:
+63:   <%= javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' %>
+64: 
+65: </html>
+
+    app/views/layouts/news.html.erb:68:in `compile!'
+
+Rendered rescues/_trace (102.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:15:44) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.7ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+ERROR: compiling _run_erb_app47views47layouts47news46html46erb RAISED compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:4: syntax error, unexpected ')'
+...( content_for :titleAddon do ).to_s); @output_buffer.concat ...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47layouts47news46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n  <head>\n    <title>PRF - "
+
+
+; @output_buffer.concat(( content_for :titleAddon do ).to_s); @output_buffer.concat "</html>\n    <meta name=\"description\" content=\"PRFBBQ - 2010\" />\n    <meta name=\"robots\" content=\"robots.txt\" />\n    \n"
+
+
+
+; #  CSS 
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag "reset" ).to_s); @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( stylesheet_link_tag "main" ).to_s); @output_buffer.concat "\n\t    \n"
+
+; # FAVCONS 
+@output_buffer.concat "    <link rel=\"image/x-icon\" href=\"make favcon\"/>\n    <link rel=\"apple-touch-icon\" href=\"make favcon\"/>\n    <link rel=\"shortcut icon\" href=\"make favcon\" type=\"image/x-icon\"/>\n    \n    <!--[if IE]>\n      <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n    <![endif]-->\n  </head>\n  \n  <body id=\"www-prfbbq-com\">\n    <div id=\"page-wrapper\">\n      <header id=\"page-header\">\n        <h1>\n          <a href=\"/\">\n            PRF BBQ\n          </a>\n        </h1>\n        \n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; # TODO: Set "selected" on nav when in particluar page 
+# News/home: News 
+# Article: News 
+# Present: Present 
+# Past: Past 
+@output_buffer.concat "        <nav id=\"page-nav\">\n          <a href=\"/news/home\" class=\"selected\">News</a>\n          <a href=\"/news/present\">Present</a>\n          <a href=\"/news/past\">Past</a>\n        </nav>\n\n"
+
+
+
+
+
+; # TICKETS not available - not sure if it'll ever happen 
+# Show only if there are tickets/shows available 
+#<dl class="ticket_info">
+#<dt>Tickets</dt>
+#<%= render (:partial=>"tickets", :collection=>@available_tickets); @output_buffer.concat "-%>\n"
+; #</dl> 
+@output_buffer.concat "        </header>\n\n        "
+
+; @output_buffer.concat(( yield :layout ).to_s); @output_buffer.concat "\n    </div>\n    \n    <div style=\"clear:both;\"></div>\n    <footer id=\"page-footer\">\n    </footer> \n    <div id=\"martyred_saint\">\n      "
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag "burning_hotdog.png" ).to_s); @output_buffer.concat "\n    </div>\n  </body>\n\n"
+
+
+
+; # Javascript 
+@output_buffer.concat "  "; @output_buffer.concat(( javascript_include_tag 'jquery/jquery-1.4.2.js' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' ).to_s); @output_buffer.concat "\n  <script>\n    $(function() {\n      $('#page-content').jScrollPane({\n        showArrows:true\n      });\n    });\n  </script>\n</html>"
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:4: syntax error, unexpected ')'
+...( content_for :titleAddon do ).to_s); @output_buffer.concat ...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting ')') on line #4 of app/views/layouts/news.html.erb:
+1: <!DOCTYPE html>
+2: <html>
+3:   <head>
+4:     <title>PRF - <%= content_for :titleAddon do %></html>
+5:     <meta name="description" content="PRFBBQ - 2010" />
+6:     <meta name="robots" content="robots.txt" />
+7:     
+
+    app/views/layouts/news.html.erb:74:in `compile!'
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:16:06) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.6ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.8ms)
+ERROR: compiling _run_erb_app47views47layouts47news46html46erb RAISED compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:4: syntax error, unexpected ')'
+...( content_for :titleAddon do ).to_s); @output_buffer.concat ...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47layouts47news46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n  <head>\n    <title>PRF - "
+
+
+; @output_buffer.concat(( content_for :titleAddon do ).to_s); @output_buffer.concat "</title>\n    <meta name=\"description\" content=\"PRFBBQ - 2010\" />\n    <meta name=\"robots\" content=\"robots.txt\" />\n    \n"
+
+
+
+; #  CSS 
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag "reset" ).to_s); @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( stylesheet_link_tag "main" ).to_s); @output_buffer.concat "\n\t    \n"
+
+; # FAVCONS 
+@output_buffer.concat "    <link rel=\"image/x-icon\" href=\"make favcon\"/>\n    <link rel=\"apple-touch-icon\" href=\"make favcon\"/>\n    <link rel=\"shortcut icon\" href=\"make favcon\" type=\"image/x-icon\"/>\n    \n    <!--[if IE]>\n      <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n    <![endif]-->\n  </head>\n  \n  <body id=\"www-prfbbq-com\">\n    <div id=\"page-wrapper\">\n      <header id=\"page-header\">\n        <h1>\n          <a href=\"/\">\n            PRF BBQ\n          </a>\n        </h1>\n        \n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; # TODO: Set "selected" on nav when in particluar page 
+# News/home: News 
+# Article: News 
+# Present: Present 
+# Past: Past 
+@output_buffer.concat "        <nav id=\"page-nav\">\n          <a href=\"/news/home\" class=\"selected\">News</a>\n          <a href=\"/news/present\">Present</a>\n          <a href=\"/news/past\">Past</a>\n        </nav>\n\n"
+
+
+
+
+
+; # TICKETS not available - not sure if it'll ever happen 
+# Show only if there are tickets/shows available 
+#<dl class="ticket_info">
+#<dt>Tickets</dt>
+#<%= render (:partial=>"tickets", :collection=>@available_tickets); @output_buffer.concat "-%>\n"
+; #</dl> 
+@output_buffer.concat "        </header>\n\n        "
+
+; @output_buffer.concat(( yield :layout ).to_s); @output_buffer.concat "\n    </div>\n    \n    <div style=\"clear:both;\"></div>\n    <footer id=\"page-footer\">\n    </footer> \n    <div id=\"martyred_saint\">\n      "
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag "burning_hotdog.png" ).to_s); @output_buffer.concat "\n    </div>\n  </body>\n\n"
+
+
+
+; # Javascript 
+@output_buffer.concat "  "; @output_buffer.concat(( javascript_include_tag 'jquery/jquery-1.4.2.js' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' ).to_s); @output_buffer.concat "\n  <script>\n    $(function() {\n      $('#page-content').jScrollPane({\n        showArrows:true\n      });\n    });\n  </script>\n</html>"
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:4: syntax error, unexpected ')'
+...( content_for :titleAddon do ).to_s); @output_buffer.concat ...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting ')') on line #4 of app/views/layouts/news.html.erb:
+1: <!DOCTYPE html>
+2: <html>
+3:   <head>
+4:     <title>PRF - <%= content_for :titleAddon do %></title>
+5:     <meta name="description" content="PRFBBQ - 2010" />
+6:     <meta name="robots" content="robots.txt" />
+7:     
+
+    app/views/layouts/news.html.erb:74:in `compile!'
+
+Rendered rescues/_trace (36.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:16:09) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+ERROR: compiling _run_erb_app47views47layouts47news46html46erb RAISED compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47layouts47news46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html>\n  <head>\n    <title>PRF - "
+
+
+;  content_for :titleAddon do ; @output_buffer.concat "</title>\n    <meta name=\"description\" content=\"PRFBBQ - 2010\" />\n    <meta name=\"robots\" content=\"robots.txt\" />\n    \n"
+
+
+
+; #  CSS 
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag "reset" ).to_s); @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( stylesheet_link_tag "main" ).to_s); @output_buffer.concat "\n\t    \n"
+
+; # FAVCONS 
+@output_buffer.concat "    <link rel=\"image/x-icon\" href=\"make favcon\"/>\n    <link rel=\"apple-touch-icon\" href=\"make favcon\"/>\n    <link rel=\"shortcut icon\" href=\"make favcon\" type=\"image/x-icon\"/>\n    \n    <!--[if IE]>\n      <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n    <![endif]-->\n  </head>\n  \n  <body id=\"www-prfbbq-com\">\n    <div id=\"page-wrapper\">\n      <header id=\"page-header\">\n        <h1>\n          <a href=\"/\">\n            PRF BBQ\n          </a>\n        </h1>\n        \n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; # TODO: Set "selected" on nav when in particluar page 
+# News/home: News 
+# Article: News 
+# Present: Present 
+# Past: Past 
+@output_buffer.concat "        <nav id=\"page-nav\">\n          <a href=\"/news/home\" class=\"selected\">News</a>\n          <a href=\"/news/present\">Present</a>\n          <a href=\"/news/past\">Past</a>\n        </nav>\n\n"
+
+
+
+
+
+; # TICKETS not available - not sure if it'll ever happen 
+# Show only if there are tickets/shows available 
+#<dl class="ticket_info">
+#<dt>Tickets</dt>
+#<%= render (:partial=>"tickets", :collection=>@available_tickets); @output_buffer.concat "-%>\n"
+; #</dl> 
+@output_buffer.concat "        </header>\n\n        "
+
+; @output_buffer.concat(( yield :layout ).to_s); @output_buffer.concat "\n    </div>\n    \n    <div style=\"clear:both;\"></div>\n    <footer id=\"page-footer\">\n    </footer> \n    <div id=\"martyred_saint\">\n      "
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag "burning_hotdog.png" ).to_s); @output_buffer.concat "\n    </div>\n  </body>\n\n"
+
+
+
+; # Javascript 
+@output_buffer.concat "  "; @output_buffer.concat(( javascript_include_tag 'jquery/jquery-1.4.2.js' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' ).to_s); @output_buffer.concat "\n  <script>\n    $(function() {\n      $('#page-content').jScrollPane({\n        showArrows:true\n      });\n    });\n  </script>\n</html>"
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:72: syntax error, unexpected kENSURE, expecting kEND
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/layouts/news.html.erb:74: syntax error, unexpected $end, expecting kEND) on line #72 of app/views/layouts/news.html.erb:
+69:     });
+70:   </script>
+71: </html>
+
+    app/views/layouts/news.html.erb:74:in `compile!'
+
+Rendered rescues/_trace (35.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:16:19) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.5ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Completed in 84ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:16:45) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.0ms)
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:17:13) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.0ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:19:13) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.0ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.9ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:20:50) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.2ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:21:31) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.0ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:22:19) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:23:26) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:23:32) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.3ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:23:45) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:23:52) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.6ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:23:58) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:24:04) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.3ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (1.2ms)
+Rendered news/_article (0.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:24:24) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:25:02) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.3ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:25:11) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.1ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (0.8ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:25:17) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.5ms)
+Rendered news/_article (0.8ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:25:58) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:26:09) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.3ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:26:11) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.6ms)
+Rendered news/_article (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:26:15) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.4ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Rendered news/_article (0.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:27:38) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.4ms)
+Rendered news/_article (1.2ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:28:27) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.2ms)
+Rendered news/_article (1.2ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.0ms)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:28:39) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.2ms)
+Rendered news/_article (1.3ms)
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:28:53) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:29:07) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.7ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (1.0ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:29:31) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:30:11) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.4ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (1.6ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:30:25) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 69ms (View: 64, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:30:30) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.4ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.2ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:31:57) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.7ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:33:34) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+ERROR: compiling _run_erb_app47views47news47_article46html46erb_locals_article_article_counter_object RAISED compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected ':', expecting ')'
+...fer.concat(( link_to "Share" :name=>"fb_share" :type=>"butto...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected ':', expecting ')'
+...to "Share" :name=>"fb_share" :type=>"button_count" :action=>...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected ':', expecting ')'
+...share" :type=>"button_count" :action=>"http://www.facebook.c...
+                              ^
+Function body:           def _run_erb_app47views47news47_article46html46erb_locals_article_article_counter_object(local_assigns)
+            old_output_buffer = output_buffer;article = local_assigns[:article];object = local_assigns[:object];article_counter = local_assigns[:article_counter];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<section class=\"story_container\">          \n  <div class=\"title_container\">\n    <h1 class=\"article_title\">"
+
+; @output_buffer.concat(( link_to article.full_title, :action=>"article", :id=>article.permalink ).to_s); @output_buffer.concat "</h1>\n    <h3 class=\"time_stamp\">"
+; @output_buffer.concat(( article.created_at_formatted).to_s); @output_buffer.concat "</h3>\n    <"
+; @output_buffer.concat(( link_to "Share" :name=>"fb_share" :type=>"button_count" :action=>"http://www.facebook.com/sharer.php" ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( javascript_include_tag 'http://static.ak.fbcdn.net/connect.php/js/FB.Share' ).to_s); @output_buffer.concat "\n  </div>\n  \n  "
+
+
+; @output_buffer.concat(( article.content).to_s); @output_buffer.concat "\n</section>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:13:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:221:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:216:in `map'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:216:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:182:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:262:in `render'
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/home.html.erb:4:in `_run_erb_app47views47news47home46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:301:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected ':', expecting ')'
+...fer.concat(( link_to "Share" :name=>"fb_share" :type=>"butto...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected ':', expecting ')'
+...to "Share" :name=>"fb_share" :type=>"button_count" :action=>...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected ':', expecting ')'
+...share" :type=>"button_count" :action=>"http://www.facebook.c...
+                              ^) on line #5 of app/views/news/_article.html.erb:
+2:   <div class="title_container">
+3:     <h1 class="article_title"><%= link_to article.full_title, :action=>"article", :id=>article.permalink %></h1>
+4:     <h3 class="time_stamp"><%= article.created_at_formatted%></h3>
+5:     <<%= link_to "Share" :name=>"fb_share" :type=>"button_count" :action=>"http://www.facebook.com/sharer.php" %>
+6:     <%= javascript_include_tag 'http://static.ak.fbcdn.net/connect.php/js/FB.Share' %>
+7:   </div>
+8:   
+
+    app/views/news/_article.html.erb:13:in `compile!'
+    app/views/news/home.html.erb:4
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:34:30) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+ERROR: compiling _run_erb_app47views47news47_article46html46erb_locals_article_article_counter_object RAISED compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.concat(( link_to "Share"m :name=>"fb_share", :type=>"bu...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected ',', expecting ')'
+...to "Share"m :name=>"fb_share", :type=>"button_count", :actio...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected ',', expecting ')'
+...share", :type=>"button_count", :action=>"http://www.facebook...
+                              ^
+Function body:           def _run_erb_app47views47news47_article46html46erb_locals_article_article_counter_object(local_assigns)
+            old_output_buffer = output_buffer;article = local_assigns[:article];object = local_assigns[:object];article_counter = local_assigns[:article_counter];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<section class=\"story_container\">          \n  <div class=\"title_container\">\n    <h1 class=\"article_title\">"
+
+; @output_buffer.concat(( link_to article.full_title, :action=>"article", :id=>article.permalink ).to_s); @output_buffer.concat "</h1>\n    <h3 class=\"time_stamp\">"
+; @output_buffer.concat(( article.created_at_formatted).to_s); @output_buffer.concat "</h3>\n    <"
+; @output_buffer.concat(( link_to "Share"m :name=>"fb_share", :type=>"button_count", :action=>"http://www.facebook.com/sharer.php" ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( javascript_include_tag 'http://static.ak.fbcdn.net/connect.php/js/FB.Share' ).to_s); @output_buffer.concat "\n  </div>\n  \n  "
+
+
+; @output_buffer.concat(( article.content).to_s); @output_buffer.concat "\n</section>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:13:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:221:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:216:in `map'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:216:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:182:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:262:in `render'
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/home.html.erb:4:in `_run_erb_app47views47news47home46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:301:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.concat(( link_to "Share"m :name=>"fb_share", :type=>"bu...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected ',', expecting ')'
+...to "Share"m :name=>"fb_share", :type=>"button_count", :actio...
+                              ^
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/_article.html.erb:5: syntax error, unexpected ',', expecting ')'
+...share", :type=>"button_count", :action=>"http://www.facebook...
+                              ^) on line #5 of app/views/news/_article.html.erb:
+2:   <div class="title_container">
+3:     <h1 class="article_title"><%= link_to article.full_title, :action=>"article", :id=>article.permalink %></h1>
+4:     <h3 class="time_stamp"><%= article.created_at_formatted%></h3>
+5:     <<%= link_to "Share"m :name=>"fb_share", :type=>"button_count", :action=>"http://www.facebook.com/sharer.php" %>
+6:     <%= javascript_include_tag 'http://static.ak.fbcdn.net/connect.php/js/FB.Share' %>
+7:   </div>
+8:   
+
+    app/views/news/_article.html.erb:13:in `compile!'
+    app/views/news/home.html.erb:4
+
+Rendered rescues/_trace (112.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:34:49) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.1ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.5ms)
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:37:11) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.3ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.8ms)
+Completed in 32ms (View: 27, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:37:30) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.3ms)
+Rendered news/_article (1.8ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.5ms)
+Completed in 75ms (View: 70, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:37:46) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.4ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (1.0ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:38:06) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.7ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (1.0ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:39:26) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.0ms)
+Completed in 68ms (View: 62, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:39:36) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.5ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.2ms)
+Rendered news/_article (1.3ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:39:45) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.1ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.2ms)
+Rendered news/_article (1.5ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:40:59) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.4ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 68ms (View: 63, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:41:25) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:41:46) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.0ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:41:57) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.4ms)
+Rendered news/_article (1.2ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.5ms)
+Completed in 69ms (View: 64, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:42:04) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.4ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:42:53) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.5ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (1.1ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:43:28) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.9ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (52.5ms)
+Rendered news/_article (1.2ms)
+Completed in 66ms (View: 61, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:43:52) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:44:08) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.5ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:44:44) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.1ms)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:45:15) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.1ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:45:43) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:46:30) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.2ms)
+Rendered news/_article (1.2ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:46:47) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.9ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:47:12) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:47:53) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.7ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (1.0ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:47:56) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.0ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.1ms)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:48:04) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.9ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.3ms)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:48:19) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.2ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:48:30) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.9ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (52.7ms)
+Completed in 66ms (View: 61, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:48:31) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.6ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.2ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:48:31) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.5ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:48:31) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (1.9ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:48:31) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.1ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:48:31) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.7ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (0.9ms)
+Rendered news/_article (1.0ms)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:48:31) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.7ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.2ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:48:51) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.1ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 18:49:02) [GET]
+  Parameters: {"id"=>"nyc-bbq-10-20-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%nyc bbq%' and event_date = '2010-10-20') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.2ms)
+Completed in 72ms (View: 66, DB: 1) | 200 OK [http://localhost/news/article/nyc-bbq-10-20-2010]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 18:49:30) [GET]
+  Parameters: {"id"=>"nyc-bbq-10-20-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%nyc bbq%' and event_date = '2010-10-20') LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.0ms)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/news/article/nyc-bbq-10-20-2010]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 18:49:55) [GET]
+  Parameters: {"id"=>"chicago-bbq-10-10-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%chicago bbq%' and event_date = '2010-10-10') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.9ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/news/article/chicago-bbq-10-10-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:57:01) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.1ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.1ms)
+Rendered news/_article (1.1ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:57:16) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.8ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 18:57:22) [GET]
+  Parameters: {"id"=>"nyc-bbq-10-20-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%nyc bbq%' and event_date = '2010-10-20') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.6ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/news/article/nyc-bbq-10-20-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-07 18:57:55) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (2.9ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Rendered news/_article (1.0ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-07 18:58:00) [GET]
+  Parameters: {"id"=>"nyc-bbq-10-20-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%nyc bbq%' and event_date = '2010-10-20') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-07') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.8ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/news/article/nyc-bbq-10-20-2010]
