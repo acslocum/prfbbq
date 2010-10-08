@@ -17117,3 +17117,48 @@ DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called 
 DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:36)
 Rendered bbq/_bbq (10.4ms)
 Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 17:18:11) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:5)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:16)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:18)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:18)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:36)
+Rendered bbq/_bbq (7.4ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 17:18:12) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.url) on line #17 of app/views/bbq/_bbq.html.erb:
+14:   
+15:   <section id="show-info">
+16:     <h1><%= bbq.event_date%></h1>
+17:     <h2><a href="<%=bbq.venue.url%>"><%= bbq.venue.name%></a></h2>
+18: 	<h2><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;"><%= bbq.venue.address%></a></h2>
+19:     
+20:     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+
+    app/views/bbq/_bbq.html.erb:17
+    app/controllers/bbq_controller.rb:8:in `past'
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 17:19:45) [GET]
+  [4;36;1mBbq Load (1.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (6.2ms)
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/bbq/past]

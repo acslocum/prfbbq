@@ -6,7 +6,7 @@ class AddVenueData < ActiveRecord::Migration
     
     chi = Bbq.find(1)
     chi.venue = quenchers
-    buf = Bbq.find(2)
+    buf = Bbq.find(3)
     buf.venue = morrissey
     chi.save!
     buf.save!
