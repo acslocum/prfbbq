@@ -15684,3 +15684,148 @@ Rendered news/_article (1.5ms)
 Rendered news/_article (1.4ms)
 Rendered news/_article (1.5ms)
 Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-10-08 13:49:46) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 13:49:47) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (177.6ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (1.6ms)
+Completed in 224ms (View: 203, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 13:50:10) [GET]
+  Parameters: {"id"=>"chicago-bbq-10-10-2010"}
+  [4;36;1mArticle Load (68.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%chicago bbq%' and event_date = '2010-10-10') LIMIT 1[0m
+  [4;35;1mArticle Load (1.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (5.1ms)
+Completed in 89ms (View: 14, DB: 70) | 200 OK [http://localhost/news/article/chicago-bbq-10-10-2010]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 13:50:10) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.join):
+  app/models/article.rb:46:in `extract_title'
+  app/models/article.rb:38:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (109.6ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 13:50:10) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.join):
+  app/models/article.rb:46:in `extract_title'
+  app/models/article.rb:38:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (29.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 13:50:13) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.join):
+  app/models/article.rb:46:in `extract_title'
+  app/models/article.rb:38:in `find_by_permalink'
+  app/controllers/news_controller.rb:22:in `article'
+
+Rendered rescues/_trace (91.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 13:50:46) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.7ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (1.7ms)
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 13:50:48) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendered news/_article (3.9ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.6ms)
+Completed in 14ms (View: 8, DB: 2) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#past (for 127.0.0.1 at 2010-10-08 13:50:53) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendered news/_article (3.7ms)
+Completed in 10ms (View: 5, DB: 2) | 200 OK [http://localhost/news/past]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 13:54:11) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.8ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.5ms)
+Completed in 23ms (View: 17, DB: 2) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 13:56:06) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (4.3ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 13:56:31) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (5.0ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 13:57:22) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (5.2ms)
+Completed in 56ms (View: 51, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
