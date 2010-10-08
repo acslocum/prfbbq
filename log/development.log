@@ -16516,3 +16516,1410 @@ DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called 
 DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:35)
 Rendered bbq/_bbq (2.4ms)
 Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/bbq/present]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bands")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bbqs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("venues")[0m
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 17:36:42) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (112.6ms)
+Rendered news/_article (2.3ms)
+Rendered news/_article (2.6ms)
+Rendered news/_article (2.0ms)
+Completed in 144ms (View: 140, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 17:36:45) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 34ms (View: 32, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 17:36:45) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#past (for 127.0.0.1 at 2010-10-08 17:36:57) [GET]
+
+ActionController::UnknownAction (No action responded to past. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 17:36:59) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 17:37:00) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 62ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 17:37:00) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 17:37:25) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 17:37:25) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 17:56:25) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 17:56:25) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 17:57:01) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 17:57:01) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 17:57:48) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 17:57:48) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 17:58:21) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 17:58:21) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 17:58:23) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 17:58:23) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:00:53) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:00:53) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:05:45) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:05:46) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:06:13) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:06:13) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:06:22) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:06:22) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:06:37) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:06:37) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:07:05) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 61ms (View: 8, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:07:05) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:07:15) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:07:15) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:08:00) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:08:00) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:08:17) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:08:17) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:08:34) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:08:34) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:08:48) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:08:49) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:09:17) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:09:17) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:09:32) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:09:32) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:09:42) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:09:42) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:09:47) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:09:47) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:10:02) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:10:02) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:10:07) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:10:07) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:10:13) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:10:13) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:10:24) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:10:24) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:10:50) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:10:50) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:11:00) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:11:00) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:11:06) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:11:06) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:11:22) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:11:22) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:11:52) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:11:52) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:11:59) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:11:59) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:12:22) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:12:22) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:12:29) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:12:29) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:12:33) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:12:33) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:12:38) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:12:38) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:12:43) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:12:43) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:12:47) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:12:47) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:12:55) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:12:55) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:13:12) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:13:12) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:13:20) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:13:21) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:13:25) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:13:25) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:13:29) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:13:29) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:13:52) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:13:52) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:14:31) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:14:31) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:14:49) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:14:49) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:14:59) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:14:59) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:15:27) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:15:27) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:15:41) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:15:41) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:16:04) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:16:04) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:16:14) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:16:14) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:18:04) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:18:04) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:18:16) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:18:16) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:18:31) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:18:31) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:18:35) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:18:35) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:18:39) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:18:40) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:18:45) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:18:45) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:18:53) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:18:53) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:18:59) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:18:59) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:19:04) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:19:04) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:19:13) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:19:13) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:19:33) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:19:33) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:19:43) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:19:43) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:20:22) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:20:22) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:20:36) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:20:36) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:20:48) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:20:48) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:20:53) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:20:53) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:21:03) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:21:03) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:21:10) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:21:10) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:22:35) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:22:35) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:22:46) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:22:46) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:22:54) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:22:54) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:23:49) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:23:49) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:24:10) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:24:10) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:24:31) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:24:32) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:24:37) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:24:37) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:25:08) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:25:08) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:25:32) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:25:32) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:25:42) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:25:42) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:26:01) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:26:01) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:26:15) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 56ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:26:15) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:26:35) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:26:35) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:26:41) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:26:42) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:26:59) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:27:00) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:27:17) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:27:17) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:27:24) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:27:24) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:27:34) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:27:34) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:28:13) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:28:13) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 18:28:40) [GET]
+Rendering template within layouts/news
+Rendering news/present
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#img to png (for 127.0.0.1 at 2010-10-08 18:28:40) [GET]
+  Parameters: {"id"=>"map"}
+
+ActionController::UnknownAction (No action responded to img. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)

@@ -448,6 +448,59 @@ ul#content-nav a.selected {
   width:30em;
 }
 
+
+/* Custom Selects
+---------------------------------------------------- */
+#bbq-nav {
+  height:5em;
+}
+div.customSelects_container {
+  background-color:#f00;
+  float:left;
+  margin-right:0.5em;
+  width:20em;
+}
+
+div.customSelects_title {
+  background-image:url(../images/select_arrow.png);
+  background-position:right 0.65em;
+  background-repeat:no-repeat;
+  color:#fff;
+  clear:both;
+  display:block;
+  font-family:'MuseoSlab500';
+  font-size:1.5em;
+  margin-bottom:0.2em;
+  padding:0.3em 0.5em 0.1em;
+  text-decoration:none;
+  text-transform:uppercase;
+  width:11.5em;
+}
+
+ul.customSelects_list {
+  background-color:#4c4c4c;
+  padding-top:0.5em;
+  top:2.85em;
+  width:20em;
+}
+ul.customSelects_list li {
+  color:#fff;
+  clear:both;
+  display:block;
+  font-family:'MuseoSlab500';
+  font-size:1.5em;
+  margin-bottom:0.3em;
+  padding:0.3em 0.5em;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+ul.customSelects_list li.hover {
+  background-color:#6a6868;
+}
+ul.customSelects_list li:first-child {
+  display:none;
+}
+
 /* ScrollPane 
 ---------------------------------------------------- */
 .jScrollPaneContainer {
