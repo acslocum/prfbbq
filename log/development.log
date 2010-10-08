@@ -13973,3 +13973,71 @@ Rendered news/_article (1.5ms)
 Rendered news/_article (1.4ms)
 Rendered news/_article (1.4ms)
 Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 08:18:14) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.4ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 08:18:57) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.5ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 08:19:48) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.1ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-10-08 08:19:49) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 09:02:12) [GET]
+  [4;36;1mArticle Load (4.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.9ms)
+Rendered news/_article (2.5ms)
+Rendered news/_article (1.8ms)
+Rendered news/_article (1.7ms)
+Completed in 42ms (View: 15, DB: 5) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 09:03:02) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.1ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.5ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]

@@ -299,7 +299,7 @@ dl.ticket_info dd span {
 #page-content .story_container {
   border-bottom:0.1em solid #45aac6;
   margin-bottom:2em;
-  padding:0.5em 0 2em;
+  padding:0.5em 0 1em;
 }
 #page-content .story_container:last-child {
   border-bottom:none;
@@ -320,7 +320,7 @@ dl.ticket_info dd span {
 
 #page-content ul.info {
   float:right;
-  padding-top:0.6em;
+  padding-top:0.4em;
 }
 #page-content ul.info li {
   float:left;
@@ -330,7 +330,7 @@ dl.ticket_info dd span {
   font-family:'MuseoSlab500';
   font-size:1.2em;
   margin-right:1em;
-  padding-top:0.2em;
+  padding-top:0.3em;
 }
 
 /* Band list */
