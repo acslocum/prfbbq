@@ -288,12 +288,15 @@ dl.ticket_info dd span {
 ==================================================== */
 #page-content {
   float:left;
-  height:48em;
+  min-height:48em;
   padding:0 1em 0 4.5em;
   position:relative;
   text-align:left;
   width:70em;
   z-index:101;
+}
+#page-content.scrollbar {
+  height:48em;
 }
 
 #page-content .story_container {

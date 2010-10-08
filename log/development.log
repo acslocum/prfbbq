@@ -15018,3 +15018,669 @@ ActionController::UnknownAction (No action responded to make favcon. Actions: ar
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:45:26) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.9ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.6ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/news/home/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:47:42) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.8ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.4ms)
+Completed in 24ms (View: 19, DB: 1) | 200 OK [http://localhost/news/home/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:47:59) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.5ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.4ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/news/home/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:48:50) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.4ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.4ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/news/home/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 10:48:54) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 10:49:09) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.2ms)
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#/ (for 127.0.0.1 at 2010-10-08 10:49:21) [GET]
+
+ActionController::UnknownAction (No action responded to /. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 10:49:30) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#news (for 127.0.0.1 at 2010-10-08 10:49:31) [GET]
+Rendering template within layouts/news
+Rendering news/news
+Completed in 25ms (View: 24, DB: 0) | 200 OK [http://localhost/news/news]
+
+
+Processing NewsController#news (for 127.0.0.1 at 2010-10-08 10:49:37) [GET]
+Rendering template within layouts/news
+Rendering news/news
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/news/news]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:49:38) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.2ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:49:40) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.2ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.5ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:49:45) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 10:49:46) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.2ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:49:48) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.2ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.5ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 10:49:52) [GET]
+  Parameters: {"id"=>"chicago-bbq-10-10-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%chicago bbq%' and event_date = '2010-10-10') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/article/chicago-bbq-10-10-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:49:57) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.4ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:49:57) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.6ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.4ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:50:13) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.2ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.9ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#/home/present (for 127.0.0.1 at 2010-10-08 10:50:14) [GET]
+
+ActionController::UnknownAction (No action responded to /home/present. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#/home/present (for 127.0.0.1 at 2010-10-08 10:50:22) [GET]
+
+ActionController::UnknownAction (No action responded to /home/present. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:50:23) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (2.3ms)
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:50:33) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.5ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:50:39) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.2ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.3ms)
+Rendered news/_article (1.4ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#present (for 127.0.0.1 at 2010-10-08 10:50:40) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.8ms)
+Rendered news/_article (1.5ms)
+Completed in 66ms (View: 61, DB: 1) | 200 OK [http://localhost/news/present]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:51:29) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.6ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.4ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 10:51:31) [GET]
+  Parameters: {"id"=>"buffalo-wtfbbq-08-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%buffalo wtfbbq%' and event_date = '2010-08-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.2ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/news/article/buffalo-wtfbbq-08-30-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:51:34) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.5ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:58:29) [GET]
+  [4;36;1mArticle Load (7.0ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.7ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.5ms)
+Completed in 54ms (View: 21, DB: 7) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 10:58:32) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.3ms)
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:59:13) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.2ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (2.0ms)
+Rendered news/_article (1.4ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:59:42) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.1ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.5ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 10:59:43) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.3ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 11:00:31) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0x1043d45c8>) on line #6 of app/views/news/article.html.erb:
+3: <% end %>
+4: 
+5: <% content_for :headAddon do %>
+6:   <meta property="og:title" content="<%= article.full_title %>" />
+7:   <meta property="og:description" content="description" />
+8:   <meta property="og:image" content="thumbnail_image" />
+9: <% end %>
+
+    app/views/news/article.html.erb:6
+    app/views/news/article.html.erb:5
+
+Rendered rescues/_trace (37.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 11:04:02) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+ERROR: compiling _run_erb_app47views47news47article46html46erb RAISED compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/article.html.erb:6: syntax error, unexpected ')', expecting tASSOC
+...@article, article.full_title ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47news47article46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  content_for :titleAddon do ; @output_buffer.concat "\n  ARTICLE TITLE\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+;  content_for :headAddon do ; @output_buffer.concat "\n  <meta property=\"og:title\" content=\""
+; @output_buffer.concat(( render :object => @article, article.full_title ).to_s); @output_buffer.concat "\" />\n\n"
+
+;  end ; @output_buffer.concat "\n\n<section id=\"page-content\" class=\"news_article\">\n  "
+
+
+; @output_buffer.concat(( render (:partial=> "article", :object=>@article) ).to_s)
+@output_buffer.concat "</section>\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/article.html.erb:17:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/news/article.html.erb:6: syntax error, unexpected ')', expecting tASSOC
+...@article, article.full_title ).to_s); @output_buffer.concat ...
+                              ^) on line #6 of app/views/news/article.html.erb:
+3: <% end %>
+4: 
+5: <% content_for :headAddon do %>
+6:   <meta property="og:title" content="<%= render :object => @article, article.full_title %>" />
+7: 
+8: <% end %>
+9: 
+
+    app/views/news/article.html.erb:17:in `compile!'
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 11:04:07) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0x1042bf930>) on line #6 of app/views/news/article.html.erb:
+3: <% end %>
+4: 
+5: <% content_for :headAddon do %>
+6:   <meta property="og:title" content="<%= render article.full_title %>" />
+7: 
+8: <% end %>
+9: 
+
+    app/views/news/article.html.erb:6
+    app/views/news/article.html.erb:5
+
+Rendered rescues/_trace (106.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 11:06:16) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (Missing template news/_article_head.erb in view path app/views) on line #5 of app/views/news/article.html.erb:
+2:   ARTICLE TITLE
+3: <% end %>
+4: 
+5: <%= render (:partial=> "article_head", :object=>@article) -%>
+6:   
+7: <section id="page-content" class="news_article">
+8:   <%= render (:partial=> "article", :object=>@article) -%>
+
+    app/views/news/article.html.erb:5
+
+Rendered rescues/_trace (37.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 11:06:46) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0x10417a340>) on line #2 of app/views/news/_article_head.html.erb:
+1: <% content_for :headAddon do %>
+2:   <meta property="og:title" content="<%= article.full_title %>" />
+3:   <meta property="og:description" content="<%= article.short_content %>" />
+4:   <meta property="og:image" content="prf_thumbnail" />
+5: <% end %>
+
+    app/views/news/_article_head.html.erb:2
+    app/views/news/_article_head.html.erb:1
+    app/views/news/article.html.erb:5
+
+Rendered rescues/_trace (45.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 11:07:17) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0x10424e988>) on line #2 of app/views/news/_article_head.html.erb:
+1: <% content_for :headAddon do %>
+2:   <meta property="og:title" content="<%= render article.full_title %>" />
+3:   <meta property="og:description" content="<%= article.short_content %>" />
+4:   <meta property="og:image" content="prf_thumbnail" />
+5: <% end %>
+
+    app/views/news/_article_head.html.erb:2
+    app/views/news/_article_head.html.erb:1
+    app/views/news/article.html.erb:5
+
+Rendered rescues/_trace (116.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 11:08:04) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0x104362e78>) on line #6 of app/views/news/article.html.erb:
+3: <% end %>
+4: 
+5: <% content_for :headAddon do %>
+6:   <!-- <meta property="og:title" content="<%= article.full_title %>" />
+7:   <meta property="og:description" content="<%= article.short_content %>" /> -->
+8:   <meta property="og:image" content="prf_thumbnail" />
+9: <% end %>
+
+    app/views/news/article.html.erb:6
+    app/views/news/article.html.erb:5
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 11:08:05) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0x1044a1d98>) on line #6 of app/views/news/article.html.erb:
+3: <% end %>
+4: 
+5: <% content_for :headAddon do %>
+6:   <!-- <meta property="og:title" content="<%= article.full_title %>" />
+7:   <meta property="og:description" content="<%= article.short_content %>" /> -->
+8:   <meta property="og:image" content="prf_thumbnail" />
+9: <% end %>
+
+    app/views/news/article.html.erb:6
+    app/views/news/article.html.erb:5
+
+Rendered rescues/_trace (37.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 11:08:17) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (3.8ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 11:08:19) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.9ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Rendered news/_article (1.5ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]

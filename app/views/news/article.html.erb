@@ -1,4 +1,13 @@
-<title>PRFBBQ - ARTICLE TITLE </title>
+<% content_for :titleAddon do %>
+  ARTICLE TITLE
+<% end %>
+
+<% content_for :headAddon do %>
+  <meta property="og:title" content="<%#= article.full_title %>" />
+  <meta property="og:description" content="<%#= article.short_content %>" />
+  <meta property="og:image" content="prf_thumbnail" />
+<% end %>
+  
 <section id="page-content" class="news_article">
   <%= render (:partial=> "article", :object=>@article) -%>
 </section>

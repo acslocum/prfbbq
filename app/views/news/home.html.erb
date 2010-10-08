@@ -1,6 +1,19 @@
-<title>PRFBBQ - News</title>
-<section id="page-content" class="home">
+<% content_for :titleAddon do %>
+  News
+<% end %>
+
+<section id="page-content" class="scrollbar">
   <div class="news" id="news-list">
     <%= render (:partial=> "article", :collection=>@articles) -%>
   </div>
 </section>
+
+<% content_for :script do %>
+  <script>
+    $(function() {
+      $('#page-content').jScrollPane({
+        showArrows:true
+      });
+    });
+  </script>
+<% end %>
