@@ -16516,3 +16516,604 @@ DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called 
 DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:35)
 Rendered bbq/_bbq (2.4ms)
 Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:27:09) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:5)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:16)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:35)
+Rendered bbq/_bbq (2.4ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 16:27:11) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (1.9ms)
+Completed in 49ms (View: 44, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 16:40:10) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (2.0ms)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:40:14) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:5)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:16)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:35)
+Rendered bbq/_bbq (2.5ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 16:40:15) [GET]
+  [4;36;1mBbq Load (1.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (2.0ms)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:48:20) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:5)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:16)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:35)
+Rendered bbq/_bbq (2.5ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 16:48:22) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (40.9ms)
+Completed in 49ms (View: 44, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing BbqController#home (for 127.0.0.1 at 2010-10-08 16:48:39) [GET]
+
+ActionController::UnknownAction (No action responded to home. Actions: past and present):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: bbq: ALTER TABLE "bbq" ADD "venue_id" integer[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "bbqs" ADD "venue_id" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101008213503')[0m
+Migrating to AddVenueData (20101008214329)
+  [4;35;1mVenue Delete all (0.3ms)[0m   [0mDELETE FROM "venues" WHERE 1=1[0m
+  [4;36;1mVenue Create (0.2ms)[0m   [0;1mINSERT INTO "venues" ("name", "updated_at", "url", "address", "created_at") VALUES('Quenchers Saloon', '2010-10-08 22:05:57', 'http://www.quenchers.com/', '2401 N. Western Ave., Chicago, IL 60647', '2010-10-08 22:05:57')[0m
+  [4;35;1mVenue Create (0.1ms)[0m   [0mINSERT INTO "venues" ("name", "updated_at", "url", "address", "created_at") VALUES('WJ Morrissey Irish Pub', '2010-10-08 22:05:57', 'http://www.wjmorrissey.com/', '30 Mississippi St, Buffalo, NY 14203, USA', '2010-10-08 22:05:57')[0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Update (0.2ms)[0m   [0;1mUPDATE "bbqs" SET "venue_id" = 1, "updated_at" = '2010-10-08 22:05:57' WHERE "id" = 1[0m
+  [4;35;1mBbq Update (0.1ms)[0m   [0mUPDATE "bbqs" SET "venue_id" = 2, "updated_at" = '2010-10-08 22:05:57' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101008214329')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bands")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bbqs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("venues")[0m
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 17:06:59) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:5)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:16)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17)
+  [4;36;1mVenue Load (0.3ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:18)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:36)
+Rendered bbq/_bbq (9.8ms)
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 17:11:36) [GET]
+  [4;35;1mBbq Load (1.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+ERROR: compiling _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object RAISED compile error
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17: unknown regexp option - h
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.concat "</a></h2>\n"
+                              ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:18: syntax error, unexpected $undefined, expecting ')'
+@output_buffer.concat "\t<h2>"; @output_buffer.concat(...
+                        ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:22: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:22: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 1</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:23: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:23: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 2</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:24: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:24: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 3</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:25: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:25: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 4</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:26: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:26: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 5</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:27: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:27: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 6</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:28: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:28: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 7</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:29: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:29: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 8</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:30: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:30: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 9</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:31: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:31: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 10</a></li>\n"
+                                                           ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:32: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:32: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 11</a></li>\n"
+                                                           ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:33: unknown regexp option - l
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:33: syntax error, unexpected $undefined
+@output_buffer.concat "    </ul>\n"
+                                 ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:34: syntax error, unexpected $undefined, expecting ')'
+@output_buffer.concat "    \n"
+                            ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:35: syntax error, unexpected kCLASS, expecting kDO or '{' or '('
+@output_buffer.concat "    <div class=\"description\">\n"
+                                     ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:40: syntax error, unexpected kENSURE, expecting ')'
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:42: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];bbq = local_assigns[:bbq];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<section id=\"page-content\" class=\"shows\">\n"
+@output_buffer.concat "  <ul id=\"content-nav\">\n"
+@output_buffer.concat "    <!-- Each past show should show up automatically in this list after the date of the show has passed -->\n"
+@output_buffer.concat "    <li class=\"top_item\">\n"
+@output_buffer.concat "      <a href=\"#\" class=\"selected\">"; @output_buffer.concat((bbq.full_title).to_s); @output_buffer.concat "</a>\n"
+@output_buffer.concat "      <ul class=\"subnav\">\n"
+@output_buffer.concat "        <li><a href=\"#\" class=\"selected\">Thursday</a></li>\n"
+@output_buffer.concat "        <li><a href=\"#\">Friday</a></li>\n"
+@output_buffer.concat "        <li><a href=\"#\">Saturday</a></li>\n"
+@output_buffer.concat "        <li><a href=\"#\">Sunday</a></li>\n"
+@output_buffer.concat "      </ul>\n"
+@output_buffer.concat "    </li>\n"
+@output_buffer.concat "  </ul>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <section id=\"show-info\">\n"
+@output_buffer.concat "    <h1>"; @output_buffer.concat(( bbq.event_date).to_s); @output_buffer.concat "</h1>\n"
+@output_buffer.concat "    <h2><a href=\""; @output_buffer.concat((bbq.venue.url>"><%= bbq.venue.name).to_s); @output_buffer.concat "</a></h2>\n"
+@output_buffer.concat "\t<h2>"; @output_buffer.concat(( bbq.venue.address).to_s); @output_buffer.concat "</h2>\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->\n"
+@output_buffer.concat "    <ul class=\"band_list\">\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 1</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 2</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 3</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 4</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 5</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 6</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 7</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 8</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 9</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 10</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 11</a></li>\n"
+@output_buffer.concat "    </ul>\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    <div class=\"description\">\n"
+@output_buffer.concat "      "; @output_buffer.concat(( bbq.content).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "  </section>\n"
+@output_buffer.concat "</section>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:42:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:184:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:971:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/controllers/bbq_controller.rb:4:in `present'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17: unknown regexp option - h
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.concat "</a></h2>\n"
+                              ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:18: syntax error, unexpected $undefined, expecting ')'
+@output_buffer.concat "\t<h2>"; @output_buffer.concat(...
+                        ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:22: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:22: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 1</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:23: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:23: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 2</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:24: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:24: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 3</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:25: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:25: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 4</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:26: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:26: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 5</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:27: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:27: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 6</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:28: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:28: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 7</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:29: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:29: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 8</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:30: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:30: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 9</a></li>\n"
+                                                          ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:31: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:31: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 10</a></li>\n"
+                                                           ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:32: unknown regexp option - a
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:32: syntax error, unexpected '<'
+@output_buffer.concat "      <li><a href=\"#\">Band 11</a></li>\n"
+                                                           ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:33: unknown regexp option - l
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:33: syntax error, unexpected $undefined
+@output_buffer.concat "    </ul>\n"
+                                 ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:34: syntax error, unexpected $undefined, expecting ')'
+@output_buffer.concat "    \n"
+                            ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:35: syntax error, unexpected kCLASS, expecting kDO or '{' or '('
+@output_buffer.concat "    <div class=\"description\">\n"
+                                     ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:40: syntax error, unexpected kENSURE, expecting ')'
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:42: syntax error, unexpected kEND, expecting ')') on line #17 of app/views/bbq/_bbq.html.erb:
+14:   
+15:   <section id="show-info">
+16:     <h1><%= bbq.event_date%></h1>
+17:     <h2><a href="<%=bbq.venue.url>"><%= bbq.venue.name%></a></h2>
+18: 	<h2><%= bbq.venue.address%></h2>
+19:     
+20:     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+
+    app/views/bbq/_bbq.html.erb:42:in `compile!'
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (78.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 17:12:07) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+ERROR: compiling _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object RAISED compile error
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17: syntax error, unexpected '<'
+...uffer.concat((bbq.venue.url>><%= bbq.venue.name).to_s); @out...
+                              ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:21: syntax error, unexpected $undefined, expecting ')'
+@output_buffer.concat "    <ul class=\"band_list\">\n"
+                                      ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:40: syntax error, unexpected kENSURE, expecting ')'
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:42: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];bbq = local_assigns[:bbq];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<section id=\"page-content\" class=\"shows\">\n"
+@output_buffer.concat "  <ul id=\"content-nav\">\n"
+@output_buffer.concat "    <!-- Each past show should show up automatically in this list after the date of the show has passed -->\n"
+@output_buffer.concat "    <li class=\"top_item\">\n"
+@output_buffer.concat "      <a href=\"#\" class=\"selected\">"; @output_buffer.concat((bbq.full_title).to_s); @output_buffer.concat "</a>\n"
+@output_buffer.concat "      <ul class=\"subnav\">\n"
+@output_buffer.concat "        <li><a href=\"#\" class=\"selected\">Thursday</a></li>\n"
+@output_buffer.concat "        <li><a href=\"#\">Friday</a></li>\n"
+@output_buffer.concat "        <li><a href=\"#\">Saturday</a></li>\n"
+@output_buffer.concat "        <li><a href=\"#\">Sunday</a></li>\n"
+@output_buffer.concat "      </ul>\n"
+@output_buffer.concat "    </li>\n"
+@output_buffer.concat "  </ul>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <section id=\"show-info\">\n"
+@output_buffer.concat "    <h1>"; @output_buffer.concat(( bbq.event_date).to_s); @output_buffer.concat "</h1>\n"
+@output_buffer.concat "    <h2><a href="; @output_buffer.concat((bbq.venue.url>><%= bbq.venue.name).to_s); @output_buffer.concat "</a></h2>\n"
+@output_buffer.concat "\t<h2>"; @output_buffer.concat(( bbq.venue.address).to_s); @output_buffer.concat "</h2>\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->\n"
+@output_buffer.concat "    <ul class=\"band_list\">\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 1</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 2</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 3</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 4</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 5</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 6</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 7</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 8</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 9</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 10</a></li>\n"
+@output_buffer.concat "      <li><a href=\"#\">Band 11</a></li>\n"
+@output_buffer.concat "    </ul>\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    <div class=\"description\">\n"
+@output_buffer.concat "      "; @output_buffer.concat(( bbq.content).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "  </section>\n"
+@output_buffer.concat "</section>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:42:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/partials.rb:184:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:971:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/controllers/bbq_controller.rb:4:in `present'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17: syntax error, unexpected '<'
+...uffer.concat((bbq.venue.url>><%= bbq.venue.name).to_s); @out...
+                              ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:21: syntax error, unexpected $undefined, expecting ')'
+@output_buffer.concat "    <ul class=\"band_list\">\n"
+                                      ^
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:40: syntax error, unexpected kENSURE, expecting ')'
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:42: syntax error, unexpected kEND, expecting ')') on line #17 of app/views/bbq/_bbq.html.erb:
+14:   
+15:   <section id="show-info">
+16:     <h1><%= bbq.event_date%></h1>
+17:     <h2><a href=<%=bbq.venue.url>><%= bbq.venue.name%></a></h2>
+18: 	<h2><%= bbq.venue.address%></h2>
+19:     
+20:     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+
+    app/views/bbq/_bbq.html.erb:42:in `compile!'
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 17:12:29) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:5)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:16)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17)
+  [4;36;1mVenue Load (0.3ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:18)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:36)
+Rendered bbq/_bbq (9.7ms)
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 17:17:04) [GET]
+  [4;35;1mBbq Load (1.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:5)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:16)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17)
+  [4;36;1mVenue Load (0.3ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:18)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:18)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:36)
+Rendered bbq/_bbq (10.4ms)
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/bbq/present]
