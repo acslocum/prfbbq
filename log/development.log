@@ -16345,3 +16345,174 @@ Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:09:45) [GET]
 Rendering template within layouts/news
 Rendered bbq/_bbq (1.9ms)
 Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:10:39) [GET]
+  [4;36;1mBbq Load (1.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (2.0ms)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 16:10:42) [GET]
+  [4;35;1mBbq Load (0.8ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+
+ActionView::MissingTemplate (Missing template bbq/past.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mBbq Create (0.6ms)[0m   [0mINSERT INTO "bbqs" ("updated_at", "title", "content", "event_date", "created_at") VALUES('2010-10-08 21:14:00', 'NYC BBQ', '<p>Some text</p>', '2010-10-20', '2010-10-08 21:14:00')[0m
+  [4;36;1mBbq Create (0.1ms)[0m   [0;1mINSERT INTO "bbqs" ("updated_at", "title", "content", "event_date", "created_at") VALUES('2010-10-08 21:14:00', 'Buffalo WTFBBQ', 'Wild like wings YO', '2010-08-30', '2010-10-08 21:14:00')[0m
+  [4;35;1mBbq Create (0.1ms)[0m   [0mINSERT INTO "bbqs" ("updated_at", "title", "content", "event_date", "created_at") VALUES('2010-10-08 21:14:00', 'Cleveland BBQ', 'HELLO CLEVELAND', '2010-11-30', '2010-10-08 21:14:00')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101008211232')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bands")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bbqs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("venues")[0m
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 16:14:06) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.event_date) on line #16 of app/views/bbq/_bbq.html.erb:
+13:   </ul>
+14:   
+15:   <section id="show-info">
+16:     <h1><%= @bbq.event_date%></h1>
+17:     <h2>Quencher's Saloon</h2>
+18:     
+19:     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+
+    app/views/bbq/_bbq.html.erb:16
+    app/controllers/bbq_controller.rb:8:in `past'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:14:11) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (1.8ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:14:47) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (1.9ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:17:38) [GET]
+  [4;35;1mBbq Load (1.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (3.4ms)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:18:25) [GET]
+  [4;36;1mBbq Load (1.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (1.9ms)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 16:18:27) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.full_title) on line #5 of app/views/bbq/_bbq.html.erb:
+2:   <ul id="content-nav">
+3:     <!-- Each past show should show up automatically in this list after the date of the show has passed -->
+4:     <li class="top_item">
+5:       <a href="#" class="selected"><%=@bbq.full_title%></a>
+6:       <ul class="subnav">
+7:         <li><a href="#" class="selected">Thursday</a></li>
+8:         <li><a href="#">Friday</a></li>
+
+    app/views/bbq/_bbq.html.erb:5
+    app/controllers/bbq_controller.rb:8:in `past'
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 16:18:48) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (3.4ms)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:18:56) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:5)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:16)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:35)
+Rendered bbq/_bbq (3.7ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 16:18:59) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (2.0ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:19:02) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:5)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:16)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:35)
+Rendered bbq/_bbq (2.4ms)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/bbq/present]

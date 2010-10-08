@@ -2,7 +2,7 @@
   <ul id="content-nav">
     <!-- Each past show should show up automatically in this list after the date of the show has passed -->
     <li class="top_item">
-      <a href="#" class="selected">CHI/JUN '10</a>
+      <a href="#" class="selected"><%=bbq.full_title%></a>
       <ul class="subnav">
         <li><a href="#" class="selected">Thursday</a></li>
         <li><a href="#">Friday</a></li>
@@ -13,7 +13,7 @@
   </ul>
   
   <section id="show-info">
-    <h1><%= @bbq.event_date%></h1>
+    <h1><%= bbq.event_date%></h1>
     <h2>Quencher's Saloon</h2>
     
     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
@@ -32,7 +32,7 @@
     </ul>
     
     <div class="description">
-      <%= @bbq.content%>
+      <%= bbq.content%>
     </div>
   </section>
 </section>
