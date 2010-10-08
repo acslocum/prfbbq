@@ -1,10 +1,45 @@
 class BbqController < ApplicationController
   def present
-    @bbq = Bbq.find(:first, :conditions=>["event_date >= ?", Date.today], :order => "event_date ASC, id DESC")
+    @bbq = present_bbqs
     render :partial=>"bbq/bbq.html.erb", :layout=>"news"
   end
   def past
-    @bbqs = Bbq.find(:all, :conditions=>["event_date < ?", Date.today], :order => "created_at DESC, id DESC")
+    @bbqs = past_bbqs
     render :partial=>"bbq/bbq.html.erb", :layout=>"news", :collection=>@bbqs
   end  
+  
+  def present_bbqs
+    Bbq.find(:all, :conditions=>["event_date >= ?", Date.today], :order => "event_date ASC, id DESC")
+  end
+  
+  def past_bbqs
+    Bbq.find(:all, :conditions=>["event_date < ?", Date.today], :order => "created_at DESC, id DESC")
+  end
+  
+  def present_year
+    bbqs = present_bbqs
+    years = bbqs.collect {|bbq| bbq.year}
+    render :partial=>"bbq/option.html.erb", :collection=>years.uniq
+  end
+  
+  def past_year
+    bbqs = past_bbqs
+    years = bbqs.collect {|bbq| bbq.year}
+    render :partial=>"bbq/option.html.erb", :collection=>years.uniq
+  end
+  
+  def present_place
+    bbqs = present_bbqs
+    places = bbqs.select {|bbq| bbq.year == params[:id].to_i} 
+    places.collect! {|bbq| bbq.title}
+    render :partial=>"bbq/option.html.erb", :collection=>places.uniq
+  end
+  
+  def past_place
+    bbqs = past_bbqs
+    places = bbqs.select {|bbq| bbq.year == params[:id].to_i} 
+    places.collect! {|bbq| bbq.title}
+    render :partial=>"bbq/option.html.erb", :collection=>places.uniq
+  end
+  
 end

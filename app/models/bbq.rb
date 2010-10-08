@@ -12,4 +12,7 @@ class Bbq < ActiveRecord::Base
     title + " - " + event_date_usa
   end
   
+  def year
+    event_date.year
+  end
 end
