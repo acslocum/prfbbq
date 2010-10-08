@@ -1,31 +1,34 @@
 <section id="page-content" class="shows">
   <form id="bbq-nav">
     <select id="year">
-      <option value="prompt">Year...</option>
       <option value="2009">2009</option>
       <option value="2010">2010</option>
     </select>
 
-    <select id="place">
+    <select id="place" disabled>
       <option value="prompt">Place...</option>
       <option value="CHI/'10">CHI/'10</option>
       <option value="NYC/'10">NYC/'10</option>
     </select>
 
-    <select id="day">
+    <select id="day" disabled>
       <option value="prompt">Day...</option>
       <option value="Thursday">Thursday</option>
       <option value="Friday">Friday</option>
       <option value="Saturday">Saturday</option>
     </select>
+    
+    <button type="submit">Go</button>
   </form>
-  <div style="clear:both;"><div>
+  <div style="clear:both;"></div>
 
   
   <section id="show-info">
-    <h1><%= bbq.event_date%></h1>
-    <h2><a href="<%=bbq.venue.url%>"><%= bbq.venue.name%></a></h2>
-	<h2><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;"><%= bbq.venue.address%></a></h2>
+    <hgroup>
+      <h1><%= bbq.event_date%></h1>
+      <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
+	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+	  </hgroup>
     
     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
     <ul class="band_list">
@@ -52,6 +55,8 @@
   <script>
     $(function() {
       $('#bbq-nav select').customSelects();
+      
+      FormNav.init('form#bbq-nav');
     });
   </script>
 <% end %>

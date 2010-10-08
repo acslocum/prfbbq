@@ -460,6 +460,9 @@ div.customSelects_container {
   margin-right:0.5em;
   width:20em;
 }
+div.customSelects_container.disabled {
+  background-color:#4c4c4c;
+}
 
 div.customSelects_title {
   background-image:url(../images/select_arrow.png);
@@ -499,6 +502,20 @@ ul.customSelects_list li.hover {
 }
 ul.customSelects_list li:first-child {
   display:none;
+}
+
+button[type=submit] {
+  background-color:#f00;
+  border:none;
+  color:#fff;
+  font-family:'MuseoSlab500';
+  font-size:1.5em;
+  padding:0.3em 0.5em 0.2em;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+button[type=submit].disabled {
+  background-color:#4c4c4c;
 }
 
 /* ScrollPane 
