@@ -30,4 +30,9 @@ class ArticleTest < ActiveSupport::TestCase
     assert_equal expected, date
   end
   
+  test "can create facebook link from permalink" do 
+    expected = "http://www.prfbbq.com/news/article/chicago-10-11-2010"
+    article = Article.new(:title=>"Chicago", :event_date=>"2010-10-11")
+    assert_equal expected, article.fblink
+  end 
 end

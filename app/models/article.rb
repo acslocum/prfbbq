@@ -18,6 +18,10 @@ class Article < ActiveRecord::Base
     title_to_link << "-" << event_date_to_link
   end
   
+  def fblink
+    'http://wwww.prfbbq.com/news/article' + title_to_link
+  end
+  
   def title_to_link
     title.downcase.tr(' ','-')
   end

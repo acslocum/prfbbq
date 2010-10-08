@@ -6,8 +6,7 @@
         <%= article.created_at_formatted -%>
       </li>
       <li class="share">
-        <%= link_to 'Share', {:action => 'http://www.facebook.com/sharer.php'}, :name => 'fb_share', :type => 'button_count' -%>
-        <%= javascript_include_tag 'http://static.ak.fbcdn.net/connect.php/js/FB.Share' %>
+        <%= link_to 'Share', {:action => 'http://www.facebook.com/sharer.php'}, :name => 'fb_share', :title => article.full_title, :type => 'button_count', :share_url => article.fblink -%>
       </li>
     </ul>
   </div>
