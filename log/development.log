@@ -15829,3 +15829,47 @@ Rendering template within layouts/news
 Rendering news/article
 Rendered news/_article (5.2ms)
 Completed in 56ms (View: 51, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 14:03:10) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.5ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 14:04:57) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0x17f3cac>) on line #6 of app/views/news/article.html.erb:
+3: <% end %>
+4: 
+5: <% content_for :headAddon do %>
+6:   <meta property="og:title" content="<%= article.full_title %>" />
+7:   <meta property="og:description" content="<%= article.content[0,200] %>" />
+8:   <meta property="og:image" content="prf_thumbnail" />
+9: <% end %>
+
+    app/views/news/article.html.erb:6
+    app/views/news/article.html.erb:5
+
+Rendered rescues/_trace (79.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 14:05:08) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.1ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
