@@ -17162,3 +17162,189 @@ Rendering template within layouts/news
   [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
 Rendered bbq/_bbq (6.2ms)
 Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 17:21:30) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (6.5ms)
+Completed in 65ms (View: 59, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 17:21:33) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (103.7ms)
+Rendered news/_article (2.5ms)
+Rendered news/_article (2.3ms)
+Rendered news/_article (2.3ms)
+Completed in 202ms (View: 197, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 17:21:36) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:5)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:16)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:17)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:18)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:18)
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbq/_bbq.html.erb:36)
+Rendered bbq/_bbq (53.2ms)
+Completed in 62ms (View: 56, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-08 17:21:37) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (6.2ms)
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 17:21:39) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.2ms)
+Rendered news/_article (2.1ms)
+Rendered news/_article (2.2ms)
+Rendered news/_article (2.3ms)
+Completed in 19ms (View: 15, DB: 1) | 200 OK [http://localhost/news/home]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mArticle Delete all (0.4ms)[0m   [0mDELETE FROM "articles" WHERE 1=1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mArticle Delete all (0.4ms)[0m   [0mDELETE FROM "articles" WHERE 1=1[0m
+  [4;36;1mArticle Create (0.2ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-10-08 22:25:58', 'Chicago BBQ announced!', 't', '10-10-2010! At Quenchers!!!!', NULL, '2010-10-08 22:25:58', NULL)[0m
+  [4;35;1mArticle Create (0.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-10-08 22:25:58', 'Some BBQ announced!', 't', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href="#">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.', NULL, '2010-10-08 22:25:58', NULL)[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-10-08 22:25:58', 'Thing BBQ announced!', 't', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href="#">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.', NULL, '2010-10-08 22:25:58', NULL)[0m
+  [4;35;1mArticle Create (0.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "tickets_available", "content", "event_date", "created_at", "ticket_url") VALUES('2010-10-08 22:25:58', 'Whatever BBQ announced!', 't', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href="#">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.', NULL, '2010-10-08 22:25:58', NULL)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101008222206')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bands")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bbqs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("venues")[0m
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 17:26:02) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.strftime) on line #3 of app/views/news/_article.html.erb:
+1: <section class="story_container">          
+2:   <div class="title_container">
+3:     <h1 class="article_title"><%= link_to article.full_title, :action => 'article', :id => article.permalink -%></h1>
+4:     <ul class="info">
+5:       <li class="time_stamp">
+6:         <%= article.created_at_formatted -%>
+
+    app/models/article.rb:7:in `event_date_usa'
+    app/models/article.rb:26:in `full_title'
+    app/views/news/_article.html.erb:3
+    app/views/news/home.html.erb:7
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 17:28:21) [GET]
+  [4;35;1mArticle Load (1.2ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.1ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (2.6ms)
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 17:28:26) [GET]
+  Parameters: {"id"=>"Chicago%20BBQ%20announced!"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%Chicago BBQ announced!%') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.6ms)
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/news/article/Chicago%2520BBQ%2520announced!]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 17:28:31) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.8ms)
+Rendered news/_article (1.8ms)
+Rendered news/_article (1.8ms)
+Rendered news/_article (2.6ms)
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 17:28:33) [GET]
+  Parameters: {"id"=>"Some%20BBQ%20announced!"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%Some BBQ announced!%') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (1.9ms)
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/news/article/Some%2520BBQ%2520announced!]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 17:28:36) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.8ms)
+Rendered news/_article (1.8ms)
+Rendered news/_article (1.8ms)
+Rendered news/_article (2.2ms)
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://localhost/news/home]
