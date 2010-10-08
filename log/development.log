@@ -15873,3 +15873,475 @@ Rendering template within layouts/news
 Rendering news/article
 Rendered news/_article (2.1ms)
 Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (9.9ms)[0m   [0mCREATE TABLE "bbqs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "event_date" date, "content" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101008202721')[0m
+Migrating to CreateVenues (20101008203229)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "venues" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101008203229')[0m
+Migrating to CreateBands (20101008203948)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "bands" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101008203948')[0m
+Migrating to BbqTestData (20101008205204)
+  [4;35;1mBbq Delete all (0.5ms)[0m   [0mDELETE FROM "bbqs" WHERE 1=1[0m
+  [4;36;1mBbq Create (0.2ms)[0m   [0;1mINSERT INTO "bbqs" ("updated_at", "title", "content", "event_date", "created_at") VALUES('2010-10-08 20:54:51', 'Chicago BBQ', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href="#">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.</p>
+ <p>In hac habitasse platea dictumst. In in massa in quam hendrerit gravida sed a purus. Donec placerat tristique laoreet. Proin hendrerit magna et lectus dictum vitae ornare nunc lacinia. Nulla facilisi. Aliquam dui neque, dictum sit amet cursus quis, condimentum eu leo. Pellentesque tempus velit ut mauris condimentum vitae gravida enim accumsan. Quisque ultrices nisi ac tortor malesuada accumsan. In hac habitasse platea dictumst.</p>
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien.</p>', '2010-10-10', '2010-10-08 20:54:51')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101008205204')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bbqs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("venues")[0m
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-08 15:56:16) [GET]
+  Parameters: {"id"=>"cleveland-bbq-11-30-2010"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%cleveland bbq%' and event_date = '2010-11-30') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.1ms)
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/news/article/cleveland-bbq-11-30-2010]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 15:56:23) [GET]
+
+ActionController::RoutingError (No route matches "/bbq/present" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 15:56:43) [GET]
+
+ActionController::RoutingError (No route matches "/bbq" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 15:57:21) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+
+ActionView::MissingTemplate (Missing template bbq/present.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 15:59:55) [GET]
+  [4;35;1mBbq Load (1.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering bbq
+
+ActionView::MissingTemplate (Missing template bbq.erb in view path app/views):
+  app/controllers/bbq_controller.rb:4:in `present'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:00:06) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering bbq/bbq
+
+ActionView::TemplateError (undefined local variable or method `bbq' for #<ActionView::Base:0x1a56670>) on line #16 of app/views/bbq/bbq.html.erb:
+13:   </ul>
+14:   
+15:   <section id="show-info">
+16:     <h1><%= bbq.event_date%></h1>
+17:     <h2>Quencher's Saloon</h2>
+18:     
+19:     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+
+    app/views/bbq/bbq.html.erb:16
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:00:26) [GET]
+  [4;35;1mBbq Load (1.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC[0m
+Rendering bbq/bbq
+
+ActionView::TemplateError (undefined local variable or method `bbq' for #<ActionView::Base:0x1213968>) on line #16 of app/views/bbq/bbq.html.erb:
+13:   </ul>
+14:   
+15:   <section id="show-info">
+16:     <h1><%= bbq.event_date%></h1>
+17:     <h2>Quencher's Saloon</h2>
+18:     
+19:     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+
+    app/views/bbq/bbq.html.erb:16
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:00:35) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering bbq/bbq
+
+ActionView::TemplateError (undefined local variable or method `bbq' for #<ActionView::Base:0x17d32b8>) on line #16 of app/views/bbq/bbq.html.erb:
+13:   </ul>
+14:   
+15:   <section id="show-info">
+16:     <h1><%= bbq.event_date%></h1>
+17:     <h2>Quencher's Saloon</h2>
+18:     
+19:     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+
+    app/views/bbq/bbq.html.erb:16
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (81.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:00:50) [GET]
+  [4;35;1mBbq Load (1.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering bbq/bbq
+
+ActionView::TemplateError (undefined method `description' for #<Bbq:0x199b280>) on line #35 of app/views/bbq/bbq.html.erb:
+32:     </ul>
+33:     
+34:     <div class="description">
+35:       <%= @bbq.description%>
+36:     </div>
+37:   </section>
+38: </section>
+
+    app/views/bbq/bbq.html.erb:35
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:00:57) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering bbq/bbq
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:03:48) [GET]
+  [4;35;1mBbq Load (1.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+
+ActionView::MissingTemplate (Missing template bbq/bbq.erb in view path app/views):
+  app/controllers/bbq_controller.rb:4:in `present'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:03:58) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering bbq/bbq.html
+
+ActionView::MissingTemplate (Missing template bbq/bbq.html in view path app/views):
+  app/controllers/bbq_controller.rb:4:in `present'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:04:04) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendering bbq/bbq.html.erb
+
+ActionView::MissingTemplate (Missing template bbq/bbq.html.erb in view path app/views):
+  app/controllers/bbq_controller.rb:4:in `present'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:04:28) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+
+ActionView::MissingTemplate (Missing template bbq/partial.erb in view path app/views):
+  app/controllers/bbq_controller.rb:4:in `present'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:04:48) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+
+ActionView::MissingTemplate (Missing template bbq/__bbq.html.erb in view path app/views):
+  app/controllers/bbq_controller.rb:4:in `present'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:04:54) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (3.3ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#make favcon (for 127.0.0.1 at 2010-10-08 16:04:54) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: past and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#make favcon (for 127.0.0.1 at 2010-10-08 16:04:54) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: past and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#make favcon (for 127.0.0.1 at 2010-10-08 16:04:57) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: past and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:07:44) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (1.9ms)
+ERROR: compiling _run_erb_app47views47layouts47news46html46erb RAISED compile error
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/layouts/news.html.erb:37: syntax error, unexpected ':', expecting ')'
+... "Past", {:action => 'past'} :class=> @is_past ).to_s); @out...
+                              ^
+Function body:           def _run_erb_app47views47layouts47news46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n"
+@output_buffer.concat "<html>\n"
+@output_buffer.concat "  <head>\n"
+@output_buffer.concat "    <title>PRFBBQ - "; @output_buffer.concat(( yield :titleAddon ).to_s); @output_buffer.concat "</title>\n"
+@output_buffer.concat "    <meta name=\"description\" content=\"PRFBBQ - 2010\" />\n"
+@output_buffer.concat "    <meta name=\"robots\" content=\"robots.txt\" />\n"
+@output_buffer.concat "    \n"
+#  CSS 
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag "reset" ).to_s)
+@output_buffer.concat "\t  "; @output_buffer.concat(( stylesheet_link_tag "main" ).to_s)
+@output_buffer.concat "\t    \n"
+# FAVCONS 
+@output_buffer.concat "    <link rel=\"image/x-icon\" href=\"make favcon\"/>\n"
+@output_buffer.concat "    <link rel=\"apple-touch-icon\" href=\"make favcon\"/>\n"
+@output_buffer.concat "    <link rel=\"shortcut icon\" href=\"make favcon\" type=\"image/x-icon\"/>\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :headAddon ).to_s)
+@output_buffer.concat "    \n"
+@output_buffer.concat "    <!--[if IE]>\n"
+@output_buffer.concat "      <script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n"
+@output_buffer.concat "    <![endif]-->\n"
+@output_buffer.concat "  </head>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <body id=\"www-prfbbq-com\">\n"
+@output_buffer.concat "    <div id=\"page-wrapper\">\n"
+@output_buffer.concat "      <header id=\"page-header\">\n"
+@output_buffer.concat "        <h1>"; @output_buffer.concat(( link_to "PRF BBQ", {:action => "home"} ).to_s); @output_buffer.concat "</h1>\n"
+@output_buffer.concat "        \n"
+# TODO: Set "selected" on nav when in particluar page 
+# News/home: News 
+# Article: News 
+# Present: Present 
+# Past: Past 
+@output_buffer.concat "        <nav id=\"page-nav\">\n"
+@output_buffer.concat "          "; @output_buffer.concat(( link_to "News", {:action => 'home'}, :class => @is_news ).to_s); @output_buffer.concat " \n"
+@output_buffer.concat "          "; @output_buffer.concat(( link_to "Present", {:action => 'present'}, :class=> @is_present ).to_s); @output_buffer.concat " \n"
+@output_buffer.concat "          "; @output_buffer.concat(( link_to "Past", {:action => 'past'} :class=> @is_past ).to_s); @output_buffer.concat "          \n"
+@output_buffer.concat "        </nav>\n"
+@output_buffer.concat "\n"
+# TICKETS not available - not sure if it'll ever happen 
+# Show only if there are tickets/shows available 
+#<dl class="ticket_info">
+#<dt>Tickets</dt>
+#<%= render (:partial=>"tickets", :collection=>@available_tickets); @output_buffer.concat "-%>\n"
+#</dl> 
+@output_buffer.concat "        </header>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "        "; @output_buffer.concat(( yield :layout ).to_s)
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    <div style=\"clear:both;\"></div>\n"
+@output_buffer.concat "    <footer id=\"page-footer\">\n"
+@output_buffer.concat "    </footer> \n"
+@output_buffer.concat "    <div id=\"martyred_saint\">\n"
+@output_buffer.concat "      "; @output_buffer.concat(( image_tag "burning_hotdog.png" ).to_s)
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "  </body>\n"
+@output_buffer.concat "\n"
+# Javascript 
+@output_buffer.concat "  "; @output_buffer.concat(( javascript_include_tag 'jquery/jquery-1.4.2.js' ).to_s)
+@output_buffer.concat "  "; @output_buffer.concat(( javascript_include_tag 'jquery/plugins/jquery.jScrollPane.js' ).to_s)
+@output_buffer.concat "  "; @output_buffer.concat(( javascript_include_tag 'http://static.ak.fbcdn.net/connect.php/js/FB.Share' ).to_s)
+@output_buffer.concat "  "; @output_buffer.concat(( yield :script ).to_s)
+@output_buffer.concat "</html>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/layouts/news.html.erb:67:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:971:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/controllers/bbq_controller.rb:4:in `present'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/layouts/news.html.erb:37: syntax error, unexpected ':', expecting ')'
+... "Past", {:action => 'past'} :class=> @is_past ).to_s); @out...
+                              ^) on line #37 of app/views/layouts/news.html.erb:
+34:         <nav id="page-nav">
+35:           <%= link_to "News", {:action => 'home'}, :class => @is_news -%> 
+36:           <%= link_to "Present", {:action => 'present'}, :class=> @is_present -%> 
+37:           <%= link_to "Past", {:action => 'past'} :class=> @is_past -%>          
+38:         </nav>
+39: 
+40:           <%-# TICKETS not available - not sure if it'll ever happen -%>
+
+    app/views/layouts/news.html.erb:67:in `compile!'
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:07:56) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (1.9ms)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:08:41) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (1.9ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:09:07) [GET]
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (1.9ms)
+
+ActionView::TemplateError (can't convert nil into String) on line #36 of app/views/layouts/news.html.erb:
+33:         <%-# Past: Past -%>
+34:         <nav id="page-nav">
+35:           <%= link_to "News", {:action => 'home'}, :class => @is_news -%> 
+36:           <%= link_to "Present", {:action => 'present'}, :class=> @is_present -%> <%= "is present " + @is_present%>
+37:           <%= link_to "Past", {:action => 'past'}, :class=> @is_past -%>          
+38:         </nav>
+39: 
+
+    app/views/layouts/news.html.erb:36:in `+'
+    app/views/layouts/news.html.erb:36
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (34.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 16:09:45) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY created_at DESC, id DESC LIMIT 1[0m
+Rendering template within layouts/news
+Rendered bbq/_bbq (1.9ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/bbq/present]
