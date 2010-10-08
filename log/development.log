@@ -14978,3 +14978,43 @@ Rendered news/_article (1.5ms)
 Rendered news/_article (1.4ms)
 Rendered news/_article (1.4ms)
 Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home/cleveland-bbq-11-30-2010]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:43:22) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.5ms)
+Rendered news/_article (4.1ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.4ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-10-08 10:43:23) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 10:44:27) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (event_date >= '2010-10-08') ORDER BY event_date DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.6ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (1.5ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-10-08 10:44:28) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: article, home, look_for_tickets, past, and present):
+  
+
+Rendering rescues/layout (not_found)
