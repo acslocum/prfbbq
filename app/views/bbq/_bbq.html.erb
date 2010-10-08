@@ -14,7 +14,8 @@
   
   <section id="show-info">
     <h1><%= bbq.event_date%></h1>
-    <h2>Quencher's Saloon</h2>
+    <h2><a href="<%=bbq.venue.url%>"><%= bbq.venue.name%></a></h2>
+	<h2><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;"><%= bbq.venue.address%></a></h2>
     
     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
     <ul class="band_list">
