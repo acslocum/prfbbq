@@ -1,11 +1,11 @@
 class BbqController < ApplicationController
   def present
     @bbqs = present_bbqs
-    render :partial=>"bbq/bbq.html.erb", :layout=>"news", :collection=>@bbqs
+    render :action=>"bbq", :layout=>"news"
   end
   def past
     @bbqs = past_bbqs
-    render :partial=>"bbq/bbq.html.erb", :layout=>"news", :collection=>@bbqs
+    render :action=>"bbq", :layout=>"news"
   end  
   
   def present_bbqs
