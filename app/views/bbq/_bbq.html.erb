@@ -6,13 +6,13 @@
     </select>
 
     <select id="place" disabled>
-      <option value="prompt">Place...</option>
+      <option value="prompt" class="prompt">Place...</option> 
       <option value="CHI/'10">CHI/'10</option>
       <option value="NYC/'10">NYC/'10</option>
     </select>
 
     <select id="day" disabled>
-      <option value="prompt">Day...</option>
+      <option value="prompt" class="prompt">Day...</option> 
       <option value="Thursday">Thursday</option>
       <option value="Friday">Friday</option>
       <option value="Saturday">Saturday</option>
@@ -25,7 +25,7 @@
   
   <section id="show-info">
     <hgroup>
-      <h1><%= bbq.event_date%></h1>
+      <h1><%= bbq.event_date %></h1>
       <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
 	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
 	  </hgroup>
@@ -54,9 +54,9 @@
 <% content_for :script do %>
   <script>
     $(function() {
-      $('#bbq-nav select').customSelects();
-      
       FormNav.init('form#bbq-nav');
+      
+      $('#bbq-nav select').customSelects();
     });
   </script>
 <% end %>

@@ -18758,3 +18758,307 @@ Rendered news/_article (1.8ms)
 Rendered news/_article (2.2ms)
 Completed in 18ms (View: 14, DB: 1) | 200 OK [http://localhost/news/home]
 >>>>>>> 1e75aae5d38853197dc3b4af94fc71768a88813c
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bands")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bbqs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("venues")[0m
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 19:26:46) [GET]
+  [4;36;1mBbq Load (0.7ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/bbq/_bbq.html.erb:28)
+
+ActionView::TemplateError (undefined method `event_date' for #<Array:0x101530c58>) on line #28 of app/views/bbq/_bbq.html.erb:
+25:   
+26:   <section id="show-info">
+27:     <hgroup>
+28:       <h1><%= bbq.event_date%></h1>
+29:       <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
+30: 	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+31: 	  </hgroup>
+
+    app/views/bbq/_bbq.html.erb:28
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 19:27:27) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/bbq/_bbq.html.erb:29)
+
+ActionView::TemplateError (undefined method `venue' for #<Array:0x104300e80>) on line #29 of app/views/bbq/_bbq.html.erb:
+26:   <section id="show-info">
+27:     <hgroup>
+28:       <h1><%#= bbq.event_date %></h1>
+29:       <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
+30: 	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+31: 	  </hgroup>
+32:     
+
+    app/views/bbq/_bbq.html.erb:29
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (109.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bands")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bbqs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("venues")[0m
+
+
+Processing BbqController#present_2010 (for 127.0.0.1 at 2010-10-08 19:28:46) [GET]
+
+ActionController::UnknownAction (No action responded to present_2010. Actions: past, past_bbqs, past_place, past_year, present, present_bbqs, present_place, and present_year):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#present_year (for 127.0.0.1 at 2010-10-08 19:28:50) [GET]
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendered bbq/_option (11.0ms)
+Completed in 102ms (View: 16, DB: 1) | 200 OK [http://localhost/bbq/present_year]
+
+
+Processing BbqController#present_year (for 127.0.0.1 at 2010-10-08 19:29:12) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendered bbq/_option (0.2ms)
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/bbq/present_year]
+
+
+Processing BbqController#index (for 127.0.0.1 at 2010-10-08 19:29:15) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: past, past_bbqs, past_place, past_year, present, present_bbqs, present_place, and present_year):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 19:29:19) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (148.9ms)
+Rendered news/_article (2.0ms)
+Rendered news/_article (71.3ms)
+Rendered news/_article (1.8ms)
+Completed in 282ms (View: 269, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 19:29:50) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/bbq/_bbq.html.erb:29)
+
+ActionView::TemplateError (undefined method `venue' for #<Array:0x104423538>) on line #29 of app/views/bbq/_bbq.html.erb:
+26:   <section id="show-info">
+27:     <hgroup>
+28:       <h1><%#= bbq.event_date %></h1>
+29:       <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
+30: 	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+31: 	  </hgroup>
+32:     
+
+    app/views/bbq/_bbq.html.erb:29
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (42.1ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 19:30:08) [GET]
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/bbq/_bbq.html.erb:47)
+
+ActionView::TemplateError (undefined method `content' for #<Array:0x10416aa30>) on line #47 of app/views/bbq/_bbq.html.erb:
+44:     </ul>
+45:     
+46:     <div class="description">
+47:       <%= bbq.content%>
+48:     </div>
+49:   </section>
+50: </section>
+
+    app/views/bbq/_bbq.html.erb:47
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 19:30:31) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/bbq/_bbq.html.erb:28)
+
+ActionView::TemplateError (undefined method `event_date' for #<Array:0x104282be8>) on line #28 of app/views/bbq/_bbq.html.erb:
+25:   
+26:   <section id="show-info">
+27:     <hgroup>
+28:       <h1><%= bbq.event_date %></h1>
+29:       <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
+30: 	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+31: 	  </hgroup>
+
+    app/views/bbq/_bbq.html.erb:28
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (115.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 19:31:10) [GET]
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/bbq/_bbq.html.erb:28)
+
+ActionView::TemplateError (undefined method `event_date' for #<Array:0x1043e90e0>) on line #28 of app/views/bbq/_bbq.html.erb:
+25:   
+26:   <section id="show-info">
+27:     <hgroup>
+28:       <h1><%= bbq.event_date %></h1>
+29:       <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
+30: 	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+31: 	  </hgroup>
+
+    app/views/bbq/_bbq.html.erb:28
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (40.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 19:32:57) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/bbq/_bbq.html.erb:28)
+
+ActionView::TemplateError (undefined method `event_date' for #<Array:0x104126ee8>) on line #28 of app/views/bbq/_bbq.html.erb:
+25:   
+26:   <section id="show-info">
+27:     <hgroup>
+28:       <h1><%= bbq.event_date %></h1>
+29:       <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
+30: 	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+31: 	  </hgroup>
+
+    app/views/bbq/_bbq.html.erb:28
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (39.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 19:36:33) [GET]
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/bbq/_bbq.html.erb:28)
+
+ActionView::TemplateError (undefined method `event_date' for #<Array:0x10424c638>) on line #28 of app/views/bbq/_bbq.html.erb:
+25:   
+26:   <section id="show-info">
+27:     <hgroup>
+28:       <h1><%= bbq.event_date %></h1>
+29:       <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
+30: 	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+31: 	  </hgroup>
+
+    app/views/bbq/_bbq.html.erb:28
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (111.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present_year (for 127.0.0.1 at 2010-10-08 19:47:47) [GET]
+  [4;35;1mBbq Load (8.4ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendered bbq/_option (0.2ms)
+Completed in 23ms (View: 2, DB: 8) | 200 OK [http://localhost/bbq/present_year]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 19:50:43) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.5ms)
+Rendered news/_article (2.0ms)
+Rendered news/_article (1.8ms)
+Rendered news/_article (1.7ms)
+Completed in 31ms (View: 15, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 19:50:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery/plugins/jquery.customSelects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

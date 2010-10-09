@@ -1,5 +1,5 @@
 var FormNav = {
-  init: function(form) {
+  init: function(form) { 
     this.form = $(form);
     this.selectYear = this.form.find('#year');
     this.selectPlace = this.form.find('#place');

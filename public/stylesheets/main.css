@@ -500,7 +500,7 @@ ul.customSelects_list li {
 ul.customSelects_list li.hover {
   background-color:#6a6868;
 }
-ul.customSelects_list li:first-child {
+ul.customSelects_list li.prompt {
   display:none;
 }
 
