@@ -127,7 +127,7 @@ jQuery customSelects Plugin
       ///////////////////////
       function buildCustomSelectOptions() {
         (function loop(index) {
-          var data, className
+          var data, className;
           if(index == $options.length) {
             return;
           } else {
@@ -135,7 +135,7 @@ jQuery customSelects Plugin
             className = $options.eq(index).attr('class');
             $('<li>')
               .text(data)
-              .addClass(className);
+              .addClass(className)
               .appendTo($list);
           }
 

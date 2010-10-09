@@ -5,17 +5,17 @@
       <option value="2010">2010</option>
     </select>
 
-    <select id="place" disabled>
+    <select id="place">
       <option value="prompt" class="prompt">Place...</option> 
-      <option value="CHI/'10">CHI/'10</option>
-      <option value="NYC/'10">NYC/'10</option>
+      <option value="chi-10">CHI/'10</option>
+      <option value="nyc-10">NYC/'10</option>
     </select>
 
-    <select id="day" disabled>
+    <select id="day">
       <option value="prompt" class="prompt">Day...</option> 
-      <option value="Thursday">Thursday</option>
-      <option value="Friday">Friday</option>
-      <option value="Saturday">Saturday</option>
+      <option value="thu">Thursday</option>
+      <option value="fri">Friday</option>
+      <option value="sat">Saturday</option>
     </select>
     
     <button type="submit">Go</button>
@@ -26,23 +26,19 @@
   <section id="show-info">
     <hgroup>
       <h1><%= bbq.full_title %></h1>
-      <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
-	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+      <h2><%= bbq.venue.name%> <a href="<%=bbq.venue.url%>" target="_blank">info</a></h2>
+	    <h3><%= bbq.venue.address%> <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank">map</a></h3>
 	  </hgroup>
     
     <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
     <ul class="band_list">
-      <li><a href="#">Band 1</a></li>
-      <li><a href="#">Band 2</a></li>
-      <li><a href="#">Band 3</a></li>
-      <li><a href="#">Band 4</a></li>
-      <li><a href="#">Band 5</a></li>
-      <li><a href="#">Band 6</a></li>
-      <li><a href="#">Band 7</a></li>
-      <li><a href="#">Band 8</a></li>
-      <li><a href="#">Band 9</a></li>
-      <li><a href="#">Band 10</a></li>
-      <li><a href="#">Band 11</a></li>
+      <li>Band Name <span>9:00pm - 9:30pm</span></li>
+      <li>Band Name <span>9:45pm - 10:15pm</span></li>
+      <li>Band Name <span>10:30pm - 11:00pm</span></li>
+      <li>Band Name <span>11:15pm - 11:45pm</span></li>
+      <li>Band Name <span>12:00pm - 12:30pm</span></li>
+      <li>Band Name <span>12:45pm - 1:15am</span></li>
+      <li>Band Name <span>1:30am - 2:00am</span></li>
     </ul>
     
     <div class="description">
@@ -52,11 +48,5 @@
 </section>
 
 <% content_for :script do %>
-  <script>
-    $(function() {
-      FormNav.init('form#bbq-nav');
-      
-      $('#bbq-nav select').customSelects();
-    });
-  </script>
+
 <% end %>

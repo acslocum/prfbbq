@@ -336,16 +336,49 @@ dl.ticket_info dd span {
   padding-top:0.3em;
 }
 
+#show-info hgroup {
+ margin-bottom:1em;
+}
+
+#show-info h1 {
+  margin-bottom:0.5em;
+}
+
+#show-info h2 {
+  font-size:1.8em;
+}
+#show-info h2 a {
+  color:#a0e2f0;
+  font-size:0.6em;
+  text-decoration:none;
+}
+#show-info h2 a:hover {
+  color:#fff;
+}
+
+#show-info h3 {
+  font-family:'PTSansRegular';
+  font-size:1.3em;
+}
+#show-info h3 a {
+  color:#a0e2f0;
+  font-size:0.8em;
+  text-decoration:none;
+}
+#show-info h3 a:hover {
+  color:#fff;
+}
+
 /* Band list */
 ul.band_list {
-  margin:1em 0;
+  margin:2em 0;
 }
-ul.band_list li a {
+ul.band_list li {
   font-family:'PTSansBold';
   font-size:1.6em;
   text-decoration:none;
 }
-ul.band_list li em {
+ul.band_list li span {
   font-family:'PTSansRegular';
   font-size:0.8em;
   margin-left:0.5em;
@@ -510,12 +543,18 @@ button[type=submit] {
   color:#fff;
   font-family:'MuseoSlab500';
   font-size:1.5em;
-  padding:0.3em 0.5em 0.2em;
+  padding:0.25em 0.5em 0.25em;
   text-decoration:none;
   text-transform:uppercase;
 }
+button[type=submit]:hover {
+  cursor:pointer;
+}
 button[type=submit].disabled {
   background-color:#4c4c4c;
+}
+button[type=submit].disabled:hover {
+  cursor:default;
 }
 
 /* ScrollPane 

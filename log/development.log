@@ -19062,3 +19062,1202 @@ ActionController::RoutingError (No route matches "/javascripts/jquery/plugins/jq
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 20:08:02) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (1.6ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 20:08:07) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.4ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.7ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 20:08:10) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (2.2ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.6ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:08:14) [GET]
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/bbq/_bbq.html.erb:28)
+
+ActionView::TemplateError (undefined method `event_date' for #<Array:0x104277900>) on line #28 of app/views/bbq/_bbq.html.erb:
+25:   
+26:   <section id="show-info">
+27:     <hgroup>
+28:       <h1><%= bbq.event_date %></h1>
+29:       <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
+30: 	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+31: 	  </hgroup>
+
+    app/views/bbq/_bbq.html.erb:28
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 20:14:56) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.5ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.5ms)
+Rendered news/_article (1.6ms)
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 20:19:42) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.3ms)
+Rendered news/_article (1.7ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (2.1ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:19:44) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+DEPRECATION WARNING: @bbq will no longer be implicitly assigned to bbq. (called from _run_erb_app47views47bbq47_bbq46html46erb_locals_bbq_object at /Users/matbiscan/Projects/PRFBBQ/prfbbq.com/app/views/bbq/_bbq.html.erb:28)
+
+ActionView::TemplateError (undefined method `event_date' for #<Array:0x104485800>) on line #28 of app/views/bbq/_bbq.html.erb:
+25:   
+26:   <section id="show-info">
+27:     <hgroup>
+28:       <h1><%= bbq.event_date %></h1>
+29:       <h2><a href="<%=bbq.venue.url%>" target="_blank"><%= bbq.venue.name%></a></h2>
+30: 	    <h3><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank"><%= bbq.venue.address%></a></h3>
+31: 	  </hgroup>
+
+    app/views/bbq/_bbq.html.erb:28
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+Migrating to BandsToBbq (20101008232512)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (8.5ms)[0m   [0mALTER TABLE "bands" ADD "bbq_id" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "bands" ADD "play_date" date[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mALTER TABLE "bands" ADD "start_time" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mALTER TABLE "bands" ADD "end_time" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101008232512')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bbqs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("venues")[0m
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:30:51) [GET]
+  [4;36;1mBbq Load (0.7ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (22.3ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 167ms (View: 85, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:31:46) [GET]
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.1ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:31:57) [GET]
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.7ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:32:24) [GET]
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.6ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:33:02) [GET]
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (7.5ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:34:06) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.7ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.8ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 20:34:06) [GET]
+
+ActionController::RoutingError (No route matches "/bbq/present/2010/make%20favcon" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 20:34:07) [GET]
+
+ActionController::RoutingError (No route matches "/bbq/present/2010/make%20favcon" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 20:34:09) [GET]
+
+ActionController::RoutingError (No route matches "/bbq/present/2010/make%20favcon" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 20:34:16) [GET]
+
+ActionController::RoutingError (No route matches "/bbq/present/2010/chi-oct/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:34:20) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.6ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.8ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:35:27) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.7ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:35:55) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (7.5ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:36:00) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.7ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.9ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:36:36) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (62.3ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.9ms)
+Completed in 77ms (View: 71, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:38:24) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.3ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:39:26) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.4ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:39:50) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.1ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:40:35) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.1ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:40:38) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (62.3ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 74ms (View: 68, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:40:48) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.9ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:41:11) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.8ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:41:15) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.8ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:41:18) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.3ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:41:51) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (58.6ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 74ms (View: 69, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:42:18) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (7.1ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:42:43) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.7ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:44:38) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.1ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:44:54) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.0ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:45:23) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.6ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 66ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:51:08) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (1.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (9.0ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:51:25) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.8ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:53:15) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.0ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:53:53) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.8ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:54:14) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.8ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 66ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:54:32) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.6ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:54:44) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.9ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:54:50) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.9ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:55:07) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.1ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:55:15) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (57.1ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 68ms (View: 63, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:55:20) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.9ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:55:30) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.4ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:55:41) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.8ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:55:57) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.7ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:56:08) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (57.3ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.8ms)
+Completed in 69ms (View: 63, DB: 1) | 200 OK [http://localhost/bbq/present/2010/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:57:29) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.8ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present/2010]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:57:29) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;36;1mBbq Load (0.9ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (9.2ms)
+  [4;36;1mVenue Load (0.3ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (2.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.9ms)
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/bbq/present/make%20favcon]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:57:30) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;36;1mBbq Load (1.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.1ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://localhost/bbq/present/make%20favcon]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:57:32) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (7.6ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.4ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.9ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/bbq/present/make%20favcon]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 20:59:54) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;36;1mBbq Load (0.6ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.9ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present/2010]
+
+
+Processing BbqController#home (for 127.0.0.1 at 2010-10-08 21:00:04) [GET]
+
+ActionController::UnknownAction (No action responded to home. Actions: past, past_bbqs, past_place, past_year, present, present_bbqs, present_place, and present_year):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-08 21:00:19) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (227.6ms)
+Rendered news/_article (1.9ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.7ms)
+Completed in 275ms (View: 258, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:00:27) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.7ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.3ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:00:58) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.3ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (10.1ms)
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:01:11) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (7.0ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:01:29) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (7.7ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:01:59) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (61.0ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 75ms (View: 69, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:02:40) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.0ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:05:25) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.9ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:05:36) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.7ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:05:46) [GET]
+  [4;35;1mBbq Load (0.7ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.1ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:06:03) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (58.1ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 69ms (View: 64, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:06:11) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.1ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:06:43) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.8ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:07:31) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.7ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:07:52) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.2ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:08:31) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.3ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (5.7ms)
+Completed in 70ms (View: 64, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:08:51) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.7ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:09:01) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.8ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:09:08) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.7ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:09:28) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.0ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:11:38) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.2ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:12:01) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.7ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.6ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:12:11) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.1ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:12:32) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (60.4ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 71ms (View: 66, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:12:49) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.9ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:13:10) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.0ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:14:12) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.0ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 71ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:16:59) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.1ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.3ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#2010CHI (for 127.0.0.1 at 2010-10-08 21:17:13) [GET]
+  Parameters: {"id"=>"'10Thursday"}
+
+ActionController::UnknownAction (No action responded to 2010CHI. Actions: past, past_bbqs, past_place, past_year, present, present_bbqs, present_place, and present_year):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#2010CHI (for 127.0.0.1 at 2010-10-08 21:17:13) [GET]
+  Parameters: {"id"=>"'10Thursday"}
+
+ActionController::UnknownAction (No action responded to 2010CHI. Actions: past, past_bbqs, past_place, past_year, present, present_bbqs, present_place, and present_year):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:17:49) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.3ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (9.6ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.8ms)
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:17:51) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (5.8ms)
+  [4;35;1mVenue Load (0.8ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#2010chi-10thu (for 127.0.0.1 at 2010-10-08 21:17:57) [GET]
+
+ActionController::UnknownAction (No action responded to 2010chi-10thu. Actions: past, past_bbqs, past_place, past_year, present, present_bbqs, present_place, and present_year):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#2010chi-10thu (for 127.0.0.1 at 2010-10-08 21:17:57) [GET]
+
+ActionController::UnknownAction (No action responded to 2010chi-10thu. Actions: past, past_bbqs, past_place, past_year, present, present_bbqs, present_place, and present_year):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#2010chi-10thu (for 127.0.0.1 at 2010-10-08 21:18:22) [GET]
+
+ActionController::UnknownAction (No action responded to 2010chi-10thu. Actions: past, past_bbqs, past_place, past_year, present, present_bbqs, present_place, and present_year):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:18:27) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.2ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 21:18:35) [GET]
+
+ActionController::RoutingError (No route matches "/2010/chi-10/fri" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-08 21:18:35) [GET]
+
+ActionController::RoutingError (No route matches "/2010/chi-10/fri" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

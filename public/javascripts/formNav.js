@@ -1,14 +1,22 @@
 var FormNav = {
   init: function(form) { 
     this.form = $(form);
+    this.selects = this.form.find('select');
     this.selectYear = this.form.find('#year');
     this.selectPlace = this.form.find('#place');
     this.selectDay = this.form.find('#day');
     this.submit = this.form.find('button[type=submit]');
+    console.log(this.selects);
+    var that = this;
+    this.selects.each(function() {
+      var prevSelect = $(this).prev();
+      that.disableSelect(prevSelect);
+    });
     
     if(this.selectDay.val() == 'prompt') {
       this.submit.addClass('disabled');
     }
+    
     this.bindEvents();
   },
   
@@ -16,9 +24,13 @@ var FormNav = {
     var that = this;
     
     this.submit.click(function() {
-      if($(this).hasClass('disabled')) {
-        return false;
+      if(!$(this).hasClass('disabled')) {
+        var action = that.rebuildFormAction();
+        that.form
+          .attr('action', action)
+          .submit();
       }
+      return false;
     });
     
     this.selectYear.change(function() {
@@ -30,23 +42,32 @@ var FormNav = {
     });
     
     this.selectDay.change(function() {
-      if($(this).val() != 'prompt') {
-        that.submit.removeClass('disabled');
-      } else {
-        that.submit.addClass('disabled');
-      }
+      that.submit.removeClass('disabled');
     });
   },
   
-  updateNextSelect: function(select, nextSelect) {
-    if($(select).val() != 'prompt') {
-      $(nextSelect).customSelects.enableSelect(nextSelect);
-    } else {
-      $(nextSelect).customSelects.disableSelect(nextSelect);
-    }
-    
+  updateNextSelect: function(select, nextSelect) {    
     // $.ajax(function() {
     //   url:url
     // });
+    
+    //$(nextSelect).customSelects.rebuildList(nextSelect);
+    $(nextSelect).customSelects.enableSelect(nextSelect);
+  },
+  
+  rebuildFormAction: function() {
+    var action = this.form.attr('action'),
+        year = this.selectYear.val(),
+        place = this.selectPlace.val(),
+        day = this.selectDay.val();
+        
+    return action + '/' + year + '/' + place + '/' + day;
+  },
+  
+  disableSelect: function(select) {
+    console.log($(select).attr('id'));
+    if($(select).val() == 'prompt') {
+      $(select).attr('disabled', 'disabled');
+    }
   }
 };
