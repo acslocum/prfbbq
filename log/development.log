@@ -20345,3 +20345,15 @@ Rendered bbq/_bbq (1.0ms)
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
 Rendered bbq/_bbq (0.6ms)
 Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-08 21:29:49) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-08') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Rendered bbq/_bbq (6.5ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Rendered bbq/_bbq (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/bbq/present]

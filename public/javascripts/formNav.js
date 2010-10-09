@@ -6,7 +6,7 @@ var FormNav = {
     this.selectPlace = this.form.find('#place');
     this.selectDay = this.form.find('#day');
     this.submit = this.form.find('button[type=submit]');
-    console.log(this.selects);
+
     var that = this;
     this.selects.each(function() {
       var prevSelect = $(this).prev();
