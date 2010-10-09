@@ -20858,3 +20858,218 @@ Rendered bbq/_bbq (1.7ms)
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
 Rendered bbq/_bbq (1.3ms)
 Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/bbq/present]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+Migrating to BandsToBbq (20101008232512)
+Migrating to SampleBandData (20101009175722)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mBand Create (0.6ms)[0m   [0mINSERT INTO "bands" ("name", "updated_at", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('Builder', '2010-10-09 18:04:52', '2010-10-10', 1, '2010-10-09 18:04:52', '11:00', '11:45')[0m
+  [4;36;1mBand Create (0.1ms)[0m   [0;1mINSERT INTO "bands" ("name", "updated_at", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('Destroyer', '2010-10-09 18:04:52', '2010-10-10', 1, '2010-10-09 18:04:52', '10:00', '10:45')[0m
+  [4;35;1mBand Create (0.1ms)[0m   [0mINSERT INTO "bands" ("name", "updated_at", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('Beginner', '2010-10-09 18:04:52', '2010-10-10', 1, '2010-10-09 18:04:52', '12:00', '2:00 AM')[0m
+  [4;36;1mBand Create (0.1ms)[0m   [0;1mINSERT INTO "bands" ("name", "updated_at", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('Ender', '2010-10-09 18:04:52', '2010-10-11', 1, '2010-10-09 18:04:52', '8:00', '9:00')[0m
+  [4;35;1mBand Create (0.1ms)[0m   [0mINSERT INTO "bands" ("name", "updated_at", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('Ender''s Game', '2010-10-09 18:04:52', '2010-10-11', 1, '2010-10-09 18:04:52', '9:00', '10:00')[0m
+  [4;36;1mBand Create (0.1ms)[0m   [0;1mINSERT INTO "bands" ("name", "updated_at", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('2Builder', '2010-10-09 18:04:52', '2010-10-20', 2, '2010-10-09 18:04:52', '11:00', '11:45')[0m
+  [4;35;1mBand Create (0.1ms)[0m   [0mINSERT INTO "bands" ("name", "updated_at", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('2Destroyer', '2010-10-09 18:04:52', '2010-10-21', 2, '2010-10-09 18:04:52', '10:00', '10:45')[0m
+  [4;36;1mBand Create (0.1ms)[0m   [0;1mINSERT INTO "bands" ("name", "updated_at", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('2Beginner', '2010-10-09 18:04:52', '2010-10-21', 2, '2010-10-09 18:04:52', '12:00', '2:00 AM')[0m
+  [4;35;1mBand Create (0.1ms)[0m   [0mINSERT INTO "bands" ("name", "updated_at", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('2Ender', '2010-10-09 18:04:52', '2010-10-20', 2, '2010-10-09 18:04:52', '8:00', '9:00')[0m
+  [4;36;1mBand Create (0.1ms)[0m   [0;1mINSERT INTO "bands" ("name", "updated_at", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('2Ender''s Game', '2010-10-09 18:04:52', '2010-10-20', 2, '2010-10-09 18:04:52', '9:00', '10:00')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101009175722')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bbqs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("venues")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+Migrating to BandsToBbq (20101008232512)
+Migrating to SampleBandData (20101009175722)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bands")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bbqs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("venues")[0m
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-09 13:23:38) [GET]
+  [4;36;1mBbq Load (1.4ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-09') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 1) [0m
+Rendered bbq/_band (0.5ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_bbq (20.1ms)
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_bbq (3.4ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 4) [0m
+Rendered bbq/_bbq (1.7ms)
+Completed in 91ms (View: 45, DB: 3) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-09 13:32:34) [GET]
+  [4;35;1mBbq Load (1.1ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-09') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "bands" WHERE ("bands".bbq_id = 1) [0m
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_bbq (17.8ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "bands" WHERE ("bands".bbq_id = 2) [0m
+  [4;35;1mBand Load (0.5ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_bbq (3.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "bands" WHERE ("bands".bbq_id = 4) [0m
+Rendered bbq/_bbq (1.9ms)
+Completed in 36ms (View: 29, DB: 3) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-09 13:33:27) [GET]
+  [4;36;1mBbq Load (1.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-09') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "bands" WHERE ("bands".bbq_id = 1) [0m
+  [4;35;1mBand Load (0.5ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".bbq_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_bbq (14.8ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "bands" WHERE ("bands".bbq_id = 2) [0m
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_bbq (3.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "bands" WHERE ("bands".bbq_id = 4) [0m
+Rendered bbq/_bbq (1.9ms)
+Completed in 34ms (View: 26, DB: 3) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-09 13:33:46) [GET]
+  [4;35;1mBbq Load (97.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-09') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "bands" WHERE ("bands".bbq_id = 1) [0m
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_bbq (61.9ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "bands" WHERE ("bands".bbq_id = 2) [0m
+  [4;35;1mBand Load (0.5ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_bbq (3.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "bands" WHERE ("bands".bbq_id = 4) [0m
+Rendered bbq/_bbq (1.9ms)
+Completed in 177ms (View: 74, DB: 99) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-09 13:42:40) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-09') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_bbq (14.6ms)
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_bbq (3.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 4) [0m
+Rendered bbq/_bbq (1.8ms)
+Completed in 33ms (View: 26, DB: 3) | 200 OK [http://localhost/bbq/present]
