@@ -65,7 +65,6 @@ var FormNav = {
   },
   
   disableSelect: function(select) {
-    console.log($(select).attr('id'));
     if($(select).val() == 'prompt') {
       $(select).attr('disabled', 'disabled');
     }

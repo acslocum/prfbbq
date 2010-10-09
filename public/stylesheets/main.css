@@ -378,7 +378,8 @@ ul.band_list li {
   font-size:1.6em;
   text-decoration:none;
 }
-ul.band_list li span {
+ul.band_list li em {
+  color:#ececec;
   font-family:'PTSansRegular';
   font-size:0.8em;
   margin-left:0.5em;
