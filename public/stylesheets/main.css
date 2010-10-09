@@ -336,8 +336,20 @@ dl.ticket_info dd span {
   padding-top:0.3em;
 }
 
+/* Show Info
+==================================================== */
+#show-info {
+  position:relative;
+}
+#show-info a.share {
+  position:absolute;
+  right:0;
+  top:0;
+}
+
 #show-info hgroup {
- margin-bottom:1em;
+  margin-bottom:1em;
+  width:60em;
 }
 
 #show-info h1 {
@@ -371,6 +383,7 @@ dl.ticket_info dd span {
 
 /* Band list */
 ul.band_list {
+  clear:both;
   margin:2em 0;
 }
 ul.band_list li {
@@ -485,14 +498,14 @@ ul#content-nav a.selected {
 
 /* Custom Selects
 ---------------------------------------------------- */
-#bbq-nav {
-  height:5em;
+#select-nav {
+  height:6em;
 }
 div.customSelects_container {
   background-color:#f00;
   float:left;
   margin-right:0.5em;
-  width:20em;
+  width:21.3em;
 }
 div.customSelects_container.disabled {
   background-color:#4c4c4c;
@@ -511,14 +524,14 @@ div.customSelects_title {
   padding:0.3em 0.5em 0.1em;
   text-decoration:none;
   text-transform:uppercase;
-  width:11.5em;
+  width:12.5em;
 }
 
 ul.customSelects_list {
   background-color:#4c4c4c;
   padding-top:0.5em;
   top:2.85em;
-  width:20em;
+  width:21.3em;
 }
 ul.customSelects_list li {
   color:#fff;
@@ -539,7 +552,7 @@ ul.customSelects_list li.prompt {
 }
 
 button[type=submit] {
-  background-color:#f00;
+  background-color:#4c4c4c;
   border:none;
   color:#fff;
   font-family:'MuseoSlab500';
@@ -549,13 +562,10 @@ button[type=submit] {
   text-transform:uppercase;
 }
 button[type=submit]:hover {
+  background-color:#a0e2f0;
+  color:#4c4c4c;
   cursor:pointer;
-}
-button[type=submit].disabled {
-  background-color:#4c4c4c;
-}
-button[type=submit].disabled:hover {
-  cursor:default;
+  outline:none;
 }
 
 /* ScrollPane 

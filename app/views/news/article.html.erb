@@ -4,7 +4,7 @@
 
 <% content_for :headAddon do %>
   <meta property="og:title" content="<%= @article.full_title %>" />
-  <meta property="og:description" content="<%= @article.content[0,200] %>" />
+  <meta property="og:description" content="<%= @article.content[0,200] %>..." />
   <meta property="og:image" content="prf_thumbnail" />
 <% end %>
   

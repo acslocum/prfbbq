@@ -6,16 +6,6 @@ var FormNav = {
     this.selectPlace = this.form.find('#place');
     this.selectDay = this.form.find('#day');
     this.submit = this.form.find('button[type=submit]');
-
-    var that = this;
-    this.selects.each(function() {
-      var prevSelect = $(this).prev();
-      that.disableSelect(prevSelect);
-    });
-    
-    if(this.selectDay.val() == 'prompt') {
-      this.submit.addClass('disabled');
-    }
     
     this.bindEvents();
   },
@@ -24,12 +14,8 @@ var FormNav = {
     var that = this;
     
     this.submit.click(function() {
-      if(!$(this).hasClass('disabled')) {
-        var action = that.rebuildFormAction();
-        that.form
-          .attr('action', action)
-          .submit();
-      }
+      var action = that.rebuildFormAction();
+      that.form.attr('action', action).submit();  
       return false;
     });
     
@@ -62,11 +48,5 @@ var FormNav = {
         day = this.selectDay.val();
         
     return action + '/' + year + '/' + place + '/' + day;
-  },
-  
-  disableSelect: function(select) {
-    if($(select).val() == 'prompt') {
-      $(select).attr('disabled', 'disabled');
-    }
   }
 };

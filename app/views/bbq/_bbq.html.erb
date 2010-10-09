@@ -1,18 +1,16 @@
 <section id="page-content" class="shows">
-  <form id="bbq-nav">
+  <form id="select-nav">
     <select id="year">
       <option value="2009">2009</option>
       <option value="2010">2010</option>
     </select>
 
     <select id="place">
-      <option value="prompt" class="prompt">Place...</option> 
       <option value="chi-10">CHI/'10</option>
       <option value="nyc-10">NYC/'10</option>
     </select>
 
     <select id="day">
-      <option value="prompt" class="prompt">Day...</option> 
       <option value="thu">Thursday</option>
       <option value="fri">Friday</option>
       <option value="sat">Saturday</option>
@@ -24,6 +22,7 @@
 
   
   <section id="show-info">
+    <%= link_to 'Share', {:action => 'http://www.facebook.com/sharer.php'}, :name => 'fb_share', :title => bbq.full_title, :type => 'button', :class => 'share' -%>
     <hgroup>
       <h1><%= bbq.full_title %></h1>
       <h2><%= bbq.venue.name%> <a href="<%=bbq.venue.url%>" target="_blank">info</a></h2>
