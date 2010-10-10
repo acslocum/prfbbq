@@ -501,6 +501,9 @@ ul#content-nav a.selected {
 #select-nav {
   height:6em;
 }
+.nav_select_container {
+  float:left;
+}
 div.customSelects_container {
   background-color:#f00;
   float:left;
