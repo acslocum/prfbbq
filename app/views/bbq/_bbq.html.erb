@@ -7,9 +7,7 @@
   </hgroup>
   
   <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
-  <ul class="band_list">
-    <%= render (:partial => "band", :collection=>bbq.bands)%>
-  </ul>
+  <%= render (:partial => "schedule", :collection=>bbq_days(bbq), :as=>:day, :locals=>{:bbq=>bbq})%>
   
   <div class="description">
     <%= bbq.content%>

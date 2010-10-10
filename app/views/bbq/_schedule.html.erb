@@ -1,0 +1,4 @@
+<h2><%=day.strftime("%A")%></h2>
+<ul class="band_list">
+  <%= render (:partial => "band", :collection=>bands_for_day(day,bbq))%>
+</ul>
