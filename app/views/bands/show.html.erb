@@ -1,0 +1,28 @@
+<p>
+	<b>BBQ:</b>
+	<%=h @band.bbq.full_title%>
+</p>
+
+<p>
+  <b>Band Name:</b>
+  <%=h @band.name %>
+</p>
+
+<p>
+  <b>Set date:</b>
+  <%=h @band.play_date %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%=h @band.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%=h @band.end_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_band_path(@band) %> |
+<%= link_to 'Back', bands_path %>

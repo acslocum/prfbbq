@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :articles
+
+  map.resources :bbqs
+
+  map.resources :bands
+
+  map.resources :bands
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

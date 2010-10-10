@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @bbq.title %>
+</p>
+
+<p>
+  <b>Event date:</b>
+  <%=h @bbq.event_date %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @bbq.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_bbq_path(@bbq) %> |
+<%= link_to 'Back', bbqs_path %>
