@@ -33,12 +33,13 @@ var FormNav = {
   
   updateNextSelect: function(select, nextSelect) {  
     var action = this.form.attr('action'),
-        options = [],
         error = 'ajax/ajax_error.html',
         customSelect = $(select).parents('.customSelects_container'),
         loader = $('<div>').text('Loading').addClass('navLoader');
         that = this;
         
+        
+    var options = [];
     if($(nextSelect).attr('id') == 'place') {
       options.push($('<option>').val('aus-mar').text('AUS/MAR'));
       options.push($('<option>').val('chi-jun').text('CHI/JUN'));
@@ -48,21 +49,22 @@ var FormNav = {
     }
         
     $(customSelect).append(loader);
+    this.selects.parents('.customSelects_container').addClass('disabled');
     
-    setTimeout(function() {
-      $.ajax({
-        type:'get',
-        //url:action,
-        success: function() {
-          that.replaceOptions(nextSelect, options);        
-          loader.remove();
-        },
-        error: function() {
-          loader.remove();
-          //
-        }
-      });   
-    }, 2000);
+    $.ajax({
+      type:'get',
+      //url:action,
+      success: function() {
+        that.replaceOptions(nextSelect, options);    
+        that.selects.parents('.customSelects_container').removeClass('disabled');
+        loader.remove();
+      },
+      error: function() {
+        that.selects.parents('.customSelects_container').removeClass('disabled');
+        loader.remove();
+        //
+      }
+    });
   },
   
   replaceOptions: function(nextSelect, options) {

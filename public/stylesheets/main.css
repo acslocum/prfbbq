@@ -522,9 +522,6 @@ div.customSelects_container {
   margin-right:0.5em;
   width:21.3em;
 }
-div.customSelects_container.disabled {
-  background-color:#4c4c4c;
-}
 
 div.customSelects_title {
   background-image:url(../images/select_arrow.png);
