@@ -35,6 +35,8 @@ var FormNav = {
     var action = this.form.attr('action'),
         options = [],
         error = 'ajax/ajax_error.html',
+        customSelect = $(select).parents('.customSelects_container'),
+        loader = $('<div>').text('Loading').addClass('navLoader');
         that = this;
         
     if($(nextSelect).attr('id') == 'place') {
@@ -45,19 +47,22 @@ var FormNav = {
       options.push($('<option>').val('thu').text('Thursday'));
     }
         
-    this.addLoader(select);
+    $(customSelect).append(loader);
     
-    $.ajax({
-      type:'get',
-      //url:action,
-      success: function() {
-        that.replaceOptions(nextSelect, options);
-        that.removeLoader(select);
-      },
-      error: function() {
-        //
-      }
-    });   
+    setTimeout(function() {
+      $.ajax({
+        type:'get',
+        //url:action,
+        success: function() {
+          that.replaceOptions(nextSelect, options);        
+          loader.remove();
+        },
+        error: function() {
+          loader.remove();
+          //
+        }
+      });   
+    }, 2000);
   },
   
   replaceOptions: function(nextSelect, options) {
@@ -78,13 +83,5 @@ var FormNav = {
         day = this.selectDay.val();
         
     return action + '/' + year + '/' + place + '/' + day;
-  },
-
-  addLoader: function(select) {
-    console.log('addLoader', select);
-  },
-  
-  removeLoader: function(select) {
-    console.log('removeLoader', select);
   }
 };

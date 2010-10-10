@@ -495,6 +495,18 @@ ul#content-nav a.selected {
   width:30em;
 }
 
+.navLoader {
+  background-image:url(../images/loader.gif);
+  font-size:1em;
+  height:2em;
+  position:absolute;
+  right:0.5em;
+  text-indent:-9999em;
+  top:0.4em;
+  width:2em;
+  -moz-border-radius:1em;
+  -webkit-border-radius:1em;
+}
 
 /* Custom Selects
 ---------------------------------------------------- */
