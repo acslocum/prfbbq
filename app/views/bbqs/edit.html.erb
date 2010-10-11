@@ -1,24 +1,29 @@
-<h1>Editing bbq</h1>
+<h1>Edit BBQ DAY</h1>
+
+<ul class="admin_controls">
+  <li><%= link_to 'BBQ List', bbqs_path %></li>
+  <li><%= link_to 'Preview', @bbq %></li>
+</ul>
 
 <% form_for(@bbq) do |f| %>
-  <%= f.error_messages %>
+  <div id="error_message">
+    <%= f.error_messages %>
+  </div>
 
-  <p>
-    <%= f.label :title %><br />
+  <div class="input_container">
+    <%= f.label :title %>
     <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :event_date %><br />
+  </div>
+  
+  <div class="input_container clearfix">
+    <%= f.label :event_date %>
     <%= f.date_select :event_date %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
+  </div>
+  
+  <div class="input_container">
+    <%= f.label :content %>
     <%= f.text_area :content, :size=>"80x40" %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+  </div>
+  
+  <%= f.submit 'Update' %>
 <% end %>
-
-<%= link_to 'Show', @bbq %> |
-<%= link_to 'Back', bbqs_path %>

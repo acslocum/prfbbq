@@ -1,32 +1,39 @@
-<h1>Editing band</h1>
+<h1>Edit Band</h1>
+
+<ul class="admin_controls">
+  <li><%= link_to 'Band List', bands_path %></li>
+  <li><%= link_to 'Preview', @band %></li>
+</ul>
 
 <% form_for(@band) do |f| %>
-  <%= f.error_messages %>
+  <div id="error_message">
+    <%= f.error_messages %>
+  </div>
 
-  <p>
-    <%= f.label :bbq %><br />
+  <div class="input_container clearfix long">
+    <%= f.label :bbq %>
     <%= f.select(:bbq_id,options_for_select(present_bbqs_select_list())) %>
-  </p>
-  <p>
-    <%= f.label :name %><br />
+  </div>
+  
+  <div class="input_container medium">
+    <%= f.label :name %>
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :play_date %><br />
+  </div>
+  
+  <div class="input_container clearfix">
+    <%= f.label :play_date %>
     <%= f.date_select :play_date %>
-  </p>
-  <p>
-    <%= f.label :start_time %><br />
+  </div>
+  
+  <div class="input_container short">
+    <%= f.label :start_time %>
     <%= f.text_field :start_time %>
-  </p>
-  <p>
-    <%= f.label :end_time %><br />
+  </div>
+  
+  <div class="input_container short">
+    <%= f.label :end_time %>
     <%= f.text_field :end_time %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+  </div>
+  
+  <%= f.submit 'Update' %>
 <% end %>
-
-<%= link_to 'Show', @band %> |
-<%= link_to 'Back', bands_path %>

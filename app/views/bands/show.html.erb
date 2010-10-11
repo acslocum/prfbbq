@@ -1,28 +1,31 @@
-<p>
-	<b>BBQ:</b>
-	<%=h @band.bbq.full_title%>
-</p>
+<h1>Band Preview</h1>
 
-<p>
-  <b>Band Name:</b>
-  <%=h @band.name %>
-</p>
+<ul class="admin_controls">
+  <li><%= link_to 'Band List', bands_path %></li>
+  <li><%= link_to 'Edit', edit_band_path(@band) %></li>
+</ul>
 
-<p>
-  <b>Set date:</b>
-  <%=h @band.play_date %>
-</p>
+<section class="content_block">
+	<h2>BBQ:</h2>
+	<p><%=h @band.bbq.full_title%></p>
+</section>
 
-<p>
-  <b>Start time:</b>
-  <%=h @band.start_time %>
-</p>
+<section class="content_block">
+  <h2>Band Name:</h2>
+  <p><%=h @band.name %></p>
+</section>
 
-<p>
-  <b>End time:</b>
-  <%=h @band.end_time %>
-</p>
+<section class="content_block">
+  <h2>Set date:</h2>
+  <p><%=h @band.play_date %></p>
+</section>
 
+<section class="content_block">
+  <h2>Start time:</h2>
+  <p><%=h @band.start_time %></p>
+</section>
 
-<%= link_to 'Edit', edit_band_path(@band) %> |
-<%= link_to 'Back', bands_path %>
+<section class="content_block">
+  <h2>End time:</h2>
+  <p><%=h @band.end_time %></p>
+</section>

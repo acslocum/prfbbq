@@ -1,18 +1,23 @@
-<p>
-  <b>Title:</b>
-  <%=h @bbq.title %>
-</p>
+<h1>BBQ Preview</h1>
 
-<p>
-  <b>Event date:</b>
-  <%=h @bbq.event_date %>
-</p>
+<ul class="admin_controls">
+  <li><%= link_to 'BBQ List', bbqs_path %></li>
+  <li><%= link_to 'Edit', edit_bbq_path(@bbq) %></li>
+</ul>
 
-<p>
-  <b>Content:</b>
-  <%=h @bbq.content %>
-</p>
+<section class="content_block">
+  <h2>Title</h2>
+  <p><%=h @bbq.title %></p>
+</section>
 
+<section class="content_block">
+  <h2>Event date</h2>
+  <p><%=h @bbq.event_date %></p>
+</section>
 
-<%= link_to 'Edit', edit_bbq_path(@bbq) %> |
-<%= link_to 'Back', bbqs_path %>
+<section class="content_block">
+  <h2>Description</h2>
+  <div>
+    <%=h @bbq.content %>
+  </div>
+</section>

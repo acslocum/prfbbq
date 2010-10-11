@@ -1,28 +1,31 @@
-<h1>Listing bands</h1>
+<h1>Band List</h1>
 
-<table>
-  <tr>
-    <th>BBQ</th>
-    <th>Name</th>
-    <th>Play date</th>
-    <th>Start time</th>
-    <th>End time</th>
-  </tr>
+<ul class="admin_controls">
+  <li><%= link_to 'New band', new_band_path %></li>
+</ul>
 
-<% @bands.each do |band| %>
-  <tr>
-    <td>[<%=h band.bbq.full_title %>]</td>
-    <td><%=h band.name %></td>
-    <td><%=h band.play_date %></td>
-    <td><%=h band.start_time %></td>
-    <td><%=h band.end_time %></td>
-    <td><%= link_to 'Show', band %></td>
-    <td><%= link_to 'Edit', edit_band_path(band) %></td>
-    <td><%= link_to 'Destroy', band, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+<table id="admin-table" class="band">
+  <thead>
+    <th class="one">BBQ</th>
+    <th class="two">Band</th>
+    <th class="three">Date</th>
+    <th class="four">Time</th>
+    <th class="five">Controls</th>
+  </thead>
+  
+  <tbody>
+    <% @bands.each do |band| %>
+      <tr>
+        <td class="one"><%=h band.bbq.full_title %></td>
+        <td class="two"><%=h band.name %></td>
+        <td class="three"><%=h band.play_date %></td>
+        <td class="four"><%=h band.start_time %> - <%=h band.end_time %></td>
+        <td class="five">
+          <ul class="table_controls">
+            <li><%= link_to 'Preview', band %></li>
+            <li><%= link_to 'Edit', edit_band_path(band) %></li>
+            <li><%= link_to 'Delete', band, :confirm => 'Are you sure?', :method => :delete %></li>
+        </td>
+    <% end %>
+  </tbody>
 </table>
-
-<br />
-
-<%= link_to 'New band', new_band_path %>

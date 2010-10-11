@@ -1,22 +1,28 @@
-<h1>Listing articles</h1>
+<h1>Article List</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-  </tr>
+<ul class="admin_controls">
+  <li><%= link_to 'New article', new_article_path %></li>
+</ul>
 
-<% @articles.each do |article| %>
-  <tr>
-    <td><%=h article.title %></td>
-    <td><%=h article.content %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+<table id="admin-table" class="article">
+  <thead>
+    <th class="one">Title</th>
+    <th class="two">Content</th>
+    <th class="three">Controls</th>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td class="one"><%=h article.title %></td>
+        <td class="two"><%=h article.content %></td>
+        <td class="three">
+          <ul class="table_controls">
+            <li><%= link_to 'Preview', article %></li>
+            <li><%= link_to 'Edit', edit_article_path(article) %></li>
+            <li><%= link_to 'Delete', article, :confirm => 'Are you sure?', :method => :delete, :class => 'delete' %></li>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
-
-<br />
-
-<%= link_to 'New article', new_article_path %>

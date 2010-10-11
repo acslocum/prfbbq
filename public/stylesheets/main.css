@@ -486,6 +486,173 @@ ul#content-nav a.selected {
   position:absolute;
 }
 
+/* Admin
+==================================================== */
+body#admin {
+  margin:2em 5em 5em;
+  text-align:left;
+}
+
+#admin-content {
+
+}
+
+#admin-content h1 {
+  font-size:3em;
+  margin-bottom:0.5em;
+}
+
+#admin-content h2 {
+  font-size:1.6em;
+}
+
+#admin-content .input_container {
+  clear:both;
+  margin:0.5em 0;
+}
+
+#admin-content label {
+  display:block;
+  font-size:2em;
+}
+
+#admin-content input[type=text],
+#admin-content textarea {
+  background-color:#60d6ef;
+  border:none;
+  color:#4c4c4c;
+  font-family:'PTSansRegular';
+  font-size:1.6em;
+  margin-bottom:0.5em;
+  padding:0.2em 0.2em 0.1em;
+  width:40.1em;
+}
+
+#admin-content .medium input[type=text] {
+  width:26.5em;
+}
+
+#admin-content .short input[type=text] {
+  width:7em;
+}
+
+#admin-content textarea {
+  height:30em;
+}
+
+#admin-content input[type=text]:focus,
+#admin-content textarea:focus {
+  background:#fff;
+  color:#2398b2;
+}
+
+ul.admin_controls {
+  margin:2em 0;
+  overflow:hidden;
+}
+ul.admin_controls li {
+  float:left;
+  margin-right:0.2em;
+}
+ul.admin_controls li a {
+  background-color:#4c4c4c;
+  border:none;
+  color:#fff;
+  display:block;
+  font-family:'MuseoSlab500';
+  font-size:1.2em;
+  padding:0.25em 0.5em;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+ul.admin_controls li a:hover {
+  background-color:#f00;
+}
+
+/* Admin Table
+---------------------------------------------------- */
+table#admin-table {
+  margin-bottom:2em;
+}
+
+table#admin-table thead {
+  
+}
+table#admin-table th {
+  background-color:#60d6ef;
+  border-right:0.1em solid #4dbddd;
+  color:#2398b2;
+  font-family:'PTSansBold';
+  font-size:1.4em;
+  font-weight:400;
+  padding:0.4em 1em;
+}
+
+table#admin-table tbody {
+  
+}
+
+table#admin-table tr {
+  vertical-align:top;
+}
+
+table#admin-table td {
+  background-color:#2398b2;
+  border-bottom:0.1em solid #4dbddd;
+  border-right:0.1em solid #4dbddd;
+  font-size:1.2em;
+  padding:0.4em 1em;
+}
+table#admin-table tr:hover td {
+  background-color:#208da5;
+  border-bottom:0.1em solid #4dbddd;
+  border-right:0.1em solid #4dbddd;
+}
+
+/* BBQ Table */
+table#admin-table.bbq .one {
+  width:30em;
+}
+table#admin-table.bbq .two {
+  width:12em;
+}
+table#admin-table.bbq .three {
+  width:12em;
+}
+
+/* Band Table */
+table#admin-table.band .one {
+  width:15em;
+}
+table#admin-table.band .two {
+  width:15em;
+}
+table#admin-table.band .three {
+  width:8em;
+}
+table#admin-table.band .four {
+  width:8em;
+}
+table#admin-table.band .five {
+  width:12em;
+}
+
+/* Article Table */
+table#admin-table.article .one {
+  width:14em;
+}
+table#admin-table.article .two {
+  width:40em;
+}
+table#admin-table.article .five {
+  width:12em;
+}
+
+table#admin-table ul.table_controls li {
+  float:left;
+  margin-right:1em;
+}
+
 /* Icons & Effects
 ==================================================== */
 #map_canvas {
@@ -508,6 +675,41 @@ ul#content-nav a.selected {
   -webkit-border-radius:1em;
 }
 
+ul.ampm {
+  background-color:#4c4c4c;
+}
+ul.ampm li {
+  color:#fff;
+  float:left;
+  font-size:1.4em;
+  padding:0.3em 0.5em;
+}
+ul.ampm li:hover,
+ul.ampm li.selected {
+  background-color:#f00;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
 /* Custom Selects
 ---------------------------------------------------- */
 #select-nav {
@@ -521,6 +723,9 @@ div.customSelects_container {
   float:left;
   margin-right:0.5em;
   width:21.3em;
+}
+.long div.customSelects_container {
+  width:42.9em;
 }
 
 div.customSelects_title {
@@ -538,12 +743,18 @@ div.customSelects_title {
   text-transform:uppercase;
   width:12.5em;
 }
+.long div.customSelects_title {
+ width:26.5em
+}
 
 ul.customSelects_list {
   background-color:#4c4c4c;
   padding-top:0.5em;
   top:2.85em;
   width:21.3em;
+}
+.long ul.customSelects_list {
+  width:42.9em;
 }
 ul.customSelects_list li {
   color:#fff;
@@ -563,7 +774,9 @@ ul.customSelects_list li.prompt {
   display:none;
 }
 
-button[type=submit] {
+button[type=submit],
+input[type=submit],
+a.button {
   background-color:#4c4c4c;
   border:none;
   color:#fff;
@@ -576,6 +789,12 @@ button[type=submit] {
 button[type=submit]:hover {
   background-color:#a0e2f0;
   color:#4c4c4c;
+  cursor:pointer;
+  outline:none;
+}
+input[type=submit]:hover,
+a.button:hover {
+  background-color:#f00;
   cursor:pointer;
   outline:none;
 }

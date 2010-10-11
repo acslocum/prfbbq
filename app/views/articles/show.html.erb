@@ -1,13 +1,18 @@
-<p>
-  <b>Title:</b>
-  <%=h @article.title %>
-</p>
+<h1>Article Preview</h1>
 
-<p>
-  <b>Content:</b>
-  <%=h @article.content %>
-</p>
+<ul class="admin_controls">
+  <li><%= link_to 'Article List', articles_path %></li>
+  <li><%= link_to 'Edit', edit_article_path(@article) %></li>
+</ul>
 
+<section class="content_block">
+  <h2>Title:</h2>
+  <p><%=h @article.title %></p>
+</section>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<section class="content_block">
+  <h2>Content:</h2>
+  <div>
+    <%=h @article.content %>
+  </div>
+</section>

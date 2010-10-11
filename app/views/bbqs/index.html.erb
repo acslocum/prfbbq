@@ -1,24 +1,28 @@
-<h1>Listing bbqs</h1>
+<h1>BBQ List</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Event date</th>
-    <th>Content</th>
-  </tr>
+<ul class="admin_controls">
+  <li><%= link_to 'New bbq', new_bbq_path %></li>
+</ul>
 
-<% @bbqs.each do |bbq| %>
-  <tr>
-    <td><%=h bbq.title %></td>
-    <td><%=h bbq.event_date %></td>
-    <td><%=h bbq.content %></td>
-    <td><%= link_to 'Show', bbq %></td>
-    <td><%= link_to 'Edit', edit_bbq_path(bbq) %></td>
-    <td><%= link_to 'Destroy', bbq, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+<table id="admin-table" class="bbq">
+  <thead>
+    <th class="one">Title</th>
+    <th class="two">Event date</th>
+    <th class="three">Controls</th>
+  </thead>
+  
+  <tbody>
+    <% @bbqs.each do |bbq| %>
+      <tr>
+        <td class="one"><%=h bbq.title %></td>
+        <td class="two"><%=h bbq.event_date %></td>
+        <td class="three">
+          <ul class="table_controls">
+            <li><%= link_to 'Preview', bbq %></li>
+            <li><%= link_to 'Edit', edit_bbq_path(bbq) %></li>
+            <li><%= link_to 'Delete', bbq, :confirm => 'Are you sure?', :method => :delete %></li>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
-
-<br />
-
-<%= link_to 'New bbq', new_bbq_path %>
