@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101011034803) do
+ActiveRecord::Schema.define(:version => 20101011044506) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20101011034803) do
     t.date     "play_date"
     t.string   "start_time"
     t.string   "end_time"
+    t.integer  "sort_order"
   end
 
   create_table "bbqs", :force => true do |t|

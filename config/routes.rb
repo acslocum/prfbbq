@@ -1,12 +1,19 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :venues
+
   map.resources :articles
 
   map.resources :bbqs
 
   map.resources :bands
+  
+  map.connect 'admin', :controller=>'admin', :action=>'admin'
+  
+  map.root :controller=>'news', :action=>'home'
 
-  map.resources :bands
+  map.connect 'present', :controller=>'bbq', :action=>'present'
 
+  map.connect 'past', :controller=>'bbq', :action=>'past'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
