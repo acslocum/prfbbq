@@ -29850,3 +29850,234 @@ Rendered bbq/_bbq (14.9ms)
   [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
 Rendered bbq/_bbq (2.6ms)
 Completed in 27ms (View: 20, DB: 3) | 200 OK [http://localhost/present]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 01:34:35) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mVenue Load (0.3ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Completed in 29ms (View: 23, DB: 1) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-11 01:34:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/bbqs/1/edit]
+
+
+Processing BbqsController#update (for 127.0.0.1 at 2010-10-11 01:34:44) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"1", "bbq"=>{"title"=>"Chicago BBQ", "is_published"=>"1", "content"=>"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href=\"#\">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.</p>"}}
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Redirected to http://localhost:3000/bbqs/1
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/bbqs/1]
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-11 01:34:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/bbqs/1]
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-11 01:34:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/bbqs/1]
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-11 01:35:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/bbqs/1/edit]
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-11 12:59:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/bbqs/1/edit]
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-11 13:04:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+ERROR: compiling _run_erb_app47views47bbqs47edit46html46erb RAISED compile error
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbqs/edit.html.erb:32: syntax error, unexpected ';', expecting ')'
+...t(venue_select_list())).to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47bbqs47edit46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>BBQ: Edit Day</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<ul class=\"admin_controls\">\n"
+@output_buffer.concat "  <li>"; @output_buffer.concat(( link_to 'BBQ List', bbqs_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "  <li>"; @output_buffer.concat(( link_to 'Preview', @bbq ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "</ul>\n"
+@output_buffer.concat "\n"
+ form_for(@bbq) do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <div id=\"error_message\">\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <div class=\"input_container radio_checkbox\">\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.check_box :is_published ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :is_published ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <div class=\"input_container\">\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :title ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :title ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <div class=\"input_container short\">\n"
+@output_buffer.concat "    "; @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat "\n"
+@output_buffer.concat "    <label for=\"event_date\">Event Date</label>\n"
+@output_buffer.concat "    <input type=\"text\" id=\"event_date\" />\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <div class=\"input_container long\">\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.label :venue_id ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.select(:venue_id,options_for_select(venue_select_list())).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <div class=\"input_container\">\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :content ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_area :content, :size=>"80x40" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.submit 'Update' ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+ content_for :javascript do ; @output_buffer.concat "\n"
+@output_buffer.concat "  <script>\n"
+@output_buffer.concat "    $(function() {\n"
+@output_buffer.concat "      $('select').customSelects();\n"
+@output_buffer.concat "      $('input.time').timeEntry();\n"
+@output_buffer.concat "      $('input.time').blur(function() {\n"
+@output_buffer.concat "        new CleanValue(this);\n"
+@output_buffer.concat "      });\n"
+@output_buffer.concat "      $('#event_date')\n"
+@output_buffer.concat "        .datepicker()\n"
+@output_buffer.concat "        .datepicker('setDate', new Date())\n"
+@output_buffer.concat "        .datepicker('option', 'dateFormat', 'yy/mm/dd');\n"
+@output_buffer.concat "    });\n"
+@output_buffer.concat "  </script>\n"
+ end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbqs/edit.html.erb:60:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/ThoughtWorks/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/ThoughtWorks/dev/ruby/prfbbq/app/views/bbqs/edit.html.erb:32: syntax error, unexpected ';', expecting ')'
+...t(venue_select_list())).to_s); @output_buffer.concat "\n"
+                              ^) on line #32 of app/views/bbqs/edit.html.erb:
+29: 
+30:   <div class="input_container long">
+31: 	<%= f.label :venue_id %>
+32: 	<%= f.select(:venue_id,options_for_select(venue_select_list())%>
+33:   </div>
+34:   
+35:   <div class="input_container">
+
+    app/views/bbqs/edit.html.erb:60:in `compile!'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-11 13:04:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+  [4;36;1mVenue Load (0.3ms)[0m   [0;1mSELECT * FROM "venues" [0m
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/bbqs/1/edit]

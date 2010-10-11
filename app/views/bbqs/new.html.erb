@@ -26,6 +26,11 @@
     <input type="text" id="event_date" />
   </div>
   
+  <div class="input_container long">
+	<%= f.label :venue_id %>
+	<%= f.select(:venue_id,options_for_select(venue_select_list))%>
+  </div>
+  
   <div class="input_container">
     <%= f.label :content %>
     <%= f.text_area :content, :size=>"80x40" %>
