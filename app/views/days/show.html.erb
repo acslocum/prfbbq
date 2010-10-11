@@ -1,0 +1,28 @@
+<p>
+  <b>Bbq date:</b>
+  <%=h @day.bbq_date %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @day.content %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%=h @day.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%=h @day.end_time %>
+</p>
+
+<p>
+  <b>Bbq:</b>
+  <%=h @day.bbq.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_day_path(@day) %> |
+<%= link_to 'Back', days_path %>

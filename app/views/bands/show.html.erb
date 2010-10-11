@@ -8,7 +8,7 @@
 
 <section class="content_block">
 	<h2>BBQ:</h2>
-	<p><%=h @band.bbq.full_title%></p>
+	<p><%=h @band.day.bbq.full_title if(!@band.day.nil?)%></p>
 </section>
 
 <section class="content_block">
@@ -18,7 +18,7 @@
 
 <section class="content_block">
   <h2>Set date:</h2>
-  <p><%=h @band.play_date %></p>
+  <p><%=h @band.day.bbq_date if(!@band.day.nil?)%></p>
 </section>
 
 <section class="content_block">

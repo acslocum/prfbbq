@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  bbq_date: 2010-10-11
+  content: MyText
+  start_time: MyString
+  end_time: MyString
+  bbq_id: 1
+
+two:
+  bbq_date: 2010-10-11
+  content: MyText
+  start_time: MyString
+  end_time: MyString
+  bbq_id: 1

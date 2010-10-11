@@ -1,5 +1,5 @@
 module BandsHelper
-  def present_bbqs_select_list
-    Bbq.find(:all, :conditions=>["event_date >= ?", Date.today], :order => "event_date ASC, id DESC").collect {|bbq| [bbq.full_title, bbq.id]}
+  def available_days_select_list
+    Day.find(:all, :conditions=>["bbq_date >= ?", Date.today], :order => "bbq_date ASC, id DESC").collect {|day| [day.bbq.full_title||day.bbq_date, day.id]}
   end
 end

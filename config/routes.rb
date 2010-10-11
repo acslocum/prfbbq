@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :days
+
   map.resources :venues
 
   map.resources :articles

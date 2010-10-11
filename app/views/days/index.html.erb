@@ -1,0 +1,28 @@
+<h1>Listing days</h1>
+
+<table>
+  <tr>
+    <th>Bbq date</th>
+    <th>Content</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Bbq</th>
+  </tr>
+
+<% @days.each do |day| %>
+  <tr>
+    <td><%=h day.bbq_date %></td>
+    <td><%=h day.content %></td>
+    <td><%=h day.start_time %></td>
+    <td><%=h day.end_time %></td>
+    <td><%=h day.bbq.title %></td>
+    <td><%= link_to 'Show', day %></td>
+    <td><%= link_to 'Edit', edit_day_path(day) %></td>
+    <td><%= link_to 'Destroy', day, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New day', new_day_path %>

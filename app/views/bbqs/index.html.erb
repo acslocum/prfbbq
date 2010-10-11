@@ -17,7 +17,7 @@
     <% @bbqs.each do |bbq| %>
       <tr>
         <td class="one"><%=h bbq.title %></td>
-        <td class="two"><%=h bbq.event_date %></td>
+        <td class="two"><%=h  bbq.days.first.bbq_date if(!bbq.days.empty?) %> - <%=h bbq.days.last.bbq_date if(!bbq.days.empty?) %></td>
         <td class="three"><%=h bbq.venue.name %></td>
         <td class="four"><%=h bbq.is_published%></td>
         <td class="five">

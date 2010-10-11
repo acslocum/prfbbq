@@ -1,3 +1,3 @@
 class Band < ActiveRecord::Base
-  belongs_to :bbq
+  belongs_to :day
 end
