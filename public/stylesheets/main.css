@@ -635,10 +635,10 @@ table#admin-table.bbq .two {
 table#admin-table.bbq .three {
   width:20em;
 }
-table#admin-table.band .four {
+table#admin-table.bbq .four {
   width:5em;
 }'
-table#admin-table.band .five {
+table#admin-table.bbq .five {
   width:12em;
 }
 
@@ -659,7 +659,6 @@ table#admin-table.band .five {
   width:12em;
 }
 
-
 /* Article Table */
 table#admin-table.article .one {
   width:20em;
@@ -671,6 +670,20 @@ table#admin-table.article .three {
   width:5em;
 }
 table#admin-table.article .four {
+  width:12em;
+}
+
+/* Article Table */
+table#admin-table.venue .one {
+  width:20em;
+}
+table#admin-table.venue .two {
+  width:20em;
+}
+table#admin-table.venue .three {
+  width:25em;
+}
+table#admin-table.venue .four {
   width:12em;
 }
 
