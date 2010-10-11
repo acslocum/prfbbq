@@ -9,7 +9,7 @@ class Article < ActiveRecord::Base
   end
   
   def title_to_link
-    URI.encode(title)
+    CGI::escape(title)
   end
   
   def full_title
@@ -22,7 +22,7 @@ class Article < ActiveRecord::Base
   end
   
   def self.extract_title(a_permalink)
-    URI.decode(a_permalink)
+    CGI::unescape(a_permalink)
   end
       
 end
