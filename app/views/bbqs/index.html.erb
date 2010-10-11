@@ -17,8 +17,9 @@
       <tr>
         <td class="one"><%=h bbq.title %></td>
         <td class="two"><%=h bbq.event_date %></td>
-        <td class="three"><%=h bbq.is_published%></td>
-        <td class="four">
+        <td class="three"><%=h bbq.venue.name %></td>
+        <td class="four"><%=h bbq.is_published%></td>
+        <td class="five">
           <ul class="table_controls">
             <li><%= link_to 'Preview', bbq %></li>
             <li><%= link_to 'Edit', edit_bbq_path(bbq) %></li>

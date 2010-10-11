@@ -28983,3 +28983,65 @@ Processing VenuesController#index (for 127.0.0.1 at 2010-10-11 00:34:18) [GET]
 Rendering template within layouts/venues
 Rendering venues/index
 Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/venues]
+
+
+Processing VenuesController#index (for 127.0.0.1 at 2010-10-11 00:41:15) [GET]
+  [4;36;1mVenue Load (0.5ms)[0m   [0;1mSELECT * FROM "venues" [0m
+Rendering template within layouts/venues
+Rendering venues/index
+Completed in 69ms (View: 65, DB: 1) | 200 OK [http://localhost/venues]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 00:41:19) [GET]
+  [4;35;1mBbq Load (0.8ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Completed in 43ms (View: 36, DB: 1) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-11 00:41:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/bbqs/1/edit]
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-11 00:42:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/bbqs/1/edit]
+
+
+Processing BbqsController#update (for 127.0.0.1 at 2010-10-11 00:42:45) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"1", "bbq"=>{"title"=>"Chicago BBQ", "is_published"=>"1", "venue_id"=>"2", "event_date(1i)"=>"2010", "content"=>"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href=\"#\">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.</p>\r\n        <p>In hac habitasse platea dictumst. In in massa in quam hendrerit gravida sed a purus. Donec placerat tristique laoreet. Proin hendrerit magna et lectus dictum vitae ornare nunc lacinia. Nulla facilisi. Aliquam dui neque, dictum sit amet cursus quis, condimentum eu leo. Pellentesque tempus velit ut mauris condimentum vitae gravida enim accumsan. Quisque ultrices nisi ac tortor malesuada accumsan. In hac habitasse platea dictumst.</p>\r\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien.</p>\r\n<p>Some image:<img src=\"http://farm5.static.flickr.com/4103/5068248701_159e9ea043_m.jpg\"></p>", "event_date(2i)"=>"10", "event_date(3i)"=>"10"}}
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Update (0.4ms)[0m   [0mUPDATE "bbqs" SET "venue_id" = 2, "updated_at" = '2010-10-11 05:42:45' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/bbqs/1
+Completed in 121ms (DB: 1) | 302 Found [http://localhost/bbqs/1]
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-11 00:42:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/bbqs/1]
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-11 00:42:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://localhost/bbqs/1/edit]

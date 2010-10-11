@@ -19,6 +19,11 @@
     <%= f.date_select :event_date %>
   </div>
   
+  <div class="input_container clearfix long">
+    <%= f.label :venue %>
+    <%= f.select(:venue_id,options_for_select(venue_select_list())) %>
+  </div>
+  
   <div class="input_container">
     <%= f.label :is_published %>
     <%= f.check_box :is_published %>
