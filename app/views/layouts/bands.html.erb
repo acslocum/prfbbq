@@ -16,9 +16,9 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
+  
   <body id="admin">
-
-  <p style="color: green"><%= flash[:notice] %></p>
+    <p style="color: green"><%= flash[:notice] %></p>
 
     <section id="admin-content">
       <%= yield %>
@@ -27,18 +27,10 @@
   
   <%-# Javascript -%>
   <%= javascript_include_tag 'jquery/jquery-1.4.2.js' -%>
+  <%= javascript_include_tag 'jquery/jquery-ui-1.8.5.custom.min.js' -%>
   <%= javascript_include_tag 'addAMPM.js' -%>
   <%= javascript_include_tag 'jquery/plugins/jquery.customSelects.js' -%>
   <%= javascript_include_tag 'jquery/plugins/jquery.maskedinput-1.2.2.js' -%>
   <%= javascript_include_tag 'jquery/plugins/jquery.mouseyDialog.js' -%>
-  <script>
-    $(function() {
-      $('select').customSelects();
-      
-      $('input.time').mask('99:99');
-      $('input.time').each(function() {
-        new AddAMPM(this);
-      });
-    });
-  </script>
+  <%= yield :javascript %>
 </html>

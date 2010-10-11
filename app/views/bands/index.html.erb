@@ -29,3 +29,11 @@
     <% end %>
   </tbody>
 </table>
+
+<% content_for :javascript do %>
+  <script>
+    $('table tbody').sortable({
+      revert: true
+    });
+  </script>
+<% end %>

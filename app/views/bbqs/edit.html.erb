@@ -32,3 +32,16 @@
   
   <%= f.submit 'Update' %>
 <% end %>
+
+<% content_for :javascript do %>
+  <script>
+    $(function() {
+      $('select').customSelects();
+      
+      $('input.time').mask('99:99');
+      $('input.time').each(function() {
+        new AddAMPM(this);
+      });
+    });
+  </script>
+<% end %>

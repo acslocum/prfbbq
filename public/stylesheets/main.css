@@ -676,12 +676,13 @@ table#admin-table ul.table_controls li {
 }
 
 ul.ampm {
-  background-color:#4c4c4c;
 }
 ul.ampm li {
+  background-color:#4c4c4c;
   color:#fff;
   float:left;
   font-size:1.4em;
+  margin-left:0.1em;
   padding:0.3em 0.5em;
 }
 ul.ampm li:hover,
