@@ -42,10 +42,9 @@
   <script>
     $(function() {
       $('select').customSelects();
-      
-      $('input.time').mask('99:99');
-      $('input.time').each(function() {
-        new AddAMPM(this);
+      $('input.time').timeEntry();
+      $('input.time').blur(function() {
+        new CleanValue(this);
       });
     });
   </script>
