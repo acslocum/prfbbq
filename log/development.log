@@ -27596,3 +27596,380 @@ Rendering template within layouts/bands
 Rendering bands/new
   [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
 Completed in 82ms (View: 77, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-10 22:24:10) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Completed in 23ms (View: 18, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-10 22:24:18) [GET]
+  [4;35;1mBand Load (0.7ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 58ms (View: 53, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-10 22:24:57) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 9) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+Completed in 27ms (View: 22, DB: 0) | 200 OK [http://localhost/bands/9]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-10-10 22:25:00) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 8) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+  [4;35;1mBbq Load (0.4ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Completed in 46ms (View: 41, DB: 1) | 200 OK [http://localhost/bands/8/edit]
+
+
+Processing BandsController#8 (for 127.0.0.1 at 2010-10-10 22:25:01) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#8 (for 127.0.0.1 at 2010-10-10 22:25:01) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#8 (for 127.0.0.1 at 2010-10-10 22:25:02) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-10 22:26:33) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Completed in 24ms (View: 19, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#create (for 127.0.0.1 at 2010-10-10 22:27:04) [POST]
+  Parameters: {"commit"=>"Create", "band"=>{"name"=>"", "end_time"=>"", "play_date(1i)"=>"2010", "play_date(2i)"=>"2", "play_date(3i)"=>"3", "bbq_id"=>"4", "start_time"=>""}, "authenticity_token"=>"dW+5yrDvEkMkQ+LXB2oN1dY/BQoPT/hl1YnGfUN+E58="}
+  [4;35;1mBand Create (0.4ms)[0m   [0mINSERT INTO "bands" ("name", "created_at", "end_time", "updated_at", "play_date", "bbq_id", "start_time") VALUES('', '2010-10-11 03:27:04', '', '2010-10-11 03:27:04', '2010-02-03', 4, '')[0m
+Redirected to http://localhost:3000/bands/14
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-10 22:27:05) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 14) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 4) [0m
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/bands/14]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-10-10 22:27:07) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 14) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+  [4;35;1mBbq Load (0.8ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/bands/14/edit]
+
+
+Processing BandsController#14 (for 127.0.0.1 at 2010-10-10 22:27:08) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 14. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#14 (for 127.0.0.1 at 2010-10-10 22:27:08) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 14. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#14 (for 127.0.0.1 at 2010-10-10 22:27:11) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 14. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-10 22:27:11) [GET]
+  [4;36;1mBand Load (0.8ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 4) [0m
+Completed in 123ms (View: 118, DB: 2) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#destroy (for 127.0.0.1 at 2010-10-10 22:27:14) [DELETE]
+  Parameters: {"authenticity_token"=>"dW+5yrDvEkMkQ+LXB2oN1dY/BQoPT/hl1YnGfUN+E58=", "id"=>"14"}
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 14) [0m
+  [4;35;1mBand Destroy (0.4ms)[0m   [0mDELETE FROM "bands" WHERE "id" = 14[0m
+Redirected to http://localhost:3000/bands
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/bands/14]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-10 22:27:14) [GET]
+  [4;36;1mBand Load (0.8ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 58ms (View: 53, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 22:27:32) [GET]
+
+ActionController::RoutingError (No route matches "/nws" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-10-10 22:27:35) [GET]
+Rendering template within layouts/news
+Rendering news/index
+Completed in 26ms (View: 25, DB: 0) | 200 OK [http://localhost/news]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-10 22:27:40) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (15.2ms)
+Rendered news/_article (2.2ms)
+Rendered news/_article (2.1ms)
+Completed in 304ms (View: 48, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing NewsController#make favcon (for 127.0.0.1 at 2010-10-10 22:27:43) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: article and home):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-10 22:27:48) [GET]
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.0ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (0.6ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (0.9ms)
+Rendered bbq/_bbq (94.7ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (0.5ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_schedule (0.8ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_schedule (0.6ms)
+Rendered bbq/_bbq (5.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 4) [0m
+Rendered bbq/_bbq (2.0ms)
+Completed in 112ms (View: 105, DB: 2) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#make favcon (for 127.0.0.1 at 2010-10-10 22:27:51) [GET]
+
+ActionController::UnknownAction (No action responded to make favcon. Actions: past, past_bbqs, past_place, past_year, present, present_bbqs, present_place, and present_year):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-10 22:27:52) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-10') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".bbq_id = 3) [0m
+Rendered bbq/_bbq (9.4ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-10 22:27:58) [GET]
+  [4;36;1mBbq Load (1.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (0.7ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (0.5ms)
+Rendered bbq/_bbq (81.1ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (0.5ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_band (0.0ms)
+Rendered bbq/_schedule (0.8ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (0.6ms)
+Rendered bbq/_bbq (6.8ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 4) [0m
+Rendered bbq/_bbq (2.0ms)
+Completed in 102ms (View: 95, DB: 2) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-10 22:27:58) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date < '2010-10-10') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".bbq_id = 3) [0m
+Rendered bbq/_bbq (9.6ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/bbq/past]
+
+
+Processing BbqController#home (for 127.0.0.1 at 2010-10-10 22:27:59) [GET]
+
+ActionController::UnknownAction (No action responded to home. Actions: past, past_bbqs, past_place, past_year, present, present_bbqs, present_place, and present_year):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-10 22:29:03) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.8ms)
+Rendered news/_article (1.6ms)
+Rendered news/_article (1.6ms)
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-10 22:29:10) [GET]
+  [4;35;1mBbq Load (0.5ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+Completed in 34ms (View: 29, DB: 1) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-10 22:29:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+Completed in 28ms (View: 23, DB: 0) | 200 OK [http://localhost/bbqs/1/edit]
+
+
+Processing BbqsController#1 (for 127.0.0.1 at 2010-10-10 22:29:17) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-10 22:29:30) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 76ms (View: 71, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-10 22:29:41) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-10 22:29:44) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-10 22:29:46) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-10 22:30:10) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 80ms (View: 16, DB: 0) | 200 OK [http://localhost/bbqs/new]
