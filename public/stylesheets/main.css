@@ -493,6 +493,25 @@ body#admin {
   text-align:left;
 }
 
+body#admin a.admin_link {
+  background-color:#a0e2f0;
+  color:#4c4c4c;
+  font-family:'MuseoSlab500';
+  font-size:1.4em;
+  padding:0.4em; 
+  position:absolute;
+  text-decoration:none;
+  text-transform:uppercase;
+  top:1em;
+  right:1em;
+  opacity:0.80;
+  filter:alpha(opacity=80);
+}
+body#admin a.admin_link:hover {
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+
 #admin-content {
 }
 
@@ -583,6 +602,38 @@ ul.admin_controls li a {
 }
 ul.admin_controls li a:hover {
   background-color:#f00;
+}
+
+dl.uber_admin_controls {
+  overflow:hidden;
+}
+dl.uber_admin_controls dt {
+  clear:left;
+  float:left;
+  font-family:'MuseoSlab500';
+  font-size:2em;
+  margin:0.5em 0;
+}
+dl.uber_admin_controls dd {
+  clear:left;
+  float:left;
+  line-height:3em;
+  margin-bottom:0.5em;
+}
+dl.uber_admin_controls a {
+  background-color:#a0E2f0;
+  color:#4c4c4c;
+  font-family:'MuseoSlab500';
+  font-size:1.4em;
+  line-height:1em;
+  padding:0.4em;
+  text-decoration:none;
+  opacity:0.80;
+  filter:alpha(opacity=80);
+}
+dl.uber_admin_controls a:hover {
+  opacity:1;
+  filter:alpha(opacity=100);
 }
 
 /* Admin Table
