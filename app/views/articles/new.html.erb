@@ -9,17 +9,17 @@
   <div id="error_message">
     <%= f.error_messages %>
   </div>
+  
+  <div class="input_container radio_checkbox">
+    <%= f.check_box :is_published %>
+    <%= f.label :is_published %>
+  </div>
 
   <div class="input_container">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-  
-  <div class="input_container">
-    <%= f.label :is_published %>
-    <%= f.check_box :is_published %>
-  </div>
-  
+
   <div class="input_container">
     <%= f.label :content %>
     <%= f.text_area :content, :size=>"80x40" %>
