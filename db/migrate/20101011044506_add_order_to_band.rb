@@ -1,9 +1,9 @@
 class AddOrderToBand < ActiveRecord::Migration
   def self.up
-    add_column :bands, :order, :integer
+    add_column :bands, :sort_order, :integer
   end
 
   def self.down
-    remove_column :bands, :order
+    remove_column :bands, :sort_order
   end
 end

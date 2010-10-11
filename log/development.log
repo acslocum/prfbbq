@@ -28568,3 +28568,411 @@ Migrating to AddOrderToBand (20101011044506)
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bands")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bbqs")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("venues")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+Migrating to BandsToBbq (20101008232512)
+Migrating to SampleBandData (20101009175722)
+Migrating to AddPublishFieldToBbqAndArticle (20101011034803)
+Migrating to AddOrderToBand (20101011044506)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bands")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bbqs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("venues")[0m
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:05:49) [GET]
+  [4;36;1mBbq Load (1.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2)  ORDER BY sort_order ASC, id ASC) on line #10 of app/views/bbq/_bbq.html.erb:
+7:   </hgroup>
+8:   
+9:   <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+10:   <%= render (:partial => "schedule", :collection=>bbq_days(bbq), :as=>:day, :locals=>{:bbq=>bbq})%>
+11:   
+12:   <div class="description">
+13:     <%= bbq.content%>
+
+    app/helpers/bbq_helper.rb:3:in `bbq_days'
+    app/views/bbq/_bbq.html.erb:10
+    app/views/bbq/bbq.html.erb:30
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:05:51) [GET]
+  [4;35;1mBbq Load (1.1ms)[0m   [0mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2)  ORDER BY sort_order ASC, id ASC) on line #10 of app/views/bbq/_bbq.html.erb:
+7:   </hgroup>
+8:   
+9:   <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+10:   <%= render (:partial => "schedule", :collection=>bbq_days(bbq), :as=>:day, :locals=>{:bbq=>bbq})%>
+11:   
+12:   <div class="description">
+13:     <%= bbq.content%>
+
+    app/helpers/bbq_helper.rb:3:in `bbq_days'
+    app/views/bbq/_bbq.html.erb:10
+    app/views/bbq/bbq.html.erb:30
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (50.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:06:16) [GET]
+  [4;36;1mBbq Load (1.4ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2)  ORDER BY sort_order ASC, id ASC) on line #10 of app/views/bbq/_bbq.html.erb:
+7:   </hgroup>
+8:   
+9:   <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+10:   <%= render (:partial => "schedule", :collection=>bbq_days(bbq), :as=>:day, :locals=>{:bbq=>bbq})%>
+11:   
+12:   <div class="description">
+13:     <%= bbq.content%>
+
+    app/helpers/bbq_helper.rb:3:in `bbq_days'
+    app/views/bbq/_bbq.html.erb:10
+    app/views/bbq/bbq.html.erb:30
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (51.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:06:17) [GET]
+  [4;35;1mBbq Load (1.1ms)[0m   [0mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2)  ORDER BY sort_order ASC, id ASC) on line #10 of app/views/bbq/_bbq.html.erb:
+7:   </hgroup>
+8:   
+9:   <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+10:   <%= render (:partial => "schedule", :collection=>bbq_days(bbq), :as=>:day, :locals=>{:bbq=>bbq})%>
+11:   
+12:   <div class="description">
+13:     <%= bbq.content%>
+
+    app/helpers/bbq_helper.rb:3:in `bbq_days'
+    app/views/bbq/_bbq.html.erb:10
+    app/views/bbq/bbq.html.erb:30
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (114.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:07:38) [GET]
+  [4;36;1mBbq Load (1.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2)  ORDER BY sort_order ASC, id ASC) on line #10 of app/views/bbq/_bbq.html.erb:
+7:   </hgroup>
+8:   
+9:   <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+10:   <%= render (:partial => "schedule", :collection=>bbq_days(bbq), :as=>:day, :locals=>{:bbq=>bbq})%>
+11:   
+12:   <div class="description">
+13:     <%= bbq.content%>
+
+    app/helpers/bbq_helper.rb:3:in `bbq_days'
+    app/views/bbq/_bbq.html.erb:10
+    app/views/bbq/bbq.html.erb:30
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-11 00:07:48) [GET]
+  [4;35;1mBand Load (1.9ms)[0m   [0mSELECT * FROM "bands" ORDER BY bbq_id desc[0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 79ms (View: 72, DB: 3) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-11 00:07:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-11 00:07:52) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=make favcon):
+  app/controllers/bands_controller.rb:16:in `show'
+
+Rendered rescues/_trace (70.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-11 00:07:53) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=make favcon):
+  app/controllers/bands_controller.rb:16:in `show'
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-11 00:07:55) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=make favcon):
+  app/controllers/bands_controller.rb:16:in `show'
+
+Rendered rescues/_trace (28.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#show to xml (for 127.0.0.1 at 2010-10-11 00:07:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Completed in 139ms (View: 134, DB: 0) | 200 OK [http://localhost/bands/1.xml]
+
+
+Processing BandsController#show to xml (for 127.0.0.1 at 2010-10-11 00:09:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/bands/1.xml]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-11 00:09:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/bands/1]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:09:52) [GET]
+  [4;36;1mBbq Load (1.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: sort_order: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2)  ORDER BY sort_order ASC, id ASC) on line #10 of app/views/bbq/_bbq.html.erb:
+7:   </hgroup>
+8:   
+9:   <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+10:   <%= render (:partial => "schedule", :collection=>bbq_days(bbq), :as=>:day, :locals=>{:bbq=>bbq})%>
+11:   
+12:   <div class="description">
+13:     <%= bbq.content%>
+
+    app/helpers/bbq_helper.rb:3:in `bbq_days'
+    app/views/bbq/_bbq.html.erb:10
+    app/views/bbq/bbq.html.erb:30
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:12:29) [GET]
+  [4;35;1mBbq Load (1.1ms)[0m   [0mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.0ms)[0m   [0mSQLite3::SQLException: near "order": syntax error: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY order ASC, id ASC[0m
+
+ActionView::TemplateError (SQLite3::SQLException: near "order": syntax error: SELECT * FROM "bands" WHERE ("bands".bbq_id = 2)  ORDER BY order ASC, id ASC) on line #10 of app/views/bbq/_bbq.html.erb:
+7:   </hgroup>
+8:   
+9:   <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
+10:   <%= render (:partial => "schedule", :collection=>bbq_days(bbq), :as=>:day, :locals=>{:bbq=>bbq})%>
+11:   
+12:   <div class="description">
+13:     <%= bbq.content%>
+
+    app/helpers/bbq_helper.rb:3:in `bbq_days'
+    app/views/bbq/_bbq.html.erb:10
+    app/views/bbq/bbq.html.erb:30
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (50.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:22:11) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.6ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (10.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 4) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (2.2ms)
+Completed in 90ms (View: 84, DB: 2) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:22:17) [GET]
+  [4;35;1mBbq Load (1.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.7ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (12.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.5ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".bbq_id = 4) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (2.4ms)
+Completed in 26ms (View: 18, DB: 3) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-11 00:22:20) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date < '2010-10-11') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.6ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 3) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (10.4ms)
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 1) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (2.5ms)
+Completed in 23ms (View: 16, DB: 3) | 200 OK [http://localhost/bbq/past]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-11 00:24:43) [GET]
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" WHERE (is_published='t') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (60.4ms)
+Completed in 148ms (View: 143, DB: 1) | 200 OK [http://localhost/news/home]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:24:45) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (11.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.4ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 4) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (2.2ms)
+Completed in 24ms (View: 17, DB: 2) | 200 OK [http://localhost/bbq/present]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-11 00:25:03) [GET]
+  [4;35;1mBand Load (0.9ms)[0m   [0mSELECT * FROM "bands" ORDER BY bbq_id desc[0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-11 00:25:20) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;36;1mBbq Load (0.8ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Completed in 30ms (View: 24, DB: 1) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#create (for 127.0.0.1 at 2010-10-11 00:25:49) [POST]
+  Parameters: {"commit"=>"Create", "band"=>{"name"=>"foo", "play_date(1i)"=>"2010", "play_date(2i)"=>"10", "play_date(3i)"=>"20", "bbq_id"=>"2", "end_time"=>"11:40 PM", "start_time"=>"10:40 PM"}, "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E="}
+  [4;35;1mBand Create (0.4ms)[0m   [0mINSERT INTO "bands" ("name", "updated_at", "sort_order", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('foo', '2010-10-11 05:25:49', NULL, '2010-10-20', 2, '2010-10-11 05:25:49', '10:40 PM', '11:40 PM')[0m
+Redirected to http://localhost:3000/bands/1
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-11 00:25:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+Completed in 76ms (View: 70, DB: 0) | 200 OK [http://localhost/bands/1]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 00:26:10) [GET]
+  [4;36;1mBbq Load (1.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.8ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_band (10.9ms)
+Rendered bbq/_schedule (25.4ms)
+Rendered bbq/_bbq (42.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (1.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 4) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (3.4ms)
+Completed in 56ms (View: 49, DB: 3) | 200 OK [http://localhost/bbq/present]

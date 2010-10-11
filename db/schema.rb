@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20101011044506) do
     t.date     "play_date"
     t.string   "start_time"
     t.string   "end_time"
-    t.integer  "order"
+    t.integer  "sort_order"
   end
 
   create_table "bbqs", :force => true do |t|
