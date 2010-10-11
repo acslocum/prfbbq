@@ -28976,3 +28976,10 @@ Rendered bbq/_bbq (42.6ms)
   [4;36;1mBand Load (1.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 4) ORDER BY sort_order ASC, id ASC[0m
 Rendered bbq/_bbq (3.4ms)
 Completed in 56ms (View: 49, DB: 3) | 200 OK [http://localhost/bbq/present]
+
+
+Processing VenuesController#index (for 127.0.0.1 at 2010-10-11 00:34:18) [GET]
+  [4;35;1mVenue Load (0.5ms)[0m   [0mSELECT * FROM "venues" [0m
+Rendering template within layouts/venues
+Rendering venues/index
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/venues]

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :venues
+
   map.resources :articles
 
   map.resources :bbqs
