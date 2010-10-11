@@ -15,6 +15,7 @@
     <% @articles.each do |article| %>
       <tr>
         <td class="one"><%=h article.title %></td>
+		<td>published: <%=h article.is_published%></td>
         <td class="two"><%=h article.content %></td>
         <td class="three">
           <ul class="table_controls">

@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   def home
-    @articles = Article.all(:order => "created_at DESC, id DESC")
+    @articles = Article.all(:conditions=> ["is_published=?",true], :order => "created_at DESC, id DESC")
   end
 
   def article

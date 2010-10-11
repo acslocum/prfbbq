@@ -16,6 +16,11 @@
   </div>
   
   <div class="input_container">
+    <%= f.label :is_published %>
+    <%= f.check_box :is_published %>
+  </div>
+  
+  <div class="input_container">
     <%= f.label :content %>
     <%= f.text_area :content, :size=>"80x40" %>
   </div>

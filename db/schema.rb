@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101009175722) do
+ActiveRecord::Schema.define(:version => 20101011034803) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20101009175722) do
     t.date     "event_date"
     t.string   "ticket_url"
     t.boolean  "tickets_available", :default => true
+    t.boolean  "is_published"
   end
 
   create_table "bands", :force => true do |t|
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20101009175722) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "venue_id"
+    t.boolean  "is_published"
   end
 
   create_table "venues", :force => true do |t|
