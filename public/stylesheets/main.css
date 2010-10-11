@@ -583,9 +583,9 @@ table#admin-table th {
   border-right:0.1em solid #4dbddd;
   color:#2398b2;
   font-family:'PTSansBold';
-  font-size:1.4em;
+  font-size:1.2em;
   font-weight:400;
-  padding:0.4em 1em;
+  padding:0.4em 1em 0.2em;
 }
 
 table#admin-table tbody {
@@ -611,18 +611,21 @@ table#admin-table tr:hover td {
 
 /* BBQ Table */
 table#admin-table.bbq .one {
-  width:30em;
+  width:20em;
 }
 table#admin-table.bbq .two {
   width:12em;
 }
 table#admin-table.bbq .three {
+  width:5em;
+}
+table#admin-table.band .four {
   width:12em;
 }
 
 /* Band Table */
 table#admin-table.band .one {
-  width:15em;
+  width:20em;
 }
 table#admin-table.band .two {
   width:15em;
@@ -631,20 +634,24 @@ table#admin-table.band .three {
   width:8em;
 }
 table#admin-table.band .four {
-  width:8em;
+  width:10em;
 }
 table#admin-table.band .five {
   width:12em;
 }
 
+
 /* Article Table */
 table#admin-table.article .one {
-  width:14em;
+  width:20em;
 }
 table#admin-table.article .two {
-  width:40em;
+  width:50em;
 }
-table#admin-table.article .five {
+table#admin-table.article .three {
+  width:5em;
+}
+table#admin-table.article .four {
   width:12em;
 }
 

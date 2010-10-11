@@ -8,7 +8,8 @@
   <thead>
     <th class="one">Title</th>
     <th class="two">Event date</th>
-    <th class="three">Controls</th>
+    <th class="three">Published</th>
+    <th class="four">Controls</th>
   </thead>
   
   <tbody>
@@ -16,8 +17,8 @@
       <tr>
         <td class="one"><%=h bbq.title %></td>
         <td class="two"><%=h bbq.event_date %></td>
-		<td>published: <%=h bbq.is_published%></td>
-        <td class="three">
+        <td class="three"><%=h bbq.is_published%></td>
+        <td class="four">
           <ul class="table_controls">
             <li><%= link_to 'Preview', bbq %></li>
             <li><%= link_to 'Edit', edit_bbq_path(bbq) %></li>
