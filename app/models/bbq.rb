@@ -1,6 +1,6 @@
 class Bbq < ActiveRecord::Base
   belongs_to :venue
-  has_many :bands
+  has_many :bands, :order => "order ASC, id ASC"
   
   def event_date_short
     event_date.strftime("%b '%y")
