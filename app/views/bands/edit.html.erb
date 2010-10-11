@@ -20,9 +20,11 @@
     <%= f.text_field :name %>
   </div>
   
-  <div class="input_container clearfix">
-    <%= f.label :play_date %>
-    <%= f.date_select :play_date %>
+  <div class="input_container short">
+    <%#= f.label :play_date %>
+    <%#= f.date_select :play_date %>
+    <label for="play_date">Play Date</label>
+    <input type="text" id="play_date" />
   </div>
   
   <div class="input_container short">
@@ -45,6 +47,26 @@
       $('input.time').timeEntry();
       $('input.time').blur(function() {
         new CleanValue(this);
+      });
+      
+      var selectValue = $('#customSelect_band_bbq_id .customSelects_title').text(),
+          selectDate = selectValue.split(' - ');
+
+      $('#play_date')
+        .datepicker()
+        .datepicker('setDate', new Date(selectDate[1]))
+        .datepicker('option', 'dateFormat', 'yy/mm/dd')
+        .datepicker( "option", "minDate", new Date(selectDate[1]))
+        .datepicker( "option", "maxDate", new Date(selectDate[2]));
+        
+      $('#band_bbq_id').change(function() {
+        var value = $('#customSelect_band_bbq_id .customSelects_title').text(),
+            date = value.split(' - ');
+            
+        $('#play_date')
+          .datepicker('setDate', new Date(date[1]))
+          .datepicker( "option", "minDate", new Date(date[1]))
+          .datepicker( "option", "maxDate", new Date(date[2]));
       });
     });
   </script>

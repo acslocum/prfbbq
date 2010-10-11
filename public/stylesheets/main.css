@@ -849,8 +849,8 @@ a.button:hover {
   background-color:#4c4c4c;
   display:none;
   padding:1em;
-  opacity:0.90;
-  filter:alpha(opacity=90);
+  opacity:0.95;
+  filter:alpha(opacity=95);
 }
 * + html #ui-datepicker-div {
   width:30em;
@@ -907,7 +907,7 @@ table.ui-datepicker-calendar td a {
   text-decoration:none;
 }
 table.ui-datepicker-calendar td.ui-datepicker-unselectable span {
-  color:#f33;
+  color:#999;
 }
 table.ui-datepicker-calendar td a:hover {
   background-color:#f00;
