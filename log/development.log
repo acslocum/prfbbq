@@ -29045,3 +29045,71 @@ Rendering template within layouts/bbqs
 Rendering bbqs/edit
   [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
 Completed in 23ms (View: 18, DB: 1) | 200 OK [http://localhost/bbqs/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-11 00:50:36) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-11 00:51:09) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-11 00:51:25) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-11 00:51:26) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-11 00:52:00) [GET]
+
+ActionController::RoutingError (No route matches "/admin/index" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-11 00:52:06) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-11 00:52:09) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 35ms (View: 31, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-10-11 00:53:46) [GET]
+
+ActionView::MissingTemplate (Missing template admin/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdminController#admin (for 127.0.0.1 at 2010-10-11 00:53:59) [GET]
+Rendering admin/admin
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/admin]

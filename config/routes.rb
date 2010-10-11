@@ -6,8 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :bbqs
 
   map.resources :bands
-
-  map.resources :bands
+  
+  map.connect 'admin', :controller=>'admin', :action=>'admin'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
