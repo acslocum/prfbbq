@@ -42,7 +42,10 @@
       $('input.time').blur(function() {
         new CleanValue(this);
       });
-      $('#event_date').datepicker().datepicker('setDate', new Date());
+      $('#event_date')
+        .datepicker()
+        .datepicker('setDate', new Date())
+        .datepicker('option', 'dateFormat', 'yy/mm/dd');
     });
   </script>
 <% end %>
