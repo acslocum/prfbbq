@@ -1,3 +1,8 @@
+<%# TODO: Conditional to change "Upcoming Events to Past Events" when past is used %>
+<% content_for :titleAddon do %>
+  Upcoming Events
+<% end %>
+
 <section id="page-content" class="shows">
   <form id="select-nav">
     <div class="nav_select_container">
@@ -25,11 +30,6 @@
     <button type="submit">Go</button>
   </form>
   <div style="clear:both;"></div>
-
   
-<%= render (:partial=> "bbq", :collection=>@bbqs) -%>
-
+  <%= render (:partial=> "bbq", :collection=>@bbqs) -%>
 </section>
-<% content_for :script do %>
-
-<% end %>
