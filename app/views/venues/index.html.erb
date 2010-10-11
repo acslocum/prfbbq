@@ -1,24 +1,30 @@
-<h1>Listing venues</h1>
+<h1>Venue: List</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Url</th>
-    <th>Address</th>
-  </tr>
+<ul class="admin_controls">
+  <li><%= link_to 'New Venue', new_venue_path %></li>
+</ul>
 
-<% @venues.each do |venue| %>
-  <tr>
-    <td><%=h venue.name %></td>
-    <td><%=h venue.url %></td>
-    <td><%=h venue.address %></td>
-    <td><%= link_to 'Show', venue %></td>
-    <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
-    <td><%= link_to 'Destroy', venue, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+<table id="admin-table" class="venue">
+  <thead>
+    <th class="one">Name</th>
+    <th class="two">Url</th>
+    <th class="three">Address</th>
+    <th class="four">Controls</th>
+  </thead>
+
+  <tbody>
+    <% @venues.each do |venue| %>
+      <tr>
+        <td class="one"><%=h venue.name %></td>
+        <td class="one"><%=h venue.url %></td>
+        <td class="three"><%=h venue.address %></td>
+        <td class="four">
+          <ul class="table_controls">
+            <li><%= link_to 'Preview', venue %></li>
+            <li><%= link_to 'Edit', edit_venue_path(venue) %></li>
+            <li><%= link_to 'Delete', venue, :confirm => 'Are you sure?', :method => :delete %></li>
+          </ul>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
-
-<br />
-
-<%= link_to 'New venue', new_venue_path %>

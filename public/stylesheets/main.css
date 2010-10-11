@@ -494,7 +494,6 @@ body#admin {
 }
 
 #admin-content {
-  width:65em;
 }
 
 #admin-content h1 {
@@ -515,6 +514,11 @@ body#admin {
   display:block;
   font-size:2em;
   text-transform:capitalize;
+  width:32.4em;
+}
+
+#admin-content .short label {
+  width:5.9em;
 }
 
 #admin-content .radio_checkbox label {
@@ -629,9 +633,12 @@ table#admin-table.bbq .two {
   width:12em;
 }
 table#admin-table.bbq .three {
-  width:5em;
+  width:20em;
 }
-table#admin-table.band .four {
+table#admin-table.bbq .four {
+  width:5em;
+}'
+table#admin-table.bbq .five {
   width:12em;
 }
 
@@ -652,7 +659,6 @@ table#admin-table.band .five {
   width:12em;
 }
 
-
 /* Article Table */
 table#admin-table.article .one {
   width:20em;
@@ -664,6 +670,20 @@ table#admin-table.article .three {
   width:5em;
 }
 table#admin-table.article .four {
+  width:12em;
+}
+
+/* Article Table */
+table#admin-table.venue .one {
+  width:20em;
+}
+table#admin-table.venue .two {
+  width:20em;
+}
+table#admin-table.venue .three {
+  width:25em;
+}
+table#admin-table.venue .four {
   width:12em;
 }
 
@@ -828,10 +848,12 @@ a.button:hover {
 #ui-datepicker-div {
   background-color:#4c4c4c;
   display:none;
-  padding:0.5em;
+  padding:1em;
+  opacity:0.95;
+  filter:alpha(opacity=95);
 }
 * + html #ui-datepicker-div {
-  width:20em;
+  width:30em;
 }
 .ui-icon {
   background-image:url(../images/date_picker_controls.png);
@@ -885,7 +907,7 @@ table.ui-datepicker-calendar td a {
   text-decoration:none;
 }
 table.ui-datepicker-calendar td.ui-datepicker-unselectable span {
-  color:#f33;
+  color:#999;
 }
 table.ui-datepicker-calendar td a:hover {
   background-color:#f00;

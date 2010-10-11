@@ -8,8 +8,9 @@
   <thead>
     <th class="one">Title</th>
     <th class="two">Event date</th>
-    <th class="three">Published</th>
-    <th class="four">Controls</th>
+    <th class="three">Venue</th>
+    <th class="four">Published</th>
+    <th class="five">Controls</th>
   </thead>
   
   <tbody>
@@ -24,6 +25,7 @@
             <li><%= link_to 'Preview', bbq %></li>
             <li><%= link_to 'Edit', edit_bbq_path(bbq) %></li>
             <li><%= link_to 'Delete', bbq, :confirm => 'Are you sure?', :method => :delete %></li>
+          </ul>
         </td>
       </tr>
     <% end %>

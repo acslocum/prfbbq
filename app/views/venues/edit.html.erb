@@ -1,24 +1,29 @@
-<h1>Editing venue</h1>
+<h1>Venue: Edit</h1>
+
+<ul class="admin_controls">
+  <li><%= link_to 'Venue List', venues_path %></li>
+  <li><%= link_to 'Preview', @venue %></li>
+</ul>
 
 <% form_for(@venue) do |f| %>
-  <%= f.error_messages %>
+  <div id="error_message">
+    <%= f.error_messages %>
+  </div>
 
-  <p>
-    <%= f.label :name %><br />
+  <div class="input_container medium">
+    <%= f.label :name %>
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :url %><br />
+  </div>
+  
+  <div class="input_container medium">
+    <%= f.label :url %>
     <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.label :address %><br />
+  </div>
+   
+  <div class="input_container medium">
+    <%= f.label :address %>
     <%= f.text_field :address %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+  </div>
 
-<%= link_to 'Show', @venue %> |
-<%= link_to 'Back', venues_path %>
+  <%= f.submit 'Update' %>
+<% end %>
