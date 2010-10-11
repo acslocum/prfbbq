@@ -29456,3 +29456,397 @@ Rendering template within layouts/news
 Rendering news/home
 Rendered news/_article (4.0ms)
 Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-11 01:04:11) [GET]
+  Parameters: {"id"=>"Chicago%20BBQ%20announced!"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%Chicago BBQ announced!%') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+Rendered news/_article (2.6ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/news/article/Chicago%2520BBQ%2520announced!]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-11 01:04:11) [GET]
+
+ActionController::RoutingError (No route matches "/..." with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-11 01:04:11) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (lower(title) like '%make favcon%') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of app/views/news/article.html.erb:
+1: <% content_for :titleAddon do %>
+2:   <%=@article.title%>
+3: <% end %>
+4: 
+5: <% content_for :headAddon do %>
+
+    app/views/news/article.html.erb:2
+    app/views/news/article.html.erb:1
+
+Rendered rescues/_trace (102.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-11 01:04:12) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE (lower(title) like '%make favcon%') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of app/views/news/article.html.erb:
+1: <% content_for :titleAddon do %>
+2:   <%=@article.title%>
+3: <% end %>
+4: 
+5: <% content_for :headAddon do %>
+
+    app/views/news/article.html.erb:2
+    app/views/news/article.html.erb:1
+
+Rendered rescues/_trace (36.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NewsController#article (for 127.0.0.1 at 2010-10-11 01:04:14) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (lower(title) like '%make favcon%') LIMIT 1[0m
+Rendering template within layouts/news
+Rendering news/article
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of app/views/news/article.html.erb:
+1: <% content_for :titleAddon do %>
+2:   <%=@article.title%>
+3: <% end %>
+4: 
+5: <% content_for :headAddon do %>
+
+    app/views/news/article.html.erb:2
+    app/views/news/article.html.erb:1
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+Migrating to BandsToBbq (20101008232512)
+Migrating to SampleBandData (20101009175722)
+Migrating to AddPublishFieldToBbqAndArticle (20101011034803)
+Migrating to AddOrderToBand (20101011044506)
+Migrating to ConvertVarcharsToText (20101011060818)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+Migrating to BandsToBbq (20101008232512)
+Migrating to SampleBandData (20101009175722)
+Migrating to AddPublishFieldToBbqAndArticle (20101011034803)
+Migrating to AddOrderToBand (20101011044506)
+Migrating to ConvertVarcharsToText (20101011060818)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "bbqs"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "bbqs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "event_date" date, "content" text, "venue_id" integer, "is_published" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101011060818')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bbqs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("venues")[0m
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-11 01:18:34) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" WHERE (is_published='t') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.0ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 01:18:36) [GET]
+  [4;35;1mBbq Load (0.8ms)[0m   [0mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/present]
+
+
+Processing AdminController#admin (for 127.0.0.1 at 2010-10-11 01:18:41) [GET]
+Rendering admin/admin
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 01:18:43) [GET]
+  [4;36;1mBbq Load (0.4ms)[0m   [0;1mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 01:18:45) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 179ms (View: 173, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 01:19:21) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"title"=>"Chicago BBQ", "is_published"=>"1", "venue_id"=>"1", "event_date(1i)"=>"2010", "content"=>"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href=\"#\">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.</p>", "event_date(2i)"=>"10", "event_date(3i)"=>"15"}}
+  [4;36;1mBbq Create (0.4ms)[0m   [0;1mINSERT INTO "bbqs" ("updated_at", "title", "is_published", "venue_id", "content", "event_date", "created_at") VALUES('2010-10-11 06:19:21', 'Chicago BBQ', 't', 1, '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href="#">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.</p>', '2010-10-15', '2010-10-11 06:19:21')[0m
+Redirected to http://localhost:3000/bbqs/1
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/bbqs]
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-11 01:19:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/bbqs/1]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 01:19:24) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 01:19:42) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"title"=>"NYC BBQ", "is_published"=>"1", "venue_id"=>"2", "event_date(1i)"=>"2010", "content"=>"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href=\"#\">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.</p>", "event_date(2i)"=>"10", "event_date(3i)"=>"22"}}
+  [4;36;1mBbq Create (0.4ms)[0m   [0;1mINSERT INTO "bbqs" ("updated_at", "title", "is_published", "venue_id", "content", "event_date", "created_at") VALUES('2010-10-11 06:19:42', 'NYC BBQ', 't', 2, '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non tellus vel dui lobortis tempor ut ut massa. Proin et tellus nisl. Donec non metus ac augue egestas malesuada non vitae sapien. Duis et augue eget erat porttitor tincidunt nec vitae felis. Cras ut mi sed eros volutpat placerat. <a href="#">Praesent sed arcu id</a> neque viverra mollis. Fusce adipiscing est at ipsum vulputate non faucibus magna interdum. Maecenas tortor magna, rutrum vel pulvinar at, mollis in lacus.</p>', '2010-10-22', '2010-10-11 06:19:42')[0m
+Redirected to http://localhost:3000/bbqs/2
+Completed in 69ms (DB: 0) | 302 Found [http://localhost/bbqs]
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-11 01:19:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/bbqs/2]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 01:19:45) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/bbqs]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-11 01:19:47) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (is_published='t') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.2ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 01:19:49) [GET]
+  [4;35;1mBbq Load (42.6ms)[0m   [0mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.5ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".bbq_id = 1) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (10.6ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.6ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (0.4ms)
+Rendered bbq/_bbq (5.4ms)
+Completed in 68ms (View: 19, DB: 44) | 200 OK [http://localhost/present]
+
+
+Processing AdminController#admin (for 127.0.0.1 at 2010-10-11 01:19:56) [GET]
+Rendering admin/admin
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 01:19:58) [GET]
+  [4;36;1mBbq Load (0.7ms)[0m   [0;1mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/bbqs]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-11 01:20:02) [GET]
+  [4;35;1mBand Load (0.9ms)[0m   [0mSELECT * FROM "bands" ORDER BY bbq_id desc[0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-10-11 01:20:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+  [4;36;1mBbq Load (0.8ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Completed in 31ms (View: 25, DB: 1) | 200 OK [http://localhost/bands/1/edit]
+
+
+Processing BandsController#1 (for 127.0.0.1 at 2010-10-11 01:20:10) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#1 to png (for 127.0.0.1 at 2010-10-11 01:20:11) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#1 (for 127.0.0.1 at 2010-10-11 01:20:11) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#1 (for 127.0.0.1 at 2010-10-11 01:20:13) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#update (for 127.0.0.1 at 2010-10-11 01:20:14) [PUT]
+  Parameters: {"commit"=>"Update", "band"=>{"name"=>"foo", "play_date(1i)"=>"2010", "play_date(2i)"=>"10", "play_date(3i)"=>"20", "bbq_id"=>"1", "end_time"=>"11:40 PM", "start_time"=>"10:40 PM"}, "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"1"}
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;36;1mBand Update (0.3ms)[0m   [0;1mUPDATE "bands" SET "bbq_id" = 1, "updated_at" = '2010-10-11 06:20:14' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/bands/1
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/bands/1]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-11 01:20:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/bands/1]
+
+
+Processing BandsController#edit (for 127.0.0.1 at 2010-10-11 01:20:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/edit
+  [4;36;1mBbq Load (0.8ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Completed in 83ms (View: 77, DB: 1) | 200 OK [http://localhost/bands/1/edit]
+
+
+Processing BandsController#1 to png (for 127.0.0.1 at 2010-10-11 01:20:17) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#update (for 127.0.0.1 at 2010-10-11 01:20:23) [PUT]
+  Parameters: {"commit"=>"Update", "band"=>{"name"=>"foo", "play_date(1i)"=>"2010", "play_date(2i)"=>"10", "play_date(3i)"=>"15", "bbq_id"=>"1", "end_time"=>"11:40 PM", "start_time"=>"10:40 PM"}, "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"1"}
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+  [4;36;1mBand Update (0.4ms)[0m   [0;1mUPDATE "bands" SET "play_date" = '2010-10-15', "updated_at" = '2010-10-11 06:20:23' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/bands/1
+Completed in 58ms (DB: 1) | 302 Found [http://localhost/bands/1]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-11 01:20:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 1) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/bands/1]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-11 01:20:27) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" WHERE (is_published='t') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (4.3ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 01:20:28) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.8ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 1) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (0.5ms)
+Rendered bbq/_bbq (14.9ms)
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.5ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".bbq_id = 2) ORDER BY sort_order ASC, id ASC[0m
+Rendered bbq/_bbq (2.6ms)
+Completed in 27ms (View: 20, DB: 3) | 200 OK [http://localhost/present]
