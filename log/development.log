@@ -27973,3 +27973,484 @@ Processing BbqsController#new (for 127.0.0.1 at 2010-10-10 22:30:10) [GET]
 Rendering template within layouts/bbqs
 Rendering bbqs/new
 Completed in 80ms (View: 16, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-10 22:36:35) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 169ms (View: 148, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 22:36:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 22:36:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:40:43) [GET]
+  [4;35;1mArticle Load (17.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 118ms (View: 83, DB: 17) | 200 OK [http://localhost/articles]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 22:40:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 22:40:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:41:15) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:41:31) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:44:04) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 18, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:44:20) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:44:26) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 18, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:44:43) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:44:54) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 23ms (View: 19, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:45:03) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:45:11) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:45:25) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:45:43) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 18, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:45:56) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:46:12) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 18, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:46:19) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:46:39) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 23ms (View: 18, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:46:46) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:54:53) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:55:04) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:55:11) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:55:48) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:55:55) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 81ms (View: 76, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:56:06) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:56:10) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:56:18) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 83ms (View: 78, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:56:56) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 22:57:05) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 23:02:11) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 82ms (View: 78, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 23:02:22) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 23:02:37) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 23:03:59) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-10 23:15:42) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 26ms (View: 22, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-10 23:15:47) [GET]
+  [4;35;1mBbq Load (0.8ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+Completed in 38ms (View: 21, DB: 1) | 200 OK [http://localhost/bbqs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:15:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-10 23:15:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+Completed in 68ms (View: 63, DB: 0) | 200 OK [http://localhost/bbqs/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:15:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-10 23:16:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/bbqs/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:16:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-10 23:16:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/bbqs/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:16:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:16:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-10 23:16:06) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/bbqs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:16:06) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-10 23:16:07) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:16:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:16:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-10 23:16:16) [GET]
+  [4;36;1mBbq Load (0.5ms)[0m   [0;1mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/bbqs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:16:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-10 23:16:26) [GET]
+  [4;35;1mBand Load (1.0ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 142ms (View: 125, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:16:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:16:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-10 23:16:55) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;36;1mBbq Load (0.4ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Completed in 26ms (View: 22, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:16:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-10 23:17:12) [GET]
+  [4;35;1mBand Load (0.9ms)[0m   [0mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;36;1mBbq Load (0.4ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 66ms (View: 59, DB: 2) | 200 OK [http://localhost/bands]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-10 23:17:13) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-1.8.5.custom.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-10 23:18:31) [GET]
+  [4;36;1mBand Load (0.7ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 128ms (View: 123, DB: 1) | 200 OK [http://localhost/bands]
