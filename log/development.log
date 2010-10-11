@@ -27561,3 +27561,38 @@ Rendering template within layouts/bands
 Rendering bands/new
   [4;36;1mBbq Load (0.4ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
 Completed in 80ms (View: 75, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-10 22:20:37) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Completed in 23ms (View: 18, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-10 22:20:53) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-10 22:21:12) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;35;1mBbq Load (0.4ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Completed in 23ms (View: 18, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-10 22:21:20) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;36;1mBbq Load (0.4ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Completed in 23ms (View: 18, DB: 0) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-10 22:21:55) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE (event_date >= '2010-10-10') ORDER BY event_date ASC, id DESC[0m
+Completed in 82ms (View: 77, DB: 0) | 200 OK [http://localhost/bands/new]

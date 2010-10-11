@@ -22,11 +22,12 @@ function AddAMPM(input) {
     var text = $(this).text(),
         value = $(input).val().split(' '),
         newValue = value[0] + ' ' + text;         
+        
+    items.removeClass('selected');
+    $(this).addClass('selected');
 
     if(value != '') {
       $(input).val(newValue);
-      items.removeClass('selected');
-      $(this).addClass('selected');
     } else {
       $(input).focus();
     }
