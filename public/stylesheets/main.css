@@ -494,7 +494,7 @@ body#admin {
 }
 
 #admin-content {
-
+  width:65em;
 }
 
 #admin-content h1 {
@@ -514,6 +514,12 @@ body#admin {
 #admin-content label {
   display:block;
   font-size:2em;
+  text-transform:capitalize;
+}
+
+#admin-content .radio_checkbox label {
+  display:inline;
+  margin-left:0.2em;
 }
 
 #admin-content input[type=text],
@@ -526,6 +532,12 @@ body#admin {
   margin-bottom:0.5em;
   padding:0.2em 0.2em 0.1em;
   width:40.1em;
+}
+
+#admin-content input[type=radio],
+#admin-content input[type=checkbox] {
+  padding:0;
+  margin:0;
 }
 
 #admin-content .medium input[type=text] {
@@ -658,6 +670,10 @@ table#admin-table.article .four {
 table#admin-table ul.table_controls li {
   float:left;
   margin-right:1em;
+}
+
+.ui-sortable tr {
+  cursor:move;
 }
 
 /* Icons & Effects
@@ -805,6 +821,80 @@ a.button:hover {
   background-color:#f00;
   cursor:pointer;
   outline:none;
+}
+
+/* ScrollPane 
+---------------------------------------------------- */
+#ui-datepicker-div {
+  background-color:#4c4c4c;
+  display:none;
+  padding:0.5em;
+}
+* + html #ui-datepicker-div {
+  width:20em;
+}
+.ui-icon {
+  background-image:url(../images/date_picker_controls.png);
+  background-repeat:no-repeat;
+  display:block;
+  height:1.2em;
+  text-indent:-999em;
+  width:0.9em;
+}
+/* Prev */
+.ui-datepicker-prev {
+  float:left;
+  margin:0.5em 0 0 0.4em;
+}
+.ui-icon-circle-triangle-w {
+  background-position:left center;
+}
+/* Next */
+.ui-datepicker-next {
+  float:right;
+  margin:0.5em 0.4em 0 0;
+}
+.ui-icon-circle-triangle-e {
+  background-position:right center;
+}
+.ui-datepicker-title {
+  color:#fff;
+  font-size:1.8em;
+  line-height:1em;
+  margin-bottom:0.4em;
+  text-align:center;
+}
+.ui-datepicker-title .ui-datepicker-month,
+.ui-datepicker-title .ui-datepicker-year {
+  color:#fff;
+}
+table.ui-datepicker-calendar {
+  border-collapse:collapse;
+  font-size:1.4em;
+}
+table.ui-datepicker-calendar th {
+  padding:0.2em 0.3em;
+}
+table.ui-datepicker-calendar th span {
+}
+table.ui-datepicker-calendar td {
+  padding:0.2em;
+}
+table.ui-datepicker-calendar td a {
+  padding:0.2em 0.3em;
+  text-decoration:none;
+}
+table.ui-datepicker-calendar td.ui-datepicker-unselectable span {
+  color:#f33;
+}
+table.ui-datepicker-calendar td a:hover {
+  background-color:#f00;
+  color:#fff;
+  text-decoration:none;
+}
+table.ui-datepicker-calendar td .ui-state-active {
+  background-color:#f00;
+  color:#fff;  
 }
 
 /* ScrollPane 

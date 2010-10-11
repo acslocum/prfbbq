@@ -8,25 +8,22 @@
   <div id="error_message">
     <%= f.error_messages %>
   </div>
+  
+  <div class="input_container radio_checkbox">
+    <%= f.check_box :is_published %>
+    <%= f.label :is_published %>
+  </div>
 
   <div class="input_container">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   
-  <div class="input_container clearfix">
-    <%= f.label :event_date %>
-    <%= f.date_select :event_date %>
-  </div>
-  
-  <div class="input_container clearfix long">
-    <%= f.label :venue %>
-    <%= f.select(:venue_id,options_for_select(venue_select_list())) %>
-  </div>
-  
-  <div class="input_container">
-    <%= f.label :is_published %>
-    <%= f.check_box :is_published %>
+  <div class="input_container short">
+    <%#= f.label :event_date %>
+    <%#= f.date_select :event_date %>
+    <label for="event_date">Event Date</label>
+    <input type="text" id="event_date" />
   </div>
   
   <div class="input_container">
@@ -41,11 +38,14 @@
   <script>
     $(function() {
       $('select').customSelects();
-      
-      $('input.time').mask('99:99');
-      $('input.time').each(function() {
-        new AddAMPM(this);
+      $('input.time').timeEntry();
+      $('input.time').blur(function() {
+        new CleanValue(this);
       });
+      $('#event_date')
+        .datepicker()
+        .datepicker('setDate', new Date())
+        .datepicker('option', 'dateFormat', 'yy/mm/dd');
     });
   </script>
 <% end %>
