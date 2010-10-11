@@ -8,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :bands
   
   map.connect 'admin', :controller=>'admin', :action=>'admin'
+  
+  map.root :controller=>'news', :action=>'home'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
