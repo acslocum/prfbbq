@@ -14,11 +14,12 @@
     <%= f.date_select :bbq_date %>
   </div> 
    
- <div class="input_container long clearfix">
+  <div class="input_container long clearfix">
 	  <%= f.label :venue_id %>
 	  <%= f.select(:venue_id,options_for_select(present_bbqs_select_list))%>
   </div>
- <div class="input_container long clearfix">
+  
+  <div class="input_container long clearfix">
 	  <%= f.label :venue_id %>
 	  <%= f.select(:venue_id,options_for_select(venue_select_list))%>
   </div>
@@ -46,6 +47,9 @@
     $(function() {
       $('select').customSelects();
       $('input.time').timeEntry();
+      $('input.time').blur(function() {
+        new CleanValue(this);
+      });
     });
   </script>
 <% end %>

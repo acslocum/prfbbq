@@ -737,9 +737,12 @@ table#admin-table.day .two {
   width:26em;
 }
 table#admin-table.day .three {
-  width:12em;
+  width:26em;
 }
 table#admin-table.day .four {
+  width:12em;
+}
+table#admin-table.day .five {
   width:12em;
 }
 
