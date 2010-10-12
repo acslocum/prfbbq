@@ -1,4 +1,4 @@
-<h1>BBQ: Edit Day</h1>
+<h1>BBQ: Edit</h1>
 
 <nav class="admin">
   <%= link_to 'Back', bbqs_path, :class=>'admin_link' %>
@@ -8,7 +8,7 @@
   <div id="error_message">
     <%= f.error_messages %>
   </div>
-  
+
   <div class="input_container radio_checkbox">
     <%= f.check_box :is_published %>
     <%= f.label :is_published %>
@@ -18,15 +18,19 @@
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-  
-  <div class="input_container long">
-	<%= f.label :venue_id %>
-	<%= f.select(:venue_id,options_for_select(venue_select_list))%>
+
+  <div class="input_container short">
+    <%#= f.label :event_date %>
+    <%#= f.date_select :event_date %>
+    <label for="event_date">Start Date</label>
+    <input type="text" id="start_date" />
   </div>
-  
-  <div class="input_container">
-    <%= f.label :content %>
-    <%= f.text_area :content, :size=>"80x40" %>
+
+  <div class="input_container short">
+    <%#= f.label :event_date %>
+    <%#= f.date_select :event_date %>
+    <label for="event_date">End Date</label>
+    <input type="text" id="end_date" />
   </div>
   
   <%= f.submit 'Update' %>
@@ -40,7 +44,12 @@
       $('input.time').blur(function() {
         new CleanValue(this);
       });
-      $('#event_date')
+      $('#start_date')
+        .datepicker()
+        .datepicker('setDate', new Date())
+        .datepicker('option', 'dateFormat', 'yy/mm/dd');
+        
+      $('#end_date')
         .datepicker()
         .datepicker('setDate', new Date())
         .datepicker('option', 'dateFormat', 'yy/mm/dd');

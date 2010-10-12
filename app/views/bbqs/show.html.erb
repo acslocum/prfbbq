@@ -1,4 +1,4 @@
-<h1>BBQ: Preview Day</h1>
+<h1>BBQ: Preview</h1>
 
 <nav class="admin">
   <%= link_to 'Edit', edit_bbq_path(@bbq), :class=>'admin_link' %>
@@ -12,26 +12,17 @@
   </section>
 
   <section class="content_block">
-    <h2>Event date</h2>
+    <h2>Published:</h2>
+    <p><%=h @bbq.is_published %></p>
+  </section>
+
+  <section class="content_block">
+    <h2>Start Date</h2>
     <p><%=h @bbq.event_date %></p>
   </section>
-
+  
   <section class="content_block">
-    <h2>Venue</h2>
-    <p><%=h @bbq.venue.name %></p>
-  </section>
-
-  <section class="content_block">
-    <h2>Is published:</h2>
-    <div>
-      <%=h @bbq.is_published %>
-    </div>
-  </section>
-
-  <section class="content_block">
-    <h2>Description</h2>
-    <div>
-      <%=h @bbq.content %>
-    </div>
+    <h2>End Date</h2>
+    <p><%=h @bbq.event_date %></p>
   </section>
 </div>

@@ -517,6 +517,13 @@ body#admin {
   margin:0.5em 0;
 }
 
+#admin-content form h2 {
+  font-family:'PTSansRegular';
+  font-size:2.4em;
+  text-transform:capitalize;
+  width:32.4em;
+}
+
 #admin-content label {
   display:block;
   font-size:2em;
@@ -665,18 +672,15 @@ table#admin-table tr:hover td {
 
 /* BBQ Table */
 table#admin-table.bbq .one {
-  width:20em;
+  width:14em;
 }
 table#admin-table.bbq .two {
-  width:12em;
+  width:30em;
 }
 table#admin-table.bbq .three {
-  width:20em;
-}
-table#admin-table.bbq .four {
   width:5em;
 }'
-table#admin-table.bbq .five {
+table#admin-table.bbq .four {
   width:12em;
 }
 
@@ -722,6 +726,20 @@ table#admin-table.venue .three {
   width:25em;
 }
 table#admin-table.venue .four {
+  width:12em;
+}
+
+/* Article Table */
+table#admin-table.day .one {
+  width:8em;
+}
+table#admin-table.day .two {
+  width:26em;
+}
+table#admin-table.day .three {
+  width:12em;
+}
+table#admin-table.day .four {
   width:12em;
 }
 

@@ -1,28 +1,35 @@
-<p>
-  <b>Bbq date:</b>
-  <%=h @day.bbq_date %>
-</p>
+<h1>Day: Preview</h1>
 
-<p>
-  <b>Content:</b>
-  <%=h @day.content %>
-</p>
+<nav class="admin">
+  <%= link_to 'Edit', edit_day_path(@day), :class=>'admin_link' %>
+  <%= link_to 'Back', days_path %>
+</nav>
 
-<p>
-  <b>Start time:</b>
-  <%=h @day.start_time %>
-</p>
+<div class="content">
+  <section class="content_block">
+    <h2>Day</h2>
+    <p><%=h @day.bbq_date %></p>
+  </section>
 
-<p>
-  <b>End time:</b>
-  <%=h @day.end_time %>
-</p>
+  <section class="content_block">
+    <h2>Content</h2>
+    <p><%=h @day.content %></p>
+  </section>
 
-<p>
-  <b>Bbq:</b>
-  <%=h @day.bbq.title %>
-</p>
-
-
-<%= link_to 'Edit', edit_day_path(@day) %> |
-<%= link_to 'Back', days_path %>
+  <section class="content_block">
+    <h2>Start Time</h2>
+    <p><%=h @day.start_time %></p>
+  </section>
+  
+  <section class="content_block">
+    <h2>End Time</h2>
+    <p><%=h @day.end_time %></p>
+  </section>
+  
+  <section class="content_block">
+    <h2>BBQ</h2>
+    <div>
+      <%=h @day.bbq.title %>
+    </div>
+  </section>
+</div>

@@ -1,34 +1,57 @@
-<h1>New day</h1>
+<h1>Day: New</h1>
+
+<nav class="admin">
+  <%= link_to 'Back', days_path %>
+</nav>
 
 <% form_for(@day) do |f| %>
-  <%= f.error_messages %>
+  <div id="error_message">
+    <%= f.error_messages %>
+  </div>
 
-  <div class="input_container short">
+  <!-- <div class="input_container short">
     <%#= f.label :event_date %>
     <%#= f.date_select :event_date %>
     <label for="bbq_date">Event Date</label>
     <input type="text" id="bbq_date" />
+  </div> -->
+  
+  <h2>BBQ Title</h2>
+  
+  <div class="input_container long clearfix">
+	  <%#= f.label :venue_id %>
+	  <%#= f.select(:venue_id,options_for_select(venue_select_list))%>
+	  
+	  <label for="venue">Venue</label>
+	  <select type="text" id="venue">
+	    <option>Venue One</option>
+	    <option>Venue Two</option>
+	  </select>
   </div>
   
-  <p>
-    <%= f.label :content %><br />
+  <div class="input_container">
+    <%= f.label :content %>
     <%= f.text_area :content %>
-  </p>
-  <p>
-    <%= f.label :start_time %><br />
-    <%= f.text_field :start_time %>
-  </p>
-  <p>
-    <%= f.label :end_time %><br />
-    <%= f.text_field :end_time %>
-  </p>
-  <div class="input_container long">
-	<%= f.label :bbq_id %>
-	<%= f.select(:bbq_id,options_for_select(present_bbqs_select_list))%>
   </div>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+  
+  <div class="input_container short">
+    <%= f.label :start_time %>
+    <%= f.text_field :start_time, :class=>'time' %>
+  </div>
+  
+  <div class="input_container short">
+    <%= f.label :end_time %>
+    <%= f.text_field :end_time, :class=>'time' %>
+  </div>
+  
+  <%= f.submit 'Create' %>
 <% end %>
 
-<%= link_to 'Back', days_path %>
+<% content_for :javascript do %>
+  <script>
+    $(function() {
+      $('select').customSelects();
+      $('input.time').timeEntry();
+    });
+  </script>
+<% end %>
