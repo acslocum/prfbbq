@@ -1,9 +1,9 @@
-<h1>Day: Preview</h1>
-
-<nav class="admin">
-  <%= link_to 'Edit', edit_day_path(@day), :class=>'admin_link' %>
+<% content_for :nav do %>
+  <%= link_to 'Edit', edit_day_path(@day) %>
   <%= link_to 'Back', days_path %>
-</nav>
+<% end %>
+
+<h1>Day: Preview</h1>
 
 <div class="content">
   <section class="content_block">

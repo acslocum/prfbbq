@@ -1,8 +1,8 @@
-<h1>Band: New</h1>
-
-<nav class="admin">
+<% content_for :nav do %>
   <%= link_to 'Back', bands_path %>
-</nav>
+<% end %>
+
+<h1>Band: New</h1>
 
 <% form_for(@band) do |f| %>
   <div id="error_message">
@@ -39,26 +39,6 @@
       $('input.time').timeEntry();
       $('input.time').blur(function() {
         new CleanValue(this);
-      });
-      
-      var selectValue = $('#customSelect_band_bbq_id .customSelects_title').text(),
-          selectDate = selectValue.split(' - ');
-
-      $('#play_date')
-        .datepicker()
-        .datepicker('setDate', new Date(selectDate[1]))
-        .datepicker('option', 'dateFormat', 'yy/mm/dd')
-        .datepicker( "option", "minDate", new Date(selectDate[1]))
-        .datepicker( "option", "maxDate", new Date(selectDate[2]));
-        
-      $('#band_bbq_id').change(function() {
-        var value = $('#customSelect_band_bbq_id .customSelects_title').text(),
-            date = value.split(' - ');
-            
-        $('#play_date')
-          .datepicker('setDate', new Date(date[1]))
-          .datepicker( "option", "minDate", new Date(date[1]))
-          .datepicker( "option", "maxDate", new Date(date[2]));
       });
     });
   </script>

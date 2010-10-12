@@ -1,8 +1,8 @@
-<h1>Article: Edit</h1>
-
-<nav class="admin">
+<% content_for :nav do %>
   <%= link_to 'Back', articles_path %>
-</nav>
+<% end %>
+
+<h1>Article: Edit</h1>
  
 <% form_for(@article) do |f| %>
   <div id="error_message">
@@ -21,7 +21,7 @@
 
   <div class="input_container">
     <%= f.label :content %>
-    <%= f.text_area :content, :size=>"80x40" %>
+    <%= f.text_area :content %>
   </div>
 
   <%= f.submit 'Update' %>

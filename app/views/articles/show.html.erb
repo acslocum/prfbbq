@@ -1,9 +1,9 @@
-<h1>Article: Preview</h1>
-
-<nav class="admin">
-  <%= link_to 'Back', articles_path, :class=>'admin_link' %>
+<% content_for :nav do %>
+  <%= link_to 'Back', articles_path %>
   <%= link_to 'Edit', edit_article_path(@article) %>
-</nav>
+<% end %>
+
+<h1>Article: Preview</h1>
 
 <div class="content">
   <section class="content_block">

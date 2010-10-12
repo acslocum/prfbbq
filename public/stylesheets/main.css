@@ -185,12 +185,18 @@ h5 {
 h6 {
 }
 
-/* Page Header 
+/* Wrappers
 ==================================================== */
 #page-wrapper {
   margin:4em auto 0;
   position:relative;
   width:97em;
+}
+
+#admin-wrapper {
+  margin:2em 0;
+  position:relative;
+  width:120em;
 }
 
 /* Page Header 
@@ -224,6 +230,7 @@ h6 {
 }
 
 #page-nav a {
+  background-color:#208da5;
   color:#fff;
   clear:both;
   display:block;
@@ -236,8 +243,7 @@ h6 {
   text-transform:uppercase;
 }
 #page-nav a:hover {
-  background-color:#a0e2f0;
-  color:#4c4c4c;
+  background-color:#4c4c4c;
 }
 #page-nav a.selected,
 #page-nav a.selected:hover {
@@ -508,12 +514,12 @@ ul#content-nav a.selected {
 /* Admin
 ==================================================== */
 body#admin {
-  margin:2em 5em 5em;
   text-align:left;
 }
 
 #admin-content {
-  
+  float:left;
+  margin:0 2em;
 }
 
 #admin-content form,
@@ -596,28 +602,31 @@ body#admin {
 }
 
 nav.admin {
+  background-color:#208da5;
   float:left;
-  margin-bottom:2em;
+  margin:0.4em 2em;
+  padding:0.2em;
+  width:20em;
 }
 nav.admin a {
   background-color:#4c4c4c;
   color:#fff;
+  display:block;
   font-family:'MuseoSlab500';
   font-size:1.2em;
   padding:0.4em 0.8em;
-  margin-right:0.1em;
+  margin:0.3em;
   text-decoration:none;
   text-transform:uppercase;
 
 }
+nav.admin a.admin_link {
+  background-color:#2398b2;
+  color:#4dbddd;
+}
 nav.admin a:hover {
   background-color:#555;
-}
-nav.admin a.admin_link {
-  background-color:#208da5;
-}
-nav.admin a.admin_link:hover {
-  background-color:#2398b2;
+  color:#fff;
 }
 
 dl.uber_admin_controls {
@@ -653,6 +662,7 @@ dl.uber_admin_controls a:hover {
 ---------------------------------------------------- */
 table#admin-table {
   margin-bottom:2em;
+  width:91em;
 }
 
 table#admin-table thead {
@@ -681,7 +691,7 @@ table#admin-table td {
   border-bottom:0.1em solid #4dbddd;
   border-right:0.1em solid #4dbddd;
   font-size:1.2em;
-  padding:0.4em 1em;
+  padding:0.6em 1em;
 }
 table#admin-table tr:hover td {
   background-color:#208da5;
@@ -689,85 +699,38 @@ table#admin-table tr:hover td {
   border-right:0.1em solid #4dbddd;
 }
 
-/* BBQ Table */
-table#admin-table.bbq .one {
+table#admin-table .date {
   width:14em;
 }
-table#admin-table.bbq .two {
-  width:30em;
+table#admin-table .time {
+  width:9em;
 }
-table#admin-table.bbq .three {
-  width:5em;
-}'
-table#admin-table.bbq .four {
-  width:12em;
-}
-
-/* Band Table */
-table#admin-table.band .one {
+table#admin-table .title {
   width:20em;
 }
-table#admin-table.band .two {
-  width:15em;
+table#admin-table .date_small {
+  width:5.5em;
 }
-table#admin-table.band .three {
-  width:8em;
+table#admin-table .published {
+  width:5em;
 }
-table#admin-table.band .four {
+table#admin-table .controls {
   width:10em;
-}
-table#admin-table.band .five {
-  width:12em;
-}
-
-/* Article Table */
-table#admin-table.article .one {
-  width:20em;
-}
-table#admin-table.article .two {
-  width:50em;
-}
-table#admin-table.article .three {
-  width:5em;
-}
-table#admin-table.article .four {
-  width:12em;
-}
-
-/* Article Table */
-table#admin-table.venue .one {
-  width:20em;
-}
-table#admin-table.venue .two {
-  width:20em;
-}
-table#admin-table.venue .three {
-  width:25em;
-}
-table#admin-table.venue .four {
-  width:12em;
-}
-
-/* Article Table */
-table#admin-table.day .one {
-  width:8em;
-}
-table#admin-table.day .two {
-  width:26em;
-}
-table#admin-table.day .three {
-  width:26em;
-}
-table#admin-table.day .four {
-  width:12em;
-}
-table#admin-table.day .five {
-  width:12em;
 }
 
 table#admin-table ul.table_controls li {
   float:left;
-  margin-right:1em;
+  margin-right:0.2em;
+}
+table#admin-table ul.table_controls li a {
+  background-color:#4dbddd;
+  color:#fff;
+  font-size:0.8em;
+  padding:0.1em 0.5em;
+  text-decoration:none;
+}
+table#admin-table ul.table_controls li a:hover {
+  background-color:#60d6ef;
 }
 
 .ui-sortable tr {

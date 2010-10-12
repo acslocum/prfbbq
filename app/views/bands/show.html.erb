@@ -1,9 +1,9 @@
-<h1>Band: Preview</h1>
+<% content_for :nav do %>
+<%= link_to 'Edit', edit_band_path(@band) %>
+<%= link_to 'Back', bands_path %>
+<% end %>
 
-<nav class="admin">
-  <%= link_to 'Edit', edit_band_path(@band), :class=>'admin_link' %>
-  <%= link_to 'Back', bands_path %>
-</nav>
+<h1>Band: Preview</h1>
 
 <div class="content">
   <section class="content_block">

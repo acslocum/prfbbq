@@ -1,9 +1,9 @@
-<h1>BBQ: Preview</h1>
-
-<nav class="admin">
-  <%= link_to 'Edit', edit_bbq_path(@bbq), :class=>'admin_link' %>
+<% content_for :nav do %>
+  <%= link_to 'Edit', edit_bbq_path(@bbq) %>
   <%= link_to 'Back', bbqs_path %>
-</nav>
+<% end %>
+
+<h1>BBQ: Preview</h1>
 
 <div class="content">
   <section class="content_block">

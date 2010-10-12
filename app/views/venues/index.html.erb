@@ -1,16 +1,15 @@
-<h1>Venue: List</h1>
-
-<nav class="admin">
-  <%= link_to 'Admin', {:controller=>'admin',:action => 'admin'}, :class=>'admin_link' %>
+<% content_for :nav do %>
   <%= link_to 'New', new_venue_path %>
-</nav>
+<% end %>
+
+<h1>Venue: List</h1>
 
 <table id="admin-table" class="venue">
   <thead>
-    <th class="one">Name</th>
+    <th class="title">Name</th>
     <th class="two">Url</th>
     <th class="three">Address</th>
-    <th class="four">Controls</th>
+    <th class="controls">Controls</th>
   </thead>
 
   <tbody>
@@ -19,7 +18,7 @@
         <td class="one"><%=h venue.name %></td>
         <td class="one"><%=h venue.url %></td>
         <td class="three"><%=h venue.address %></td>
-        <td class="four">
+        <td class="controls">
           <ul class="table_controls">
             <li><%= link_to 'Preview', venue %></li>
             <li><%= link_to 'Edit', edit_venue_path(venue) %></li>

@@ -1,8 +1,8 @@
-<h1>Day: New</h1>
-
-<nav class="admin">
+<% content_for :nav do %>
   <%= link_to 'Back', days_path %>
-</nav>
+<% end %>
+
+<h1>Day: New</h1>
 
 <% form_for(@day) do |f| %>
   <div id="error_message">
@@ -45,39 +45,15 @@
 <% content_for :javascript do %>
   <script>
     $(function() {
-      $('select').customSelects();
-      
-      var value = $('#day_bbq_id').next('.customSelects_title').text(),
-          valueSplitOne = value.split(' : '),
-          valueSplitTwo = valueSplitOne[1].split(' - '),
-          date = valueSplitTwo[0]; 
-      
-      $('select').change(function() {
-        value = $('#day_bbq_id').next('.customSelects_title').text();
-        valueSplitOne = value.split(' : ');
-        valueSplitTwo = valueSplitOne[1].split(' - ');
-        date = valueSplitTwo[0];
-        
-        $('#bbq_date').datepicker('setDate', new Date(date));
-      });
-      
-      $('#bbq_date')
-        .focus(function() {
-          value = $('#day_bbq_id').next('.customSelects_title').text();
-          valueSplitOne = value.split(' : ');
-          valueSplitTwo = valueSplitOne[1].split(' - ');
-          date = valueSplitTwo[0];
-          
-          $(this).datepicker('setDate', new Date(date));
-        })
-        .datepicker()
-        .datepicker('setDate', new Date(date))
-        .datepicker('option', 'dateFormat', 'yy-mm-dd');
-        
+      $('select').customSelects();      
       $('input.time').timeEntry();
       $('input.time').blur(function() {
         new CleanValue(this);
       });
+
+      $('.date')
+        .datepicker()
+        .datepicker('option', 'dateFormat', 'yy-mm-dd');
     });
   </script>
 <% end %>
