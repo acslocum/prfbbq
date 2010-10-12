@@ -1,25 +1,24 @@
-<h1>BBQ: List</h1>
-
-<nav class="admin">
-  <%= link_to 'Admin', {:controller=>'admin',:action => 'admin'}, :class=>'admin_link' %>
+<% content_for :nav do %>
   <%= link_to 'New', new_bbq_path %>
-</nav>
+<% end %>
+
+<h1>BBQ: List</h1>
 
 <table id="admin-table" class="bbq">
   <thead>
-    <th class="one">Date</th>
-    <th class="two">Title</th>
-    <th class="three">Published</th>
-    <th class="four">Controls</th>
+    <th class="date">Date</th>
+    <th>Title</th>
+    <th class="published">Published</th>
+    <th class="controls">Controls</th>
   </thead>
   
   <tbody>
     <% @bbqs.each do |bbq| %>
       <tr>
-        <td class="one"><%=h bbq.days.first.bbq_date if(!bbq.days.empty?) %> - <%=h bbq.days.last.bbq_date if(!bbq.days.empty?) %></td>
-        <td class="two"><%=h bbq.title %></td>
-        <td class="three"><%=h bbq.is_published%></td>
-        <td class="four">
+        <td class="date"><%=h bbq.days.first.bbq_date if(!bbq.days.empty?) %> - <%=h bbq.days.last.bbq_date if(!bbq.days.empty?) %></td>
+        <td><%=h bbq.title %></td>
+        <td class="published"><%=h bbq.is_published%></td>
+        <td class="controls">
           <ul class="table_controls">
             <li><%= link_to 'Preview', bbq %></li>
             <li><%= link_to 'Edit', edit_bbq_path(bbq) %></li>

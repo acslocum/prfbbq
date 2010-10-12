@@ -1,25 +1,22 @@
-<h1>Article: List</h1>
-
-<nav class="admin">
-  <%= link_to 'Admin', {:controller=>'admin',:action => 'admin'}, :class=>'admin_link' %>
+<% content_for :nav do %>
   <%= link_to 'New', new_article_path %>
-</nav>
+<% end %>
+
+<h1>Article: List</h1>
 
 <table id="admin-table" class="article">
   <thead>
-    <th class="one">Title</th>
-    <th class="two">Content</th>
-    <th class="three">Published</th>
-    <th class="four">Controls</th>
+    <th>Title</th>
+    <th class="published">Published</th>
+    <th class="controls">Controls</th>
   </thead>
 
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td class="one"><%=h article.title %></td>
-        <td class="two"><%=h article.content %></td>
-        <td class="three"><%=h article.is_published%></td>
-        <td class="four">
+        <td><%=h article.title %></td>
+        <td class="published"><%=h article.is_published%></td>
+        <td class="controls">
           <ul class="table_controls">
             <li><%= link_to 'Preview', article %></li>
             <li><%= link_to 'Edit', edit_article_path(article) %></li>

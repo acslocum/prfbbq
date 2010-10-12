@@ -1,8 +1,8 @@
-<h1>Venue: New</h1>
-
-<nav class="admin">
+<% content_for :nav do %>
   <%= link_to 'Back', venues_path %>
-</nav>
+<% end %>
+
+<h1>Venue: Edit</h1>
 
 <% form_for(@venue) do |f| %>
   <div id="error_message">

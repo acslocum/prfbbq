@@ -18,16 +18,28 @@
   </head>
 
   <body id="admin">
-    <p style="color: green"><%= flash[:notice] %></p>
+    <div class="flash"><%= flash[:notice] %></div>
+    
+    <div id="admin-wrapper">
+      <nav class="admin">
+        <%= yield :nav %>  
+        <%= link_to 'BBQs', bbqs_path, :class=>'admin_link' %>
+        <%= link_to 'Days', days_path, :class=>'admin_link' %>
+        <%= link_to 'Bands', bands_path, :class=>'admin_link' %>
+        <%= link_to 'Venues', venues_path, :class=>'admin_link' %>
+        <%= link_to 'Articles', articles_path, :class=>'admin_link' %>
+      </nav>
 
-    <section id="admin-content">
-      <%= yield %>
-    </section>
+      <section id="admin-content">
+        <%= yield %>  
+      </section>
+      
+      <div style="clear:both;"></div>
+    </div>
   </body>
   
   <%-# Javascript -%>
   <%= javascript_include_tag 'jquery/jquery-1.4.2.js' -%>
   <%= javascript_include_tag 'jquery/jquery-ui-1.8.5.custom.min.js' -%>
-  <%= javascript_include_tag 'jquery/plugins/jquery.mouseyDialog.js' -%>
   <%= yield :javascript %>
 </html>

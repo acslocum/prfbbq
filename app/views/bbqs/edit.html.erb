@@ -1,8 +1,8 @@
-<h1>BBQ: Edit</h1>
+<% content_for :nav do %>
+  <%= link_to 'Back', bbqs_path %>
+<% end %>
 
-<nav class="admin">
-  <%= link_to 'Back', bbqs_path, :class=>'admin_link' %>
-</nav>
+<h1>BBQ: Edit</h1>
 
 <% form_for(@bbq) do |f| %>
   <div id="error_message">
@@ -20,17 +20,13 @@
   </div>
 
   <div class="input_container short">
-    <%#= f.label :event_date %>
-    <%#= f.date_select :event_date %>
-    <label for="event_date">Start Date</label>
-    <input type="text" id="start_date" />
+    <%= f.label :start_date %>
+    <%= f.text_field :start_date, :class=>'date' %>
   </div>
-
+  
   <div class="input_container short">
-    <%#= f.label :event_date %>
-    <%#= f.date_select :event_date %>
-    <label for="event_date">End Date</label>
-    <input type="text" id="end_date" />
+    <%= f.label :end_date %>
+    <%= f.text_field :end_date, :class=>'date' %>
   </div>
   
   <%= f.submit 'Update' %>
@@ -39,20 +35,18 @@
 <% content_for :javascript do %>
   <script>
     $(function() {
-      $('select').customSelects();
-      $('input.time').timeEntry();
-      $('input.time').blur(function() {
-        new CleanValue(this);
-      });
-      $('#start_date')
-        .datepicker()
-        .datepicker('setDate', new Date())
-        .datepicker('option', 'dateFormat', 'yy/mm/dd');
+      $('.date').each(function() {
+        var date = $(this).val().split('-'),
+            year = date[0],
+            month = date[1],
+            day = date[2],
+            newDate = month + '/' + day + '/' + year;
         
-      $('#end_date')
-        .datepicker()
-        .datepicker('setDate', new Date())
-        .datepicker('option', 'dateFormat', 'yy/mm/dd');
+        $(this)
+          .datepicker()
+          .datepicker('setDate', newDate)
+          .datepicker('option', 'dateFormat', 'yy-mm-dd');
+      });
     });
   </script>
 <% end %>

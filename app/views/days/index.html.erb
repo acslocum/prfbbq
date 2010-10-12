@@ -1,27 +1,26 @@
-<h1>Day List</h1>
-
-<nav class="admin">
-  <%= link_to 'Admin', {:controller=>'admin',:action => 'admin'}, :class=>'admin_link' %>
+<% content_for :nav do %>
   <%= link_to 'New', new_day_path %>
-</nav>
+<% end %>
+
+<h1>Day List</h1>
 
 <table id="admin-table" class="day">
   <thead>
-    <th class="one">Date</th>
-    <th class="two">BBQ</th>
-    <th class="three">Venue</th>
-    <th class="four">Time</th>
-    <th class="five">Controls</th>
+    <th class="date_small">Date</th>
+    <th class="title">BBQ</th>
+    <th>Venue</th>
+    <th class="time">Time</th>
+    <th class="controls">Controls</th>
   </thead>
 
   <tbody>
     <% @days.each do |day| %>
       <tr>
-        <td class="one"><%=h day.bbq_date %></td>
-        <td class="two"><%=h day.bbq.title if(!day.bbq.nil?)%></td>
-        <td class="three"><%=h day.venue.name if(!day.venue.nil?) %></td>
-        <td class="four"><%=h day.start_time %> - <%=h day.end_time %></td>
-        <td class="five">
+        <td class="date_small"><%=h day.bbq_date %></td>
+        <td class="title"><%=h day.bbq.title if(!day.bbq.nil?)%></td>
+        <td><%=h day.venue.name if(!day.venue.nil?) %></td>
+        <td class="time"><%=h day.start_time %> - <%=h day.end_time %></td>
+        <td class="controls">
           <ul class="table_controls">
             <li><%= link_to 'Preview', day %></li>
             <li><%= link_to 'Edit', edit_day_path(day) %></li>

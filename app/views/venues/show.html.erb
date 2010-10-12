@@ -1,9 +1,9 @@
-<h1>Venue: Preview</h1>
-
-<nav class="admin">
-  <%= link_to 'Edit', edit_venue_path(@venue), :class=>'admin_link' %>
+<% content_for :nav do %>
+  <%= link_to 'Edit', edit_venue_path(@venue) %>
   <%= link_to 'Back', venues_path %>
-</nav>
+<% end %>
+
+<h1>Venue: Preview</h1>
 
 <div class="content">
   <section class="content_block">
