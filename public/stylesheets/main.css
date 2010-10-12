@@ -416,7 +416,6 @@ dl.venue_info dt {
   font-size:2em;
 }
 dl.venue_info dt a {
-  color:#2398b2;
   font-size:0.5em;
   font-weight:700;
   text-decoration:none;
@@ -426,13 +425,9 @@ dl.venue_info dd {
   font-size:1.2em;
 }
 dl.venue_info dd a {
-  color:#2398b2;
   font-size:0.8em;
   font-weight:700;
   text-decoration:none;
-}
-dl.venue_info a:hover {
-  color:#4c4c4c;
 }
 
 /* Content Nav
