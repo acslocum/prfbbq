@@ -1,9 +1,8 @@
 <h1>Venue: Edit</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'Venue List', venues_path %></li>
-  <li><%= link_to 'Preview', @venue %></li>
-</ul>
+<nav class="admin">
+  <%= link_to 'Back', venues_path %>
+</nav>
 
 <% form_for(@venue) do |f| %>
   <div id="error_message">

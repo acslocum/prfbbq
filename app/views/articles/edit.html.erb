@@ -1,15 +1,14 @@
 <h1>Article: Edit</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'Article List', articles_path %></li>
-  <li><%= link_to 'Preview', @article %></li>
-</ul>
-
+<nav class="admin">
+  <%= link_to 'Back', articles_path %>
+</nav>
+ 
 <% form_for(@article) do |f| %>
   <div id="error_message">
     <%= f.error_messages %>
   </div>
-  
+
   <div class="input_container radio_checkbox">
     <%= f.check_box :is_published %>
     <%= f.label :is_published %>
@@ -19,11 +18,11 @@
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-  
+
   <div class="input_container">
     <%= f.label :content %>
     <%= f.text_area :content, :size=>"80x40" %>
   </div>
-  
+
   <%= f.submit 'Update' %>
 <% end %>

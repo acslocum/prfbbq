@@ -1,9 +1,8 @@
 <h1>BBQ: Edit Day</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'BBQ List', bbqs_path %></li>
-  <li><%= link_to 'Preview', @bbq %></li>
-</ul>
+<nav class="admin">
+  <%= link_to 'Back', bbqs_path, :class=>'admin_link' %>
+</nav>
 
 <% form_for(@bbq) do |f| %>
   <div id="error_message">

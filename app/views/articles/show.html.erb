@@ -1,26 +1,27 @@
 <h1>Article: Preview</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'Article List', articles_path %></li>
-  <li><%= link_to 'Edit', edit_article_path(@article) %></li>
-  <li><%= link_to 'New Article', new_article_path %></li>
-</ul>
+<nav class="admin">
+  <%= link_to 'Back', articles_path, :class=>'admin_link' %>
+  <%= link_to 'Edit', edit_article_path(@article) %>
+</nav>
 
-<section class="content_block">
-  <h2>Title:</h2>
-  <p><%=h @article.title %></p>
-</section>
+<div class="content">
+  <section class="content_block">
+    <h2>Title:</h2>
+    <p><%=h @article.title %></p>
+  </section>
 
-<section class="content_block">
-  <h2>Is published:</h2>
-  <div>
-    <%=h @article.is_published %>
-  </div>
-</section>
+  <section class="content_block">
+    <h2>Is published:</h2>
+    <div>
+      <%=h @article.is_published %>
+    </div>
+  </section>
 
-</section><section class="content_block">
-  <h2>Content:</h2>
-  <div>
-    <%=h @article.content %>
-  </div>
-</section>
+  </section><section class="content_block">
+    <h2>Content:</h2>
+    <div>
+      <%=h @article.content %>
+    </div>
+  </section>
+</div>

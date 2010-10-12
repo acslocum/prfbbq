@@ -1,15 +1,14 @@
 <h1>Article: New</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'Article List', articles_path %></li>
-</ul>
-
+<nav class="admin">
+  <%= link_to 'Back', articles_path %>
+</nav>
 
 <% form_for(@article) do |f| %>
   <div id="error_message">
     <%= f.error_messages %>
   </div>
-  
+
   <div class="input_container radio_checkbox">
     <%= f.check_box :is_published %>
     <%= f.label :is_published %>
@@ -24,6 +23,6 @@
     <%= f.label :content %>
     <%= f.text_area :content, :size=>"80x40" %>
   </div>
-  
+
   <%= f.submit 'Create' %>
 <% end %>

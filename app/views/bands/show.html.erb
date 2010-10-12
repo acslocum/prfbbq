@@ -1,32 +1,33 @@
 <h1>Band: Preview</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'Band List', bands_path %></li>
-  <li><%= link_to 'Edit', edit_band_path(@band) %></li>
-  <li><%= link_to 'New Band', new_band_path %></li>
-</ul>
+<nav class="admin">
+  <%= link_to 'Edit', edit_band_path(@band), :class=>'admin_link' %>
+  <%= link_to 'Back', bands_path %>
+</nav>
 
-<section class="content_block">
-	<h2>BBQ:</h2>
-	<p><%=h @band.day.bbq.full_title if(!@band.day.nil?)%></p>
-</section>
+<div class="content">
+  <section class="content_block">
+  	<h2>BBQ:</h2>
+  	<p><%=h @band.day.bbq.full_title if(!@band.day.nil?)%></p>
+  </section>
 
-<section class="content_block">
-  <h2>Band Name:</h2>
-  <p><%=h @band.name %></p>
-</section>
+  <section class="content_block">
+    <h2>Band Name:</h2>
+    <p><%=h @band.name %></p>
+  </section>
 
-<section class="content_block">
-  <h2>Set date:</h2>
-  <p><%=h @band.day.bbq_date if(!@band.day.nil?)%></p>
-</section>
+  <section class="content_block">
+    <h2>Set date:</h2>
+    <p><%=h @band.day.bbq_date if(!@band.day.nil?)%></p>
+  </section>
 
-<section class="content_block">
-  <h2>Start time:</h2>
-  <p><%=h @band.start_time %></p>
-</section>
+  <section class="content_block">
+    <h2>Start time:</h2>
+    <p><%=h @band.start_time %></p>
+  </section>
 
-<section class="content_block">
-  <h2>End time:</h2>
-  <p><%=h @band.end_time %></p>
-</section>
+  <section class="content_block">
+    <h2>End time:</h2>
+    <p><%=h @band.end_time %></p>
+  </section>
+</div>

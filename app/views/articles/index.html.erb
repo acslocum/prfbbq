@@ -1,8 +1,9 @@
 <h1>Article: List</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'New Article', new_article_path %></li>
-</ul>
+<nav class="admin">
+  <%= link_to 'Admin', {:controller=>'admin',:action => 'admin'}, :class=>'admin_link' %>
+  <%= link_to 'New', new_article_path %>
+</nav>
 
 <table id="admin-table" class="article">
   <thead>

@@ -1,8 +1,9 @@
 <h1>Venue: List</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'New Venue', new_venue_path %></li>
-</ul>
+<nav class="admin">
+  <%= link_to 'Admin', {:controller=>'admin',:action => 'admin'}, :class=>'admin_link' %>
+  <%= link_to 'New', new_venue_path %>
+</nav>
 
 <table id="admin-table" class="venue">
   <thead>

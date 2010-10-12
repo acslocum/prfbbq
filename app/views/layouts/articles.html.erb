@@ -18,13 +18,12 @@
   </head>
   
   <body id="admin">
-    <p style="color: green"><%= flash[:notice] %></p>
-
+    <div class="flash"><%= flash[:notice] %></div>
+    
     <section id="admin-content">
-      <%= link_to 'Admin List', {:action => 'admin'}, :class => 'admin_link' %>
-      <%= yield %>
-    </section>
-  </body>
+      <%= yield %>  
+    </section>  
+  </ul>
   
   <%-# Javascript -%>
   <%= javascript_include_tag 'jquery/jquery-1.4.2.js' -%>

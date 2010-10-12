@@ -1,9 +1,8 @@
 <h1>Band: New</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'Band List', bands_path %></li>
-  <li><%= link_to 'New Band', new_band_path %></li>
-</ul>
+<nav class="admin">
+  <%= link_to 'Back', bands_path %>
+</nav>
 
 <% form_for(@band) do |f| %>
   <div id="error_message">

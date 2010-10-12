@@ -1,23 +1,24 @@
 <h1>Venue: Preview</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'Venue List', venues_path %></li>
-  <li><%= link_to 'Edit', edit_venue_path(@venue) %></li>
-  <li><%= link_to 'New Venue', new_venue_path %></li>
-</ul>
+<nav class="admin">
+  <%= link_to 'Edit', edit_venue_path(@venue), :class=>'admin_link' %>
+  <%= link_to 'Back', venues_path %>
+</nav>
 
-<section class="content_block">
-  <h2>Name:</h2>
-  <p><%=h @venue.name %></p>
-</section>
+<div class="content">
+  <section class="content_block">
+    <h2>Name:</h2>
+    <p><%=h @venue.name %></p>
+  </section>
 
-<section class="content_block">
-  <h2>Url:</h2>
-  <p><%=h @venue.url %>
-</p>
-</section>
+  <section class="content_block">
+    <h2>Url:</h2>
+    <p><%=h @venue.url %>
+  </p>
+  </section>
 
-<section class="content_block">
-  <h2>Address:</h2>
-  <p><%=h @venue.address %></p>
-</section>
+  <section class="content_block">
+    <h2>Address:</h2>
+    <p><%=h @venue.address %></p>
+  </section>
+</nav>

@@ -1,8 +1,9 @@
 <h1>BBQ: Day List</h1>
 
-<ul class="admin_controls">
-  <li><%= link_to 'New BBQ Day', new_bbq_path %></li>
-</ul>
+<nav class="admin">
+  <%= link_to 'Admin', {:controller=>'admin',:action => 'admin'}, :class=>'admin_link' %>
+  <%= link_to 'New', new_bbq_path %>
+</nav>
 
 <table id="admin-table" class="bbq">
   <thead>
