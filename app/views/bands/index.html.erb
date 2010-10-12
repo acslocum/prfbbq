@@ -17,7 +17,7 @@
   <tbody>
     <% @bands.each do |band| %>
       <tr>
-        <td class="one"><%=h band.day.bbq.full_title if(!band.day.nil?)%></td>
+        <td class="one"><%=h band.day.bbq.full_title if(!band.day.nil? && !band.day.bbq.nil?)%></td>
         <td class="two"><%=h band.name %></td>
         <td class="three"><%=h band.day.bbq_date if(!band.day.nil?)%></td>
         <td class="four"><%=h band.start_time %> - <%=h band.end_time %></td>

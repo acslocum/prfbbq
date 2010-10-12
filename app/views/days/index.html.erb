@@ -18,7 +18,7 @@
     <% @days.each do |day| %>
       <tr>
         <td class="one"><%=h day.bbq_date %></td>
-        <td class="two"><%=h day.bbq.title %></td>
+        <td class="two"><%=h day.bbq.title if(!day.bbq.nil?)%></td>
         <td class="three"><%=h day.venue.name if(!day.venue.nil?) %></td>
         <td class="four"><%=h day.start_time %> - <%=h day.end_time %></td>
         <td class="five">

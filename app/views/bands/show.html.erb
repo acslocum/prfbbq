@@ -8,7 +8,7 @@
 <div class="content">
   <section class="content_block">
   	<h2>BBQ:</h2>
-  	<p><%=h @band.day.bbq.full_title if(!@band.day.nil?)%></p>
+  	<p><%=h @band.day.bbq.full_title if(!@band.day.nil? && !@band.day.bbq.nil?)%></p>
   </section>
 
   <section class="content_block">
