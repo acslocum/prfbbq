@@ -9,17 +9,22 @@
     <%= f.error_messages %>
   </div>
 
-  <div class="input_container short">
+  <!-- <div class="input_container short">
   <label for="bbq_date">Event Date</label>
     <%= f.date_select :bbq_date %>
+  </div> -->
+  
+  <h2 class="bbq_title"><%= @day.bbq.full_title%></h2>
+  
+  <div class="input_container short">
+    <label for="bbq_date">Event Date</label>
+    <input id="bbq_date" type="text" class="date" />
   </div>
   
   <!-- <div class="input_container clearfix long">
     <%#= f.label :bbq_id %>
     <%#= f.select(:bbq_id,options_for_select(present_bbqs_select_list))%>
   </div> -->
-  
-  <h2><%= @day.bbq.full_title%></h2>
   
   <div class="input_container long clearfix">
 	  <%= f.label :venue_id %>
@@ -48,7 +53,21 @@
   <script>
     $(function() {
       $('select').customSelects();
+      
+      var value = $('.bbq_title').text(),
+          valueSplitOne = value.split(' : '),
+          valueSplitTwo = valueSplitOne[1].split(' - '),
+          date = valueSplitTwo[0];
+
+      $('#bbq_date')
+        .datepicker()
+        .datepicker('setDate', new Date(date))
+        .datepicker('option', 'dateFormat', 'yy-mm-dd');
+        
       $('input.time').timeEntry();
+      $('input.time').blur(function() {
+        new CleanValue(this);
+      });
     });
   </script>
 <% end %>
