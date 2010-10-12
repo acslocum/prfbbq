@@ -19,7 +19,7 @@
     <%#= f.select(:bbq_id,options_for_select(present_bbqs_select_list))%>
   </div> -->
   
-  <h2><%= @day.bbq.title%></h2>
+  <h2><%= @day.bbq.full_title%></h2>
   
   <div class="input_container long clearfix">
 	  <%= f.label :venue_id %>
