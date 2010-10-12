@@ -353,11 +353,11 @@ dl.ticket_info dd span {
 }
 
 #show-info h1 {
-  margin-bottom:0.5em;
+  margin-bottom:0;
 }
 
 #show-info h2 {
-  font-size:1.8em;
+  font-size:1.5em;
 }
 #show-info h2 a {
   color:#a0e2f0;
@@ -379,6 +379,15 @@ dl.ticket_info dd span {
 }
 #show-info h3 a:hover {
   color:#fff;
+}
+
+#show-info .temp_bbq_container {
+  background-color:#208da5;
+  padding:1em;
+  margin-bottom:2em;
+}
+#show-info h1.article_title {
+  margin-bottom:0.5em;
 }
 
 /* Band list */
@@ -406,9 +415,24 @@ dl.venue_info dt {
   font-family:'MuseoSlab500';
   font-size:2em;
 }
+dl.venue_info dt a {
+  color:#2398b2;
+  font-size:0.5em;
+  font-weight:700;
+  text-decoration:none;
+}
 dl.venue_info dd {
   font-family:'MuseoSlab500';
   font-size:1.2em;
+}
+dl.venue_info dd a {
+  color:#2398b2;
+  font-size:0.8em;
+  font-weight:700;
+  text-decoration:none;
+}
+dl.venue_info a:hover {
+  color:#4c4c4c;
 }
 
 /* Content Nav

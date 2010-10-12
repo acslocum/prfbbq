@@ -5,9 +5,9 @@
       <li class="time_stamp">
         <%= article.created_at_formatted -%>
       </li>
-      <li class="share">
-        <%= link_to 'Share', {:action => 'http://www.facebook.com/sharer.php'}, :name => 'fb_share', :title => article.full_title, :type => 'button', :share_url => (url_for :controller=>'news', :action=>'article', :id=>article.permalink, :only_path=>false) -%>
-      </li>
+      <!-- <li class="share">
+              <%#= link_to 'Share', {:action => 'http://www.facebook.com/sharer.php'}, :name => 'fb_share', :title => article.full_title, :type => 'button', :share_url => (url_for :controller=>'news', :action=>'article', :id=>article.permalink, :only_path=>false) -%>
+            </li> -->
     </ul>
   </div>
   

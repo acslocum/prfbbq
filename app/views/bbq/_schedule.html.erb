@@ -1,12 +1,19 @@
-<h2><%=day.long_date%></h2>
-<h2><%= day.venue.name%> <a href="<%=day.venue.url%>" target="_blank">info</a></h2>
-<h3><%= day.venue.address%> <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(day.venue.address)%>&amp;ie=UTF8&amp;" target="_blank">map</a></h3>
-<div>
-	<%= day.start_time%> - <%= day.end_time%>
-</div>
-<div class="description">
-    <%= day.content%>
+<section class="temp_bbq_container">
+  <hgroup>
+    <h1><%=day.long_date%></h1>
+    <h2><%= day.start_time%> - <%= day.end_time%></h2>
+  </hgroup>
+
+  <dl class="venue_info">
+    <dt><%= day.venue.name%> <a href="<%=day.venue.url%>" target="_blank">info</a></dt>
+    <dd><%= day.venue.address%> <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(day.venue.address)%>&amp;ie=UTF8&amp;" target="_blank">map</a></dd>
+  </dl>
+
+  <ul class="band_list">
+    <%= render (:partial => "band", :collection=>day.bands)%>
+  </ul>
+
+  <div class="description">
+    <p><%= day.content%></p>
   </div>
-<ul class="band_list">
-  <%= render (:partial => "band", :collection=>day.bands)%>
-</ul>
+</section>
