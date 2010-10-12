@@ -1,6 +1,8 @@
 class Bbq < ActiveRecord::Base
   belongs_to :venue
   has_many :days, :order => "bbq_date ASC"
+  attr_accessor :start_date
+  attr_accessor :end_date
   
   def event_date_short
     event_date.strftime("%b '%y") if(!event_date.nil?)
@@ -9,15 +11,19 @@ class Bbq < ActiveRecord::Base
     event_date.strftime("%m/%d/%Y") if(!event_date.nil?)
   end
   def full_title
-    title || " - " || event_date_usa
+    title + " : " + date_range
   end
   
   def date_range
-    (days.first.bbq_date || " - " || days.last.bbq_date) if(!days.empty?)
+    (start_date.to_s + " - " + end_date.to_s) if(!days.empty?)
   end
   
-  def event_date
+  def start_date
     days.first.bbq_date if(!days.empty?)
+  end
+  
+  def end_date
+    days.last.bbq_date if(!days.empty?)
   end
   
   def year

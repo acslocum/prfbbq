@@ -21,16 +21,14 @@
   
   <div class="input_container short">
     <%#= f.label :event_date %>
-    <%#= f.date_select :event_date %>
     <label for="event_date">Start Date</label>
-    <input type="text" id="start_date" />
+    <%= f.text_field :start_date %>
   </div>
   
   <div class="input_container short">
     <%#= f.label :event_date %>
-    <%#= f.date_select :event_date %>
     <label for="event_date">End Date</label>
-    <input type="text" id="end_date" />
+    <%= f.text_field :end_date %>
   </div>
   
   <%= f.submit 'Create' %>
@@ -44,15 +42,15 @@
       $('input.time').blur(function() {
         new CleanValue(this);
       });
-      $('#start_date')
+      $('#bbq_start_date')
         .datepicker()
         .datepicker('setDate', new Date())
-        .datepicker('option', 'dateFormat', 'yy/mm/dd');
+        .datepicker('option', 'dateFormat', 'yy-mm-dd');
         
-      $('#end_date')
+      $('#bbq_end_date')
         .datepicker()
         .datepicker('setDate', new Date())
-        .datepicker('option', 'dateFormat', 'yy/mm/dd');
+        .datepicker('option', 'dateFormat', 'yy-mm-dd');
     });
   </script>
 <% end %>

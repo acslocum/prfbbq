@@ -31928,3 +31928,2150 @@ Rendered bbq/_bbq (21.5ms)
 Rendered bbq/_schedule (0.7ms)
 Rendered bbq/_bbq (3.1ms)
 Completed in 35ms (View: 26, DB: 4) | 200 OK [http://localhost/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 22:22:48) [GET]
+  [4;35;1mBbq Load (1.1ms)[0m   [0mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mDay Load (0.9ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC[0m
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (5.8ms)
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (0.7ms)
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (0.7ms)
+Rendered bbq/_bbq (20.6ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC[0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 4) [0m
+Rendered bbq/_schedule (0.7ms)
+Rendered bbq/_bbq (3.1ms)
+Completed in 34ms (View: 25, DB: 4) | 200 OK [http://localhost/present]
+
+
+Processing DaysController#new (for 127.0.0.1 at 2010-10-11 22:43:25) [GET]
+Rendering template within layouts/days
+Rendering days/new
+  [4;36;1mBbq Load (0.4ms)[0m   [0;1mSELECT * FROM "bbqs" ORDER BY id DESC[0m
+
+ActionView::TemplateError (undefined method `venue_id' for #<Day:0x26748a8>) on line #19 of app/views/days/new.html.erb:
+16:    
+17:  <div class="input_container long clearfix">
+18: 	  <%= f.label :venue_id %>
+19: 	  <%= f.select(:venue_id,options_for_select(present_bbqs_select_list))%>
+20:   </div>
+21:  <div class="input_container long clearfix">
+22: 	  <%= f.label :venue_id %>
+
+    app/views/days/new.html.erb:19
+    app/views/days/new.html.erb:7
+    app/controllers/days_controller.rb:29:in `new'
+
+Rendered rescues/_trace (41.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 22:43:32) [GET]
+  [4;35;1mBbq Load (0.6ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 39ms (View: 31, DB: 4) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 22:43:36) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/bbqs/new]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20100928184505)
+Migrating to AddTestArticles (20100928185250)
+Migrating to AddEventDateAndTicketUrlToArticles (20100928204447)
+Migrating to AddTicketsAvaliableToArticles (20100928211023)
+Migrating to CreateTestDataForMoreShows (20100928211425)
+Migrating to CreateBbqs (20101008202721)
+Migrating to CreateVenues (20101008203229)
+Migrating to CreateBands (20101008203948)
+Migrating to BbqTestData (20101008205204)
+Migrating to AddMoreBbqs (20101008211232)
+Migrating to BbqToVenue (20101008213503)
+Migrating to AddVenueData (20101008214329)
+Migrating to BetterArticleData (20101008222206)
+Migrating to BandsToBbq (20101008232512)
+Migrating to SampleBandData (20101009175722)
+Migrating to AddPublishFieldToBbqAndArticle (20101011034803)
+Migrating to AddOrderToBand (20101011044506)
+Migrating to ConvertVarcharsToText (20101011060818)
+Migrating to CreateDays (20101011223953)
+Migrating to DayHasManyBands (20101011224150)
+Migrating to AssociateDayWithVenue (20101012032432)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "days" ADD "venue_id" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101012032432')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("bands")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("bbqs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("days")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("venues")[0m
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 22:48:20) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 22:48:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"title"=>"A BBQ", "is_published"=>"1"}}
+  [4;36;1mBbq Create (0.4ms)[0m   [0;1mINSERT INTO "bbqs" ("updated_at", "title", "is_published", "venue_id", "content", "event_date", "created_at") VALUES('2010-10-12 03:48:49', 'A BBQ', 't', NULL, NULL, NULL, '2010-10-12 03:48:49')[0m
+
+TypeError (can't dup NilClass):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:959:in `dup'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:959:in `_parse'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:974:in `parse'
+  app/controllers/bbqs_controller.rb:60:in `create_days'
+  app/controllers/bbqs_controller.rb:48:in `create'
+  app/controllers/bbqs_controller.rb:46:in `create'
+
+Rendered rescues/_trace (30.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 22:50:47) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+
+ActionView::TemplateError (undefined method `text' for #<ActionView::Helpers::FormBuilder:0x25bb754>) on line #25 of app/views/bbqs/new.html.erb:
+22:   <div class="input_container short">
+23:     <%#= f.label :event_date %>
+24:     <label for="event_date">Start Date</label>
+25:     <%= f.text :start_date %>
+26:   </div>
+27:   
+28:   <div class="input_container short">
+
+    app/views/bbqs/new.html.erb:25
+    app/views/bbqs/new.html.erb:7
+    app/controllers/bbqs_controller.rb:29:in `new'
+
+Rendered rescues/_trace (38.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 22:51:01) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+
+ActionView::TemplateError (undefined method `start_date' for #<Bbq:0x23ee2c8>) on line #25 of app/views/bbqs/new.html.erb:
+22:   <div class="input_container short">
+23:     <%#= f.label :event_date %>
+24:     <label for="event_date">Start Date</label>
+25:     <%= f.text_field :start_date %>
+26:   </div>
+27:   
+28:   <div class="input_container short">
+
+    app/views/bbqs/new.html.erb:25
+    app/views/bbqs/new.html.erb:7
+    app/controllers/bbqs_controller.rb:29:in `new'
+
+Rendered rescues/_trace (104.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 22:51:02) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+
+ActionView::TemplateError (undefined method `start_date' for #<Bbq:0x2512064>) on line #25 of app/views/bbqs/new.html.erb:
+22:   <div class="input_container short">
+23:     <%#= f.label :event_date %>
+24:     <label for="event_date">Start Date</label>
+25:     <%= f.text_field :start_date %>
+26:   </div>
+27:   
+28:   <div class="input_container short">
+
+    app/views/bbqs/new.html.erb:25
+    app/views/bbqs/new.html.erb:7
+    app/controllers/bbqs_controller.rb:29:in `new'
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 22:52:04) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.bbq_date) on line #25 of app/views/bbqs/new.html.erb:
+22:   <div class="input_container short">
+23:     <%#= f.label :event_date %>
+24:     <label for="event_date">Start Date</label>
+25:     <%= f.text_field :start_date %>
+26:   </div>
+27:   
+28:   <div class="input_container short">
+
+    app/models/bbq.rb:24:in `start_date'
+    app/views/bbqs/new.html.erb:25
+    app/views/bbqs/new.html.erb:7
+    app/controllers/bbqs_controller.rb:29:in `new'
+
+Rendered rescues/_trace (42.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 22:52:18) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 22:52:52) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 22:53:01) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 22:53:15) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"end_date"=>"2010/11/17", "start_date"=>"2010/11/14", "title"=>"A BBQ", "is_published"=>"1"}}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: start_date):
+  app/controllers/bbqs_controller.rb:43:in `new'
+  app/controllers/bbqs_controller.rb:43:in `create'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 22:53:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"end_date"=>"2010/11/17", "start_date"=>"2010/11/14", "title"=>"A BBQ", "is_published"=>"1"}}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: start_date):
+  app/controllers/bbqs_controller.rb:43:in `new'
+  app/controllers/bbqs_controller.rb:43:in `create'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 22:54:44) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"end_date"=>"2010/11/17", "start_date"=>"2010/11/14", "title"=>"A BBQ", "is_published"=>"1"}}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: start_date):
+  app/controllers/bbqs_controller.rb:43:in `new'
+  app/controllers/bbqs_controller.rb:43:in `create'
+
+Rendered rescues/_trace (29.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 22:55:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"end_date"=>"2010/11/17", "start_date"=>"2010/11/14", "title"=>"A BBQ", "is_published"=>"1"}}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: start_date):
+  app/controllers/bbqs_controller.rb:43:in `new'
+  app/controllers/bbqs_controller.rb:43:in `create'
+
+Rendered rescues/_trace (93.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 22:56:38) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"end_date"=>"2010/11/17", "start_date"=>"2010/11/14", "title"=>"A BBQ", "is_published"=>"1"}}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: start_date):
+  app/controllers/bbqs_controller.rb:43:in `new'
+  app/controllers/bbqs_controller.rb:43:in `create'
+
+Rendered rescues/_trace (29.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 22:58:38) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #7 of app/views/bbqs/new.html.erb:
+4:   <%= link_to 'Back', bbqs_path %>
+5: </nav>
+6: 
+7: <% form_for([@bbq,@start_date,@end_date]) do |f| %>
+8:   <div id="error_message">
+9:     <%= f.error_messages %>
+10:   </div>
+
+    app/views/bbqs/new.html.erb:7
+    app/controllers/bbqs_controller.rb:29:in `new'
+
+Rendered rescues/_trace (39.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:12:45) [GET]
+  [4;35;1mBbq Load (0.7ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.8ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 3) [0m
+Completed in 37ms (View: 27, DB: 4) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#destroy (for 127.0.0.1 at 2010-10-11 23:12:50) [DELETE]
+  Parameters: {"authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"3"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 3) [0m
+  [4;36;1mBbq Destroy (0.3ms)[0m   [0;1mDELETE FROM "bbqs" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/bbqs
+Completed in 59ms (DB: 1) | 302 Found [http://localhost/bbqs/3]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:12:50) [GET]
+  [4;35;1mBbq Load (0.7ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 29ms (View: 21, DB: 4) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 23:12:51) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 23:13:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"end_date"=>"2010-11-10", "start_date"=>"2010-11-08", "title"=>"a bbq", "is_published"=>"1"}}
+  [4;36;1mBbq Create (0.4ms)[0m   [0;1mINSERT INTO "bbqs" ("updated_at", "title", "is_published", "venue_id", "content", "event_date", "created_at") VALUES('2010-10-12 04:13:12', 'a bbq', 't', NULL, NULL, NULL, '2010-10-12 04:13:12')[0m
+
+TypeError (can't dup NilClass):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:959:in `dup'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:959:in `_parse'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:974:in `parse'
+  app/controllers/bbqs_controller.rb:60:in `create_days'
+  app/controllers/bbqs_controller.rb:48:in `create'
+  app/controllers/bbqs_controller.rb:46:in `create'
+
+Rendered rescues/_trace (30.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 23:14:32) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 23:14:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"end_date"=>"2010-11-11", "start_date"=>"2010-11-08", "title"=>"a bbq", "is_published"=>"1"}}
+  [4;35;1mBbq Create (0.4ms)[0m   [0mINSERT INTO "bbqs" ("updated_at", "title", "is_published", "venue_id", "content", "event_date", "created_at") VALUES('2010-10-12 04:14:46', 'a bbq', 't', NULL, NULL, NULL, '2010-10-12 04:14:46')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 5) [0m
+
+TypeError (can't dup NilClass):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:959:in `dup'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:959:in `_parse'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:974:in `parse'
+  app/controllers/bbqs_controller.rb:60:in `create_days'
+  app/controllers/bbqs_controller.rb:48:in `create'
+  app/controllers/bbqs_controller.rb:46:in `create'
+
+Rendered rescues/_trace (85.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:15:56) [GET]
+  [4;35;1mBbq Load (0.8ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 4) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 5) [0m
+Completed in 38ms (View: 29, DB: 4) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#destroy (for 127.0.0.1 at 2010-10-11 23:16:01) [DELETE]
+  Parameters: {"authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"4"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 4) [0m
+  [4;35;1mBbq Destroy (0.3ms)[0m   [0mDELETE FROM "bbqs" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/bbqs
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/bbqs/4]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:16:01) [GET]
+  [4;36;1mBbq Load (0.7ms)[0m   [0;1mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;36;1mDay Load (0.8ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 5) [0m
+Completed in 37ms (View: 29, DB: 4) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#destroy (for 127.0.0.1 at 2010-10-11 23:16:04) [DELETE]
+  Parameters: {"authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"5"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 5) [0m
+  [4;35;1mBbq Destroy (0.3ms)[0m   [0mDELETE FROM "bbqs" WHERE "id" = 5[0m
+Redirected to http://localhost:3000/bbqs
+Completed in 23ms (DB: 0) | 302 Found [http://localhost/bbqs/5]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:16:04) [GET]
+  [4;36;1mBbq Load (0.7ms)[0m   [0;1mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 33ms (View: 24, DB: 4) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#new (for 127.0.0.1 at 2010-10-11 23:16:05) [GET]
+Rendering template within layouts/bbqs
+Rendering bbqs/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/bbqs/new]
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 23:16:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"end_date"=>"2010-10-11", "start_date"=>"2010-10-11", "title"=>"asdf", "is_published"=>"0"}}
+  [4;35;1mBbq Create (0.4ms)[0m   [0mINSERT INTO "bbqs" ("updated_at", "title", "is_published", "venue_id", "content", "event_date", "created_at") VALUES('2010-10-12 04:16:10', 'asdf', 'f', NULL, NULL, NULL, '2010-10-12 04:16:10')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 6) [0m
+
+TypeError (can't dup NilClass):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:959:in `dup'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:959:in `_parse'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:974:in `parse'
+  app/controllers/bbqs_controller.rb:61:in `create_days'
+  app/controllers/bbqs_controller.rb:48:in `create'
+  app/controllers/bbqs_controller.rb:46:in `create'
+
+Rendered rescues/_trace (90.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 23:16:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"end_date"=>"2010-10-11", "start_date"=>"2010-10-11", "title"=>"asdf", "is_published"=>"0"}}
+  [4;35;1mBbq Create (0.4ms)[0m   [0mINSERT INTO "bbqs" ("updated_at", "title", "is_published", "venue_id", "content", "event_date", "created_at") VALUES('2010-10-12 04:16:52', 'asdf', 'f', NULL, NULL, NULL, '2010-10-12 04:16:52')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 7) [0m
+
+TypeError (can't dup NilClass):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:959:in `dup'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:959:in `_parse'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:974:in `parse'
+  app/controllers/bbqs_controller.rb:61:in `create_days'
+  app/controllers/bbqs_controller.rb:48:in `create'
+  app/controllers/bbqs_controller.rb:46:in `create'
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqsController#create (for 127.0.0.1 at 2010-10-11 23:17:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "bbq"=>{"end_date"=>"2010-11-18", "start_date"=>"2010-11-15", "title"=>"asdf", "is_published"=>"0"}}
+  [4;35;1mBbq Create (0.4ms)[0m   [0mINSERT INTO "bbqs" ("updated_at", "title", "is_published", "venue_id", "content", "event_date", "created_at") VALUES('2010-10-12 04:17:31', 'asdf', 'f', NULL, NULL, NULL, '2010-10-12 04:17:31')[0m
+  [4;36;1mDay Create (0.4ms)[0m   [0;1mINSERT INTO "days" ("updated_at", "venue_id", "content", "bbq_id", "bbq_date", "start_time", "end_time", "created_at") VALUES('2010-10-12 04:17:31', NULL, NULL, 8, '2010-11-15', NULL, NULL, '2010-10-12 04:17:31')[0m
+  [4;35;1mDay Create (0.4ms)[0m   [0mINSERT INTO "days" ("updated_at", "venue_id", "content", "bbq_id", "bbq_date", "start_time", "end_time", "created_at") VALUES('2010-10-12 04:17:31', NULL, NULL, 8, '2010-11-16', NULL, NULL, '2010-10-12 04:17:31')[0m
+  [4;36;1mDay Create (0.4ms)[0m   [0;1mINSERT INTO "days" ("updated_at", "venue_id", "content", "bbq_id", "bbq_date", "start_time", "end_time", "created_at") VALUES('2010-10-12 04:17:31', NULL, NULL, 8, '2010-11-17', NULL, NULL, '2010-10-12 04:17:31')[0m
+  [4;35;1mDay Create (0.4ms)[0m   [0mINSERT INTO "days" ("updated_at", "venue_id", "content", "bbq_id", "bbq_date", "start_time", "end_time", "created_at") VALUES('2010-10-12 04:17:31', NULL, NULL, 8, '2010-11-18', NULL, NULL, '2010-10-12 04:17:31')[0m
+Redirected to http://localhost:3000/bbqs/8
+Completed in 42ms (DB: 2) | 302 Found [http://localhost/bbqs]
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-11 23:17:31) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://localhost/bbqs/8]
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:17:48) [GET]
+  [4;35;1mDay Load (1.2ms)[0m   [0mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 56ms (View: 49, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:18:00) [GET]
+  [4;36;1mBbq Load (0.8ms)[0m   [0;1mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 6) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 7) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 44ms (View: 34, DB: 6) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#destroy (for 127.0.0.1 at 2010-10-11 23:18:03) [DELETE]
+  Parameters: {"authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"6"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 6) [0m
+  [4;36;1mBbq Destroy (0.3ms)[0m   [0;1mDELETE FROM "bbqs" WHERE "id" = 6[0m
+Redirected to http://localhost:3000/bbqs
+Completed in 63ms (DB: 1) | 302 Found [http://localhost/bbqs/6]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:18:04) [GET]
+  [4;35;1mBbq Load (0.8ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.8ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 7) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 41ms (View: 31, DB: 5) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#destroy (for 127.0.0.1 at 2010-10-11 23:18:06) [DELETE]
+  Parameters: {"authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"7"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 7) [0m
+  [4;36;1mBbq Destroy (0.3ms)[0m   [0;1mDELETE FROM "bbqs" WHERE "id" = 7[0m
+Redirected to http://localhost:3000/bbqs
+Completed in 60ms (DB: 1) | 302 Found [http://localhost/bbqs/7]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:18:06) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (1.1ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.8ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 41ms (View: 28, DB: 6) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-11 23:18:15) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/bbqs/8]
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-11 23:19:48) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;35;1mDay Load (0.8ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://localhost/bbqs/8]
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:20:48) [GET]
+  [4;36;1mDay Load (1.4ms)[0m   [0;1mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 49ms (View: 42, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing DaysController#edit (for 127.0.0.1 at 2010-10-11 23:20:50) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mDay Load (0.2ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 5) [0m
+Rendering template within layouts/days
+Rendering days/edit
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 52ms (View: 45, DB: 1) | 200 OK [http://localhost/days/5/edit]
+
+
+Processing DaysController#5 (for 127.0.0.1 at 2010-10-11 23:20:51) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 5. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#5 to png (for 127.0.0.1 at 2010-10-11 23:20:51) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+
+ActionController::UnknownAction (No action responded to 5. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#5 (for 127.0.0.1 at 2010-10-11 23:20:51) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 5. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#5 (for 127.0.0.1 at 2010-10-11 23:20:53) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 5. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#update (for 127.0.0.1 at 2010-10-11 23:21:19) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"5", "day"=>{"bbq_date(3i)"=>"15", "venue_id"=>"1", "content"=>"this is the 15th", "bbq_date(1i)"=>"2010", "end_time"=>"01:20pm", "start_time"=>"12:00pm", "bbq_date(2i)"=>"11"}}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 5) [0m
+  [4;35;1mDay Update (0.3ms)[0m   [0mUPDATE "days" SET "start_time" = '12:00pm', "venue_id" = 1, "content" = 'this is the 15th', "end_time" = '01:20pm', "updated_at" = '2010-10-12 04:21:19' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/days/5
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/days/5]
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:21:19) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 5) [0m
+Rendering template within layouts/days
+Rendering days/show
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://localhost/days/5]
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:21:19) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;36;1mDay Load (0.1ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Day with ID=make favcon):
+  app/controllers/days_controller.rb:16:in `show'
+
+Rendered rescues/_trace (31.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:21:19) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;35;1mDay Load (0.1ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Day with ID=make favcon):
+  app/controllers/days_controller.rb:16:in `show'
+
+Rendered rescues/_trace (29.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:21:22) [GET]
+  Parameters: {"id"=>"make favcon"}
+  [4;36;1mDay Load (0.1ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Day with ID=make favcon):
+  app/controllers/days_controller.rb:16:in `show'
+
+Rendered rescues/_trace (91.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:21:23) [GET]
+  [4;35;1mDay Load (1.1ms)[0m   [0mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 49ms (View: 43, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing DaysController#edit (for 127.0.0.1 at 2010-10-11 23:21:26) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 6) [0m
+Rendering template within layouts/days
+Rendering days/edit
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mVenue Load (0.3ms)[0m   [0;1mSELECT * FROM "venues" [0m
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/days/6/edit]
+
+
+Processing DaysController#6 (for 127.0.0.1 at 2010-10-11 23:21:27) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 6. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#6 to png (for 127.0.0.1 at 2010-10-11 23:21:27) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+
+ActionController::UnknownAction (No action responded to 6. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#6 (for 127.0.0.1 at 2010-10-11 23:21:27) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 6. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#6 (for 127.0.0.1 at 2010-10-11 23:21:29) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 6. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#update (for 127.0.0.1 at 2010-10-11 23:21:44) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"6", "day"=>{"bbq_date(3i)"=>"16", "venue_id"=>"2", "content"=>"day 2 in NYC!!!!!", "bbq_date(1i)"=>"2010", "end_time"=>"05:21pm", "start_time"=>"03:21pm", "bbq_date(2i)"=>"11"}}
+  [4;35;1mDay Load (0.2ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 6) [0m
+  [4;36;1mDay Update (0.4ms)[0m   [0;1mUPDATE "days" SET "start_time" = '03:21pm', "venue_id" = 2, "content" = 'day 2 in NYC!!!!!', "end_time" = '05:21pm', "updated_at" = '2010-10-12 04:21:44' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/days/6
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/days/6]
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:21:44) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mDay Load (0.2ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 6) [0m
+Rendering template within layouts/days
+Rendering days/show
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/days/6]
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:21:46) [GET]
+  [4;35;1mDay Load (1.1ms)[0m   [0mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 51ms (View: 44, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing DaysController#edit (for 127.0.0.1 at 2010-10-11 23:21:53) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 7) [0m
+Rendering template within layouts/days
+Rendering days/edit
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mVenue Load (0.3ms)[0m   [0;1mSELECT * FROM "venues" [0m
+Completed in 29ms (View: 22, DB: 1) | 200 OK [http://localhost/days/7/edit]
+
+
+Processing DaysController#7 (for 127.0.0.1 at 2010-10-11 23:21:53) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 7. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#7 to png (for 127.0.0.1 at 2010-10-11 23:21:54) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+
+ActionController::UnknownAction (No action responded to 7. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#7 (for 127.0.0.1 at 2010-10-11 23:21:54) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 7. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#7 (for 127.0.0.1 at 2010-10-11 23:21:56) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 7. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#update (for 127.0.0.1 at 2010-10-11 23:22:06) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"7", "day"=>{"bbq_date(3i)"=>"17", "venue_id"=>"1", "content"=>"back to chicago punnks!", "bbq_date(1i)"=>"2010", "end_time"=>"10:22pm", "start_time"=>"02:22pm", "bbq_date(2i)"=>"11"}}
+  [4;35;1mDay Load (0.2ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 7) [0m
+  [4;36;1mDay Update (0.3ms)[0m   [0;1mUPDATE "days" SET "start_time" = '02:22pm', "venue_id" = 1, "content" = 'back to chicago punnks!', "end_time" = '10:22pm', "updated_at" = '2010-10-12 04:22:06' WHERE "id" = 7[0m
+Redirected to http://localhost:3000/days/7
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/days/7]
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:22:06) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mDay Load (0.2ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 7) [0m
+Rendering template within layouts/days
+Rendering days/show
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/days/7]
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:22:08) [GET]
+  [4;35;1mDay Load (1.1ms)[0m   [0mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 49ms (View: 42, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:22:54) [GET]
+  [4;36;1mDay Load (1.1ms)[0m   [0;1mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #21 of app/views/days/index.html.erb:
+18:       <tr>
+19:         <td class="one"><%=h day.bbq_date %></td>
+20:         <td class="two"><%=h day.bbq.title %></td>
+21:         <td class="three"><%=h day.venue.name %></td>
+22:         <td class="four"><%=h day.start_time %> - <%=h day.end_time %></td>
+23:         <td class="five">
+24:           <ul class="table_controls">
+
+    app/views/days/index.html.erb:21
+    app/views/days/index.html.erb:17:in `each'
+    app/views/days/index.html.erb:17
+    app/controllers/days_controller.rb:7:in `index'
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:23:13) [GET]
+  [4;36;1mDay Load (1.1ms)[0m   [0;1mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 53ms (View: 46, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing DaysController#edit (for 127.0.0.1 at 2010-10-11 23:23:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDay Load (0.2ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 1) [0m
+Rendering template within layouts/days
+Rendering days/edit
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/days/1/edit]
+
+
+Processing DaysController#1 (for 127.0.0.1 at 2010-10-11 23:23:16) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#1 to png (for 127.0.0.1 at 2010-10-11 23:23:17) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#1 (for 127.0.0.1 at 2010-10-11 23:23:17) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#1 (for 127.0.0.1 at 2010-10-11 23:23:19) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#update (for 127.0.0.1 at 2010-10-11 23:23:20) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"1", "day"=>{"bbq_date(3i)"=>"15", "venue_id"=>"1", "content"=>"We'll totally have bacon today!", "bbq_date(1i)"=>"2010", "end_time"=>"11:00 PM", "start_time"=>"11:00 AM", "bbq_date(2i)"=>"10"}}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 1) [0m
+  [4;35;1mDay Update (0.3ms)[0m   [0mUPDATE "days" SET "venue_id" = 1, "updated_at" = '2010-10-12 04:23:20' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/days/1
+Completed in 66ms (DB: 1) | 302 Found [http://localhost/days/1]
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:23:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 1) [0m
+Rendering template within layouts/days
+Rendering days/show
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/days/1]
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:23:22) [GET]
+  [4;36;1mDay Load (1.1ms)[0m   [0;1mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 49ms (View: 42, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing DaysController#edit (for 127.0.0.1 at 2010-10-11 23:23:24) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDay Load (0.2ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 2) [0m
+Rendering template within layouts/days
+Rendering days/edit
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/days/2/edit]
+
+
+Processing DaysController#2 (for 127.0.0.1 at 2010-10-11 23:23:24) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 2. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#2 to png (for 127.0.0.1 at 2010-10-11 23:23:24) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+
+ActionController::UnknownAction (No action responded to 2. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#2 (for 127.0.0.1 at 2010-10-11 23:23:24) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 2. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#2 (for 127.0.0.1 at 2010-10-11 23:23:25) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 2. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#update (for 127.0.0.1 at 2010-10-11 23:23:26) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"2", "day"=>{"bbq_date(3i)"=>"16", "venue_id"=>"1", "content"=>"Sausage!!!!!", "bbq_date(1i)"=>"2010", "end_time"=>"9:45 PM", "start_time"=>"10:00 AM", "bbq_date(2i)"=>"10"}}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 2) [0m
+  [4;35;1mDay Update (0.3ms)[0m   [0mUPDATE "days" SET "venue_id" = 1, "updated_at" = '2010-10-12 04:23:26' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/days/2
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/days/2]
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:23:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 2) [0m
+Rendering template within layouts/days
+Rendering days/show
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/days/2]
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:23:28) [GET]
+  [4;36;1mDay Load (1.1ms)[0m   [0;1mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 48ms (View: 41, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing DaysController#edit (for 127.0.0.1 at 2010-10-11 23:23:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mDay Load (0.2ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 3) [0m
+Rendering template within layouts/days
+Rendering days/edit
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 32ms (View: 24, DB: 1) | 200 OK [http://localhost/days/3/edit]
+
+
+Processing DaysController#3 (for 127.0.0.1 at 2010-10-11 23:23:31) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 3. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#3 (for 127.0.0.1 at 2010-10-11 23:23:32) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 3. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#3 to png (for 127.0.0.1 at 2010-10-11 23:23:32) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+
+ActionController::UnknownAction (No action responded to 3. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#update (for 127.0.0.1 at 2010-10-11 23:23:33) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"3", "day"=>{"bbq_date(3i)"=>"17", "venue_id"=>"1", "content"=>"Day Threeeeeee", "bbq_date(1i)"=>"2010", "end_time"=>"4:00 PM", "start_time"=>"2:00 PM", "bbq_date(2i)"=>"10"}}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 3) [0m
+  [4;35;1mDay Update (0.3ms)[0m   [0mUPDATE "days" SET "venue_id" = 1, "updated_at" = '2010-10-12 04:23:33' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/days/3
+Completed in 63ms (DB: 1) | 302 Found [http://localhost/days/3]
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:23:34) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 3) [0m
+Rendering template within layouts/days
+Rendering days/show
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 77ms (View: 70, DB: 1) | 200 OK [http://localhost/days/3]
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:23:35) [GET]
+  [4;36;1mDay Load (1.1ms)[0m   [0;1mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 49ms (View: 42, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing DaysController#edit (for 127.0.0.1 at 2010-10-11 23:23:38) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mDay Load (0.2ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 4) [0m
+Rendering template within layouts/days
+Rendering days/edit
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 29ms (View: 22, DB: 1) | 200 OK [http://localhost/days/4/edit]
+
+
+Processing DaysController#4 (for 127.0.0.1 at 2010-10-11 23:23:38) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 4. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#4 (for 127.0.0.1 at 2010-10-11 23:23:39) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 4. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#4 to png (for 127.0.0.1 at 2010-10-11 23:23:39) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+
+ActionController::UnknownAction (No action responded to 4. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#update (for 127.0.0.1 at 2010-10-11 23:23:44) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"4", "day"=>{"bbq_date(3i)"=>"20", "venue_id"=>"2", "content"=>"NYC event", "bbq_date(1i)"=>"2010", "end_time"=>"2:00 PM", "start_time"=>"12:00 PM", "bbq_date(2i)"=>"10"}}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 4) [0m
+  [4;35;1mDay Update (0.6ms)[0m   [0mUPDATE "days" SET "venue_id" = 2, "updated_at" = '2010-10-12 04:23:44' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/days/4
+Completed in 58ms (DB: 1) | 302 Found [http://localhost/days/4]
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:23:44) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 4) [0m
+Rendering template within layouts/days
+Rendering days/show
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/days/4]
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:23:46) [GET]
+  [4;36;1mDay Load (1.1ms)[0m   [0;1mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 48ms (View: 41, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing DaysController#index (for 127.0.0.1 at 2010-10-11 23:24:07) [GET]
+  [4;35;1mDay Load (1.2ms)[0m   [0mSELECT * FROM "days" [0m
+Rendering template within layouts/days
+Rendering days/index
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 61ms (View: 53, DB: 2) | 200 OK [http://localhost/days]
+
+
+Processing DaysController#edit (for 127.0.0.1 at 2010-10-11 23:24:11) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mDay Load (0.3ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 8) [0m
+Rendering template within layouts/days
+Rendering days/edit
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mVenue Load (0.4ms)[0m   [0mSELECT * FROM "venues" [0m
+Completed in 30ms (View: 23, DB: 1) | 200 OK [http://localhost/days/8/edit]
+
+
+Processing DaysController#8 (for 127.0.0.1 at 2010-10-11 23:24:11) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#8 to png (for 127.0.0.1 at 2010-10-11 23:24:11) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#8 (for 127.0.0.1 at 2010-10-11 23:24:11) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#8 (for 127.0.0.1 at 2010-10-11 23:24:14) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DaysController#update (for 127.0.0.1 at 2010-10-11 23:24:30) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"8", "day"=>{"bbq_date(3i)"=>"18", "venue_id"=>"1", "content"=>"ending it homestyle", "bbq_date(1i)"=>"2010", "end_time"=>"11:24pm", "start_time"=>"11:24am", "bbq_date(2i)"=>"11"}}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 8) [0m
+  [4;35;1mDay Update (0.4ms)[0m   [0mUPDATE "days" SET "start_time" = '11:24am', "venue_id" = 1, "content" = 'ending it homestyle', "end_time" = '11:24pm', "updated_at" = '2010-10-12 04:24:30' WHERE "id" = 8[0m
+Redirected to http://localhost:3000/days/8
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/days/8]
+
+
+Processing DaysController#show (for 127.0.0.1 at 2010-10-11 23:24:30) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mDay Load (0.2ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 8) [0m
+Rendering template within layouts/days
+Rendering days/show
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/days/8]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-11 23:24:43) [GET]
+  [4;36;1mBand Load (1.0ms)[0m   [0;1mSELECT * FROM "bands" ORDER BY bbq_id desc[0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;35;1mDay Load (0.3ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 1) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+Completed in 36ms (View: 30, DB: 1) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-11 23:24:48) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;35;1mDay Load (1.4ms)[0m   [0mSELECT * FROM "days" WHERE (bbq_date >= '2010-10-11') ORDER BY bbq_date ASC, id DESC[0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 35ms (View: 27, DB: 2) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#show to png (for 127.0.0.1 at 2010-10-11 23:24:48) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=spinnerDefault):
+  app/controllers/bands_controller.rb:16:in `show'
+
+Rendered rescues/_trace (28.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-11 23:25:45) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;35;1mDay Load (1.6ms)[0m   [0mSELECT * FROM "days" WHERE (bbq_date >= '2010-10-11') ORDER BY bbq_date ASC, id DESC[0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 86ms (View: 79, DB: 2) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#show to png (for 127.0.0.1 at 2010-10-11 23:25:46) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=spinnerDefault):
+  app/controllers/bands_controller.rb:16:in `show'
+
+Rendered rescues/_trace (28.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-11 23:26:22) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;35;1mDay Load (1.3ms)[0m   [0mSELECT * FROM "days" WHERE (bbq_date >= '2010-10-11') ORDER BY bbq_date ASC, id DESC[0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 29ms (View: 22, DB: 2) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#show to png (for 127.0.0.1 at 2010-10-11 23:26:22) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=spinnerDefault):
+  app/controllers/bands_controller.rb:16:in `show'
+
+Rendered rescues/_trace (29.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-11 23:27:05) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;35;1mDay Load (1.4ms)[0m   [0mSELECT * FROM "days" WHERE (bbq_date >= '2010-10-11') ORDER BY bbq_date ASC, id DESC[0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 28ms (View: 21, DB: 2) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#show to png (for 127.0.0.1 at 2010-10-11 23:27:05) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=spinnerDefault):
+  app/controllers/bands_controller.rb:16:in `show'
+
+Rendered rescues/_trace (28.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-11 23:27:06) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;35;1mDay Load (1.4ms)[0m   [0mSELECT * FROM "days" WHERE (bbq_date >= '2010-10-11') ORDER BY bbq_date ASC, id DESC[0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 30ms (View: 22, DB: 2) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#show to png (for 127.0.0.1 at 2010-10-11 23:27:06) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=spinnerDefault):
+  app/controllers/bands_controller.rb:16:in `show'
+
+Rendered rescues/_trace (29.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#create (for 127.0.0.1 at 2010-10-11 23:27:25) [POST]
+  Parameters: {"commit"=>"Create", "band"=>{"name"=>"thirst", "day_id"=>"5", "end_time"=>"1:45 pm", "start_time"=>"12:45 pm"}, "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E="}
+  [4;35;1mBand Create (0.5ms)[0m   [0mINSERT INTO "bands" ("name", "updated_at", "day_id", "sort_order", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('thirst', '2010-10-12 04:27:25', 5, NULL, NULL, NULL, '2010-10-12 04:27:25', '12:45 pm', '1:45 pm')[0m
+Redirected to http://localhost:3000/bands/2
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-11 23:27:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands"."id" = 2) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;35;1mDay Load (0.3ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 5) [0m
+  [4;36;1mBbq Load (0.3ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 86ms (View: 80, DB: 1) | 200 OK [http://localhost/bands/2]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-11 23:27:28) [GET]
+  [4;35;1mBand Load (1.0ms)[0m   [0mSELECT * FROM "bands" ORDER BY bbq_id desc[0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;36;1mDay Load (0.3ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 1) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mDay Load (0.3ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 5) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 31ms (View: 25, DB: 2) | 200 OK [http://localhost/bands]
+
+
+Processing BandsController#new (for 127.0.0.1 at 2010-10-11 23:27:43) [GET]
+Rendering template within layouts/bands
+Rendering bands/new
+  [4;36;1mDay Load (1.3ms)[0m   [0;1mSELECT * FROM "days" WHERE (bbq_date >= '2010-10-11') ORDER BY bbq_date ASC, id DESC[0m
+  [4;35;1mBbq Load (0.3ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 28ms (View: 21, DB: 2) | 200 OK [http://localhost/bands/new]
+
+
+Processing BandsController#show to png (for 127.0.0.1 at 2010-10-11 23:27:44) [GET]
+  Parameters: {"id"=>"spinnerDefault"}
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Band with ID=spinnerDefault):
+  app/controllers/bands_controller.rb:16:in `show'
+
+Rendered rescues/_trace (29.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BandsController#create (for 127.0.0.1 at 2010-10-11 23:27:59) [POST]
+  Parameters: {"commit"=>"Create", "band"=>{"name"=>"max rainbow", "day_id"=>"6", "end_time"=>"1:45 pm", "start_time"=>"12:45 pm"}, "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E="}
+  [4;36;1mBand Create (0.4ms)[0m   [0;1mINSERT INTO "bands" ("name", "updated_at", "day_id", "sort_order", "play_date", "bbq_id", "created_at", "start_time", "end_time") VALUES('max rainbow', '2010-10-12 04:27:59', 6, NULL, NULL, NULL, '2010-10-12 04:27:59', '12:45 pm', '1:45 pm')[0m
+Redirected to http://localhost:3000/bands/3
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/bands]
+
+
+Processing BandsController#show (for 127.0.0.1 at 2010-10-11 23:27:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands"."id" = 3) [0m
+Rendering template within layouts/bands
+Rendering bands/show
+  [4;36;1mDay Load (0.3ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days"."id" = 6) [0m
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/bands/3]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-10-11 23:28:02) [GET]
+  [4;36;1mBand Load (1.2ms)[0m   [0;1mSELECT * FROM "bands" ORDER BY bbq_id desc[0m
+Rendering template within layouts/bands
+Rendering bands/index
+  [4;35;1mDay Load (0.3ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 1) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 1) [0m
+  [4;35;1mDay Load (0.3ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 5) [0m
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;35;1mDay Load (0.2ms)[0m   [0mSELECT * FROM "days" WHERE ("days"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Completed in 36ms (View: 29, DB: 2) | 200 OK [http://localhost/bands]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-11 23:28:06) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE (is_published='t') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.7ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:28:08) [GET]
+  [4;36;1mBbq Load (1.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mDay Load (0.9ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC[0m
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (11.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (0.9ms)
+Rendered bbq/_bbq (28.0ms)
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC[0m
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 4) [0m
+Rendered bbq/_schedule (1.2ms)
+Rendered bbq/_bbq (2.9ms)
+Completed in 45ms (View: 36, DB: 4) | 200 OK [http://localhost/present]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:28:31) [GET]
+  [4;35;1mBbq Load (0.7ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (1.0ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 37ms (View: 26, DB: 5) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-11 23:28:39) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/bbqs/8/edit]
+
+
+Processing BbqsController#8 (for 127.0.0.1 at 2010-10-11 23:28:39) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: create, create_days, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqsController#8 (for 127.0.0.1 at 2010-10-11 23:28:40) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: create, create_days, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqsController#8 (for 127.0.0.1 at 2010-10-11 23:28:42) [GET]
+  Parameters: {"id"=>"make favcon"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: create, create_days, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BbqsController#update (for 127.0.0.1 at 2010-10-11 23:28:53) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"8", "bbq"=>{"title"=>"asdf", "is_published"=>"1"}}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+  [4;36;1mBbq Update (0.3ms)[0m   [0;1mUPDATE "bbqs" SET "is_published" = 't', "updated_at" = '2010-10-12 04:28:53' WHERE "id" = 8[0m
+Redirected to http://localhost:3000/bbqs/8
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/bbqs/8]
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-11 23:28:53) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 8) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 20ms (View: 12, DB: 2) | 200 OK [http://localhost/bbqs/8]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-11 23:29:01) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (is_published='t') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.8ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:29:03) [GET]
+  [4;35;1mBbq Load (1.1ms)[0m   [0mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mDay Load (0.9ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC[0m
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (9.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (0.9ms)
+Rendered bbq/_bbq (22.2ms)
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC[0m
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 4) [0m
+Rendered bbq/_schedule (1.2ms)
+Rendered bbq/_bbq (2.9ms)
+Completed in 35ms (View: 27, DB: 4) | 200 OK [http://localhost/present]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:29:11) [GET]
+  [4;36;1mBbq Load (0.7ms)[0m   [0;1mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;36;1mDay Load (0.6ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 36ms (View: 26, DB: 5) | 200 OK [http://localhost/bbqs]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-11 23:29:51) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE (is_published='t') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.7ms)
+Completed in 68ms (View: 63, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:29:53) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mDay Load (1.0ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC[0m
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (10.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (1.0ms)
+Rendered bbq/_bbq (22.7ms)
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC[0m
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 4) [0m
+Rendered bbq/_schedule (1.3ms)
+Rendered bbq/_bbq (3.1ms)
+Completed in 36ms (View: 27, DB: 4) | 200 OK [http://localhost/present]
+
+
+Processing BbqController#past (for 127.0.0.1 at 2010-10-11 23:29:54) [GET]
+  [4;35;1mBbq Load (0.9ms)[0m   [0mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date < '2010-10-11') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/past]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:29:56) [GET]
+  [4;36;1mBbq Load (1.1ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mDay Load (0.9ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC[0m
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.4ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (9.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (1.0ms)
+Rendered bbq/_bbq (21.5ms)
+  [4;36;1mDay Load (0.7ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC[0m
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 4) [0m
+Rendered bbq/_schedule (1.3ms)
+Rendered bbq/_bbq (3.1ms)
+Completed in 35ms (View: 26, DB: 4) | 200 OK [http://localhost/present]
+
+
+Processing BbqsController#index (for 127.0.0.1 at 2010-10-11 23:30:06) [GET]
+  [4;35;1mBbq Load (0.8ms)[0m   [0mSELECT * FROM "bbqs" [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 1) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 8) [0m
+  [4;35;1mDay Load (0.6ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 8) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 94ms (View: 29, DB: 5) | 200 OK [http://localhost/bbqs]
+
+
+Processing BbqsController#edit (for 127.0.0.1 at 2010-10-11 23:30:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBbq Load (0.2ms)[0m   [0;1mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/edit
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/bbqs/2/edit]
+
+
+Processing BbqsController#update (for 127.0.0.1 at 2010-10-11 23:30:21) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"31v//gYbUfzxma/ba411QXR8m67o7wn4YYpiFTTIJ6E=", "id"=>"2", "bbq"=>{"title"=>"NYC BBQ", "is_published"=>"0"}}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+  [4;36;1mBbq Update (0.3ms)[0m   [0;1mUPDATE "bbqs" SET "is_published" = 'f', "updated_at" = '2010-10-12 04:30:21' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/bbqs/2
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/bbqs/2]
+
+
+Processing BbqsController#show (for 127.0.0.1 at 2010-10-11 23:30:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBbq Load (0.2ms)[0m   [0mSELECT * FROM "bbqs" WHERE ("bbqs"."id" = 2) [0m
+Rendering template within layouts/bbqs
+Rendering bbqs/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "days" WHERE ("days".bbq_id = 2) [0m
+  [4;35;1mDay Load (0.7ms)[0m   [0mSELECT * FROM "days" WHERE ("days".bbq_id = 2) ORDER BY bbq_date DESC LIMIT 1[0m
+Completed in 20ms (View: 12, DB: 2) | 200 OK [http://localhost/bbqs/2]
+
+
+Processing NewsController#home (for 127.0.0.1 at 2010-10-11 23:30:26) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE (is_published='t') ORDER BY created_at DESC, id DESC[0m
+Rendering template within layouts/news
+Rendering news/home
+Rendered news/_article (3.7ms)
+Completed in 68ms (View: 63, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:30:28) [GET]
+  [4;35;1mBbq Load (1.1ms)[0m   [0mSELECT * FROM "bbqs" WHERE (is_published = 't' AND event_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mDay Load (0.9ms)[0m   [0;1mSELECT * FROM "days" WHERE ("days".bbq_id = 1) ORDER BY bbq_date ASC[0m
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (10.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (0.9ms)
+Rendered bbq/_bbq (22.4ms)
+Completed in 33ms (View: 25, DB: 3) | 200 OK [http://localhost/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:35:58) [GET]
+
+ActiveRecord::ConfigurationError (Association named 'day' was not found; perhaps you misspelled it?):
+  app/controllers/bbq_controller.rb:17:in `present_bbqs'
+  app/controllers/bbq_controller.rb:3:in `present'
+
+Rendered rescues/_trace (32.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:36:09) [GET]
+  [4;35;1mBbq Load Including Associations (0.0ms)[0m   [0mSQLite3::SQLException: no such column: day.bbq_date: SELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs" LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND day.bbq_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: day.bbq_date: SELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs"  LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND day.bbq_date >= '2010-10-11')  ORDER BY event_date ASC, id DESC):
+  app/controllers/bbq_controller.rb:17:in `present_bbqs'
+  app/controllers/bbq_controller.rb:3:in `present'
+
+Rendered rescues/_trace (94.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:36:29) [GET]
+  [4;36;1mBbq Load Including Associations (0.0ms)[0m   [0;1mSQLite3::SQLException: ambiguous column name: id: SELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs" LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11') ORDER BY event_date ASC, id DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: ambiguous column name: id: SELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs"  LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11')  ORDER BY event_date ASC, id DESC):
+  app/controllers/bbq_controller.rb:17:in `present_bbqs'
+  app/controllers/bbq_controller.rb:3:in `present'
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:37:00) [GET]
+  [4;35;1mBbq Load Including Associations (0.0ms)[0m   [0mSQLite3::SQLException: no such column: bbq.id: SELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs" LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11') ORDER BY days.bbq_date ASC, bbq.id DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: bbq.id: SELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs"  LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11')  ORDER BY days.bbq_date ASC, bbq.id DESC):
+  app/controllers/bbq_controller.rb:17:in `present_bbqs'
+  app/controllers/bbq_controller.rb:3:in `present'
+
+Rendered rescues/_trace (99.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:37:07) [GET]
+  [4;36;1mBbq Load Including Associations (1.7ms)[0m   [0;1mSELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs" LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11') ORDER BY days.bbq_date ASC, bbqs.id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (10.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (1.0ms)
+Rendered bbq/_bbq (15.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 5) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.4ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 6) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 7) [0m
+Rendered bbq/_schedule (0.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 8) [0m
+Rendered bbq/_schedule (0.9ms)
+Rendered bbq/_bbq (5.7ms)
+Completed in 38ms (View: 24, DB: 3) | 200 OK [http://localhost/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:37:45) [GET]
+  [4;35;1mBbq Load Including Associations (1.7ms)[0m   [0mSELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs" LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11') ORDER BY days.bbq_date ASC, bbqs.id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (11.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (0.9ms)
+Rendered bbq/_bbq (17.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 5) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.4ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 6) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 7) [0m
+Rendered bbq/_schedule (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 8) [0m
+Rendered bbq/_schedule (0.9ms)
+Rendered bbq/_bbq (5.8ms)
+Completed in 43ms (View: 29, DB: 3) | 200 OK [http://localhost/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:38:08) [GET]
+  [4;36;1mBbq Load Including Associations (1.7ms)[0m   [0;1mSELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs" LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11') ORDER BY days.bbq_date ASC, bbqs.id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+
+ActionView::TemplateError (can't convert Date into String) on line #2 of app/views/bbq/_bbq.html.erb:
+1: <section id="show-info">
+2:   <%= link_to 'Share', {:action => 'http://www.facebook.com/sharer.php'}, :name => 'fb_share', :title => bbq.full_title, :type => 'button', :class => 'share' -%>
+3:   <hgroup>
+4:     <h1 class="article_title"><%= bbq.full_title -%></h1>
+5:   </hgroup>
+
+    app/models/bbq.rb:14:in `+'
+    app/models/bbq.rb:14:in `full_title'
+    app/views/bbq/_bbq.html.erb:2
+    app/views/bbq/bbq.html.erb:34
+    app/controllers/bbq_controller.rb:4:in `present'
+
+Rendered rescues/_trace (43.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:38:25) [GET]
+  [4;35;1mBbq Load Including Associations (1.7ms)[0m   [0mSELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs" LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11') ORDER BY days.bbq_date ASC, bbqs.id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (11.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (0.9ms)
+Rendered bbq/_bbq (17.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 5) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.1ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 6) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 7) [0m
+Rendered bbq/_schedule (0.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 8) [0m
+Rendered bbq/_schedule (1.0ms)
+Rendered bbq/_bbq (5.7ms)
+Completed in 98ms (View: 84, DB: 3) | 200 OK [http://localhost/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:38:40) [GET]
+  [4;36;1mBbq Load Including Associations (1.6ms)[0m   [0;1mSELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs" LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11') ORDER BY days.bbq_date ASC, bbqs.id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.3ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (10.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (0.8ms)
+Rendered bbq/_bbq (16.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 5) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.1ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 6) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 7) [0m
+Rendered bbq/_schedule (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 8) [0m
+Rendered bbq/_schedule (0.8ms)
+Rendered bbq/_bbq (6.0ms)
+Completed in 40ms (View: 25, DB: 3) | 200 OK [http://localhost/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:38:47) [GET]
+  [4;35;1mBbq Load Including Associations (1.6ms)[0m   [0mSELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs" LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11') ORDER BY days.bbq_date ASC, bbqs.id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;36;1mVenue Load (0.8ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.3ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (10.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (0.8ms)
+Rendered bbq/_bbq (15.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 5) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.1ms)
+  [4;36;1mVenue Load (0.2ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;35;1mBand Load (0.2ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 6) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 7) [0m
+Rendered bbq/_schedule (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;35;1mBand Load (0.1ms)[0m   [0mSELECT * FROM "bands" WHERE ("bands".day_id = 8) [0m
+Rendered bbq/_schedule (0.8ms)
+Rendered bbq/_bbq (6.0ms)
+Completed in 39ms (View: 24, DB: 4) | 200 OK [http://localhost/present]
+
+
+Processing BbqController#present (for 127.0.0.1 at 2010-10-11 23:40:26) [GET]
+  [4;36;1mBbq Load Including Associations (1.7ms)[0m   [0;1mSELECT "bbqs"."id" AS t0_r0, "bbqs"."title" AS t0_r1, "bbqs"."event_date" AS t0_r2, "bbqs"."content" AS t0_r3, "bbqs"."venue_id" AS t0_r4, "bbqs"."is_published" AS t0_r5, "bbqs"."created_at" AS t0_r6, "bbqs"."updated_at" AS t0_r7, "days"."id" AS t1_r0, "days"."bbq_date" AS t1_r1, "days"."content" AS t1_r2, "days"."start_time" AS t1_r3, "days"."end_time" AS t1_r4, "days"."bbq_id" AS t1_r5, "days"."created_at" AS t1_r6, "days"."updated_at" AS t1_r7, "days"."venue_id" AS t1_r8 FROM "bbqs" LEFT OUTER JOIN "days" ON days.bbq_id = bbqs.id WHERE (is_published = 't' AND days.bbq_date >= '2010-10-11') ORDER BY days.bbq_date ASC, bbqs.id DESC[0m
+Rendering template within layouts/news
+Rendering bbq/bbq
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 1) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (11.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 2) [0m
+Rendered bbq/_schedule (1.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 3) [0m
+Rendered bbq/_schedule (0.8ms)
+Rendered bbq/_bbq (20.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.3ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 5) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.2ms)
+  [4;35;1mVenue Load (0.2ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 2) [0m
+  [4;36;1mBand Load (0.2ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 6) [0m
+Rendered bbq/_band (0.1ms)
+Rendered bbq/_schedule (1.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 7) [0m
+Rendered bbq/_schedule (1.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "venues" WHERE ("venues"."id" = 1) [0m
+  [4;36;1mBand Load (0.1ms)[0m   [0;1mSELECT * FROM "bands" WHERE ("bands".day_id = 8) [0m
+Rendered bbq/_schedule (0.8ms)
+Rendered bbq/_bbq (6.0ms)
+Completed in 45ms (View: 29, DB: 3) | 200 OK [http://localhost/present]

@@ -9,29 +9,21 @@
     <%= f.error_messages %>
   </div>
 
-  <!-- <div class="input_container short">
-    <%#= f.label :event_date %>
-    <%#= f.date_select :event_date %>
-    <label for="bbq_date">Event Date</label>
-    <input type="text" id="bbq_date" />
-  </div> -->
+  <div class="input_container short">
+  <label for="bbq_date">Event Date</label>
+    <%= f.date_select :bbq_date %>
+  </div>
   
   <!-- <div class="input_container clearfix long">
     <%#= f.label :bbq_id %>
     <%#= f.select(:bbq_id,options_for_select(present_bbqs_select_list))%>
   </div> -->
   
-  <h2>BBQ Title</h2>
+  <h2><%= @day.bbq.title%></h2>
   
   <div class="input_container long clearfix">
-	  <%#= f.label :venue_id %>
-	  <%#= f.select(:venue_id,options_for_select(venue_select_list))%>
-	  
-	  <label for="venue">Venue</label>
-	  <select type="text" id="venue">
-	    <option>Venue One</option>
-	    <option>Venue Two</option>
-	  </select>
+	  <%= f.label :venue_id %>
+	  <%= f.select(:venue_id,options_for_select(venue_select_list))%>
   </div>
   
   <div class="input_container">

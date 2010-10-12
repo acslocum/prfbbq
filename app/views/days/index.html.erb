@@ -18,8 +18,9 @@
       <tr>
         <td class="one"><%=h day.bbq_date %></td>
         <td class="two"><%=h day.bbq.title %></td>
-        <td class="three"><%=h day.start_time %> - <%=h day.end_time %></td>
-        <td class="four">
+        <td class="three"><%=h day.venue.name if(!day.venue.nil?) %></td>
+        <td class="four"><%=h day.start_time %> - <%=h day.end_time %></td>
+        <td class="five">
           <ul class="table_controls">
             <li><%= link_to 'Preview', day %></li>
             <li><%= link_to 'Edit', edit_day_path(day) %></li>

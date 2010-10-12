@@ -14,7 +14,7 @@ class BbqController < ApplicationController
   end
 
   def present_bbqs
-    Bbq.find(:all, :conditions=>["is_published = ? AND event_date >= ?", true, Date.today], :order => "event_date ASC, id DESC")
+    Bbq.find(:all, :include=>:days, :conditions=>["is_published = ? AND days.bbq_date >= ?", true, Date.today], :order => "days.bbq_date ASC, bbqs.id DESC")
   end
   
   def past_bbqs

@@ -42,8 +42,10 @@ class BbqsController < ApplicationController
   def create
     @bbq = Bbq.new(params[:bbq])
 
+
     respond_to do |format|
       if @bbq.save
+        create_days(@bbq)
         flash[:notice] = 'Bbq was successfully created.'
         format.html { redirect_to(@bbq) }
         format.xml  { render :xml => @bbq, :status => :created, :location => @bbq }
@@ -52,6 +54,12 @@ class BbqsController < ApplicationController
         format.xml  { render :xml => @bbq.errors, :status => :unprocessable_entity }
       end
     end
+  end
+  
+  def create_days(bbq)
+    start_date = Date.parse(params[:bbq][:start_date])
+    end_date = Date.parse(params[:bbq][:end_date])
+    start_date.upto(end_date) { |date| Day.create(:bbq_date=>date, :bbq_id=>bbq.id) }
   end
 
   # PUT /bbqs/1
