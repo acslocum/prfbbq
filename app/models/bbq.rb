@@ -23,4 +23,17 @@ class Bbq < ActiveRecord::Base
   def year
     event_date.year
   end
+  
+  def permalink
+    event_date.strftime("%Y/%m/%d") + "/" + short_name
+  end
+  
+  def short_name
+    title[0,3]
+  end
+  
+  def self.find_by_permalink(a_year, a_month, a_day, a_title)
+    find(:first,:conditions => ["lower(title) like ? and ","%"<<a_title<<"%"])
+  end
+      
 end

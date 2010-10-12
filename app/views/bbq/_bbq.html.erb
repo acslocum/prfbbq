@@ -1,7 +1,7 @@
 <section id="show-info">
   <%= link_to 'Share', {:action => 'http://www.facebook.com/sharer.php'}, :name => 'fb_share', :title => bbq.full_title, :type => 'button', :class => 'share' -%>
   <hgroup>
-    <h1><%= bbq.full_title %></h1>
+    <h1 class="article_title"><%= bbq.full_title -%></h1>
     <h2><%= bbq.venue.name%> <a href="<%=bbq.venue.url%>" target="_blank">info</a></h2>
     <h3><%= bbq.venue.address%> <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%=URI.escape(bbq.venue.address)%>&amp;ie=UTF8&amp;" target="_blank">map</a></h3>
   </hgroup>

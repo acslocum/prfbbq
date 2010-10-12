@@ -8,6 +8,11 @@ class BbqController < ApplicationController
     render :action=>"bbq", :layout=>"news"
   end  
   
+  def bbq
+    @bbqs = [Bbq.find_by_permalink(params[:year], params[:short_name])]
+    render :action=>"bbq", :layout=>"news"
+  end
+
   def present_bbqs
     Bbq.find(:all, :conditions=>["is_published = ? AND event_date >= ?", true, Date.today], :order => "event_date ASC, id DESC")
   end

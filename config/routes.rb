@@ -16,6 +16,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'present', :controller=>'bbq', :action=>'present'
 
   map.connect 'past', :controller=>'bbq', :action=>'past'
+
+  map.connect 'bbq/:year/:month/:day/:short_name', :controller=>'bbq', :action=>'bbq'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
