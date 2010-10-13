@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :bands
   
-  map.connect 'admin', :controller=>'admin', :action=>'admin'
+  map.connect 'xxxxxadmin', :controller=>'admin', :action=>'admin'
   
   map.root :controller=>'news', :action=>'home'
 
