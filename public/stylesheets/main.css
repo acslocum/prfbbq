@@ -795,6 +795,17 @@ html[xmlns] .clearfix {
 	height: 1%;
 }
 
+.flash {
+  background-color:#FF0000;
+  font-family:'PTSansBold';
+  font-size:1.2em;
+  left:22em;
+  position:absolute;
+  text-align:center;
+  top:0;
+  width:74.55em;
+}
+
 /* Custom Selects
 ---------------------------------------------------- */
 #select-nav {
