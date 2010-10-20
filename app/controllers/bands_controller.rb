@@ -3,6 +3,7 @@ class BandsController < ApplicationController
   # GET /bands.xml
   def index
     @bands = Band.all(:order=>"bbq_id desc")
+    @bbqs = Bbq.all(:order=>"id desc")
 
     respond_to do |format|
       format.html # index.html.erb

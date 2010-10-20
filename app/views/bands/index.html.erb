@@ -2,21 +2,52 @@
   <%= link_to 'New', new_band_path %>
 <% end %>
 
-<h1>Band: List</h1>
+<h1>Band: List</h2>
 
+<% @bbqs.each do |this_bbq| %>
+	<h2><%=this_bbq.full_title%></h2>
+	<table id="admin-table" class="band">
+	  <thead>
+	    <th>Band</th>
+	    <th class="date_small">Date</th>
+	    <th class="time">Time</th>
+	    <th class="controls">Controls</th>
+	  </thead>
+  
+	  <tbody>
+		<% bands_for_this_bbq = @bands.select{|band| this_bbq == band.day.bbq if(!band.day.nil?)}%>
+		
+	    <% bands_for_this_bbq.each do |band| %>
+	      <tr>
+	        <td><%=h band.name %></td>
+	        <td class="date_small"><%=h band.day.bbq_date if(!band.day.nil?)%></td>
+	        <td class="time"><%=h band.start_time %> - <%=h band.end_time %></td>
+	        <td class="controls">
+	          <ul class="table_controls">
+	            <li><%= link_to 'Preview', band %></li>
+	            <li><%= link_to 'Edit', edit_band_path(band) %></li>
+	            <li><%= link_to 'Delete', band, :confirm => 'Are you sure?', :method => :delete %></li>
+	          </ul>
+	        </td>
+	    <% end %>
+	  </tbody>
+	</table>
+<% end %>
+
+<h2>Bands with no BBQ</h2>
 <table id="admin-table" class="band">
   <thead>
-    <th class="title">BBQ</th>
     <th>Band</th>
     <th class="date_small">Date</th>
     <th class="time">Time</th>
     <th class="controls">Controls</th>
   </thead>
-  
+
   <tbody>
-    <% @bands.each do |band| %>
+	<% bands_for_this_bbq = @bands.select{|band| band.day.nil? | band.day.bbq.nil?}%>
+	
+    <% bands_for_this_bbq.each do |band| %>
       <tr>
-        <td class="title"><%=h band.day.bbq.full_title if(!band.day.nil? && !band.day.bbq.nil?)%></td>
         <td><%=h band.name %></td>
         <td class="date_small"><%=h band.day.bbq_date if(!band.day.nil?)%></td>
         <td class="time"><%=h band.start_time %> - <%=h band.end_time %></td>
