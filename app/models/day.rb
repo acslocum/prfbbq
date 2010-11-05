@@ -6,4 +6,16 @@ class Day < ActiveRecord::Base
   def long_date
     bbq_date.strftime("%A, %m/%d")
   end
+  
+  def year
+    bbq_date.year
+  end
+  
+  def month
+    bbq_date.month
+  end
+  
+  def day
+    bbq_date.day
+  end
 end

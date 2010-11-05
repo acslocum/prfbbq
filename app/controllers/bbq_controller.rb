@@ -9,12 +9,12 @@ class BbqController < ApplicationController
   end  
   
   def bbq
-    @bbqs = [Bbq.find_by_permalink(params[:year], params[:short_name])]
+    @bbqs = [Bbq.find_by_permalink(params[:year].to_i, params[:month].to_i, params[:day].to_i)]
     render :action=>"bbq", :layout=>"news"
   end
 
   def present_bbqs
-    Bbq.find(:all, :include=>:days, :conditions=>["is_published = ? AND days.bbq_date >= ?", true, Date.today], :order => "days.bbq_date ASC, bbqs.id DESC")
+    Bbq.find(:all, :include=>:days, :conditions=>["is_published = ? ", true], :order => "days.bbq_date ASC, bbqs.id DESC")
   end
   
   def past_bbqs

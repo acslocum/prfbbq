@@ -1,7 +1,7 @@
 <section id="show-info">
   <%#= link_to 'Share', {:action => 'http://www.facebook.com/sharer.php'}, :name => 'fb_share', :title => bbq.full_title, :type => 'button', :class => 'share' -%>
 
-  <h1 class="article_title"><%= bbq.full_title -%></h1>
+  <h1 class="article_title"><%= bbq.full_title -%> <%=permalink(bbq)%></h1>
   
   <!-- For each band submitted, we should give an option for a link. If no link, then there should be no <a> -->
   <%= render (:partial => "schedule", :collection=>bbq.days, :as=>:day)%>

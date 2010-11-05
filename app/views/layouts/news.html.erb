@@ -33,16 +33,11 @@
         <%-# Past: Past -%>
         <nav id="page-nav">
           <%= link_to "News", {:controller=>'news',:action => 'home'} -%> 
-          <%= link_to "Auktoberfest", {:controller=> 'bbq',:action => 'present'} -%>
-          <%#= link_to "Past", {:controller=> 'bbq',:action => 'past'} -%>          
+			<%- # present bbqs -%>
+			<%= render (:partial=> "layouts/bbq_menu", :collection=>present_bbq_list, :as=>:bbq) -%>
+			<%- # past bbqs -%>
+			<%= render (:partial=> "layouts/bbq_menu", :collection=>past_bbq_list, :as=>:bbq) -%>
         </nav>
-
-          <%-# TICKETS not available - not sure if it'll ever happen -%>
-          <%-# Show only if there are tickets/shows available -%>
-          <%-#<dl class="ticket_info">-%>
-            <%-#<dt>Tickets</dt>-%>
-            <%-#<%= render (:partial=>"tickets", :collection=>@available_tickets)%>-%>
-          <%-#</dl> -%>
         </header>
 
         <%= yield :layout -%>

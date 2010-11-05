@@ -27,19 +27,24 @@ class Bbq < ActiveRecord::Base
   end
   
   def year
-    event_date.year
-  end
-  
-  def permalink
-    event_date.strftime("%Y/%m/%d") + "/" + short_name
+    start_date.year
   end
   
   def short_name
     title[0,3]
   end
   
-  def self.find_by_permalink(a_year, a_month, a_day, a_title)
-    find(:first,:conditions => ["lower(title) like ? and ","%"<<a_title<<"%"])
+  def self.find_by_permalink(a_year, a_month, a_day)
+    a_date = Date.civil(a_year,a_month,a_day)
+    find(:first, :conditions => ["days.bbq_date == ?", a_date], :joins => "inner join days on bbqs.id = days.bbq_id")
+  end
+  
+  def self.find_present_bbqs
+    find(:all, :conditions => ["days.bbq_date >= ?", Date.today], :joins => "inner join days on bbqs.id = days.bbq_id").uniq
+  end
+      
+  def self.find_past_bbqs
+    find(:all, :conditions => ["days.bbq_date < ?", Date.today], :joins => "inner join days on bbqs.id = days.bbq_id").uniq
   end
       
 end
